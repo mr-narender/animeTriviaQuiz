@@ -53,4 +53,9 @@
 **Expectations**
 * Visually appealing website that is easy on the eyes and make the UX very positive emotionally.
 * Looks fun and the colour schemes should relax user to enjoy their free time.
-* Satisfy all user goals to the best of ability by including all relevant features, user should feel site was very enjoyable .
+* Satisfy all user goals to the best of ability by including all relevant features, user should feel site was very enjoyable.
+
+### Design Choices 
+---
+**Fonts**
+I looked for a simple and asthetically pleasing font to match typical holiday themes of relaxations and good times. I chose [Palanquin](https://fonts.google.com/specimen/Palanquin?category=Sans+Serif&sort=popularity&query=pa#standard-styles) for all texts and headers. 
