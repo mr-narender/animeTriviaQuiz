@@ -76,3 +76,11 @@ View wireframes for each device here:
 * [Desktop](wireframes/desktop.png)
 * [Tablet](wireframes/mobile.png)
 * [Mobile](wireframes/tablet.png)
+
+## Technologies Used 
+---
+**Languages**
+
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
