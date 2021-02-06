@@ -49,6 +49,7 @@
 * Web application should be on the header part of front-page to dominate the webpage.
 * Should be a one page website that has only web app on display to avoid distracting user from main feature.
 * Should be without lag and have good performance to make experience comfortable and easy.
+* A start page that displays top score and user presses button to begin quiz.
 
 **Expectations**
 * Visually appealing website that is easy on the eyes and make the UX very positive emotionally.
