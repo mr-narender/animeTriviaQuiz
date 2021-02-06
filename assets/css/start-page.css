@@ -25,3 +25,9 @@
     width: 37.5rem;
     background-color: #ffffff;
 }
+
+.btn:hover {
+    color: #ffffff;
+    background-color: transparent;
+    border: 3px solid#ffffff;
+}
