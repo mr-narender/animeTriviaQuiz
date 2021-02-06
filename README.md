@@ -49,3 +49,8 @@
 * Web application should be on the header part of front-page to dominate the webpage.
 * Should be a one page website that has only web app on display to avoid distracting user from main feature.
 * Should be without lag and have good performance to make experience comfortable and easy.
+
+**Expectations**
+* Visually appealing website that is easy on the eyes and make the UX very positive emotionally.
+* Looks fun and the colour schemes should relax user to enjoy their free time.
+* Satisfy all user goals to the best of ability by including all relevant features, user should feel site was very enjoyable .
