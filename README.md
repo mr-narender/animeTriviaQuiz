@@ -64,3 +64,15 @@ I looked for a simple and asthetically pleasing font to match typical holiday th
 I chose to use the [Coolors](https://coolors.co/f72585-b5179e-7209b7-560bad-480ca8-3a0ca3-3f37c9-4361ee-4895ef-4cc9f0) colour scheme generator to find one suitable for this project. Below is a screenshot of the colour scheme. They are colours that are pleasant and to look.
 
 ![Colour Scheme](wireframes/palette.png)
+
+### Wireframing 
+
+For **wireframing**, I used [Balsamiq](https://balsamiq.com/). I used it to create **simple** wireframes 
+showing the basic structure on which I built the website on. Some features maybe removed or added during 
+development. 
+
+View wireframes for each device here:
+
+* [Desktop](wireframes/desktop.png)
+* [Tablet](wireframes/mobile.png)
+* [Mobile](wireframes/tablet.png)
