@@ -24,4 +24,11 @@
 ## UX (User Experience) 
 ---
 ### Project Goals 
-* To build a trivia question web app on anime and manga with multiple choice questions
+* To build a trivia question web app on anime and manga with multiple choice questions.
+
+### User Goals 
+* Have my Japanese anime and manga knowledge challenge.
+* Challenge myself to beat my previous high score.
+* Have fun!
+
+
