@@ -3,7 +3,9 @@
 body {
     font-family: 'Palanquin', sans-serif;
     background: 
-        linear-gradient(to top right, rgb(247, 37, 133), 
+        linear-gradient(
+            to top right, 
+            rgb(247, 37, 133), 
             rgb(181, 23, 158), 
             rgb(86, 11, 173), 
             rgb(72, 12, 168), 
