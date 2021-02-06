@@ -77,13 +77,18 @@ View wireframes for each device here:
 
 **Start Page**
 * [Desktop](wireframes/start-page-desktop.pdf)
-* [Tablet](wireframes/start-page-mobile.pdf)
-* [Mobile](wireframes/start-page-tablet.pdf)
+* [Tablet](wireframes/start-page-tablet.pdf)
+* [Mobile](wireframes/start-page-mobile.pdf)
 
 **Question and Answer Page**
 * [Desktop](wireframes/desktop-qa.pdf)
-* [Tablet](wireframes/mobile-qa.pdf)
-* [Mobile](wireframes/tablet-qa.pdf)
+* [Tablet](wireframes/tablet-qa.pdf)
+* [Mobile](wireframes/mobile-qa.pdf)
+
+**End Page**
+* [Desktop](wireframes/end-page-desktop.pdf)
+* [Tablet](wireframes/end-page-tablet.pdf)
+* [Mobile](wireframes/end-page-mobile.pdf)
 
 ## Technologies Used 
 ---
