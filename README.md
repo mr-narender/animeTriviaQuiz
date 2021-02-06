@@ -39,3 +39,6 @@
 * As a **user**, should be able to have my **top score saved** to beat next time or challenge others to do so. 
 * As a **user**, I would like to **know my progress** through the test in terms of **how much** of test **has been completed**.
 
+### Site Owner Goals 
+* As a **site owner**, to entertain and keep user coming back to take the challenge again to beat the top score.
+* As a **site owner**, make the quiz fun for the user!
