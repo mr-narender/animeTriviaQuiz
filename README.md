@@ -75,9 +75,15 @@ development.
 
 View wireframes for each device here:
 
-* [Desktop](wireframes/desktop.png)
-* [Tablet](wireframes/mobile.png)
-* [Mobile](wireframes/tablet.png)
+**Start Page**
+* [Desktop](wireframes/start-page-desktop.pdf)
+* [Tablet](wireframes/start-page-mobile.pdf)
+* [Mobile](wireframes/start-page-tablet.pdf)
+
+**Question and Answer Page**
+* [Desktop](wireframes/desktop-qa.pdf)
+* [Tablet](wireframes/mobile-qa.pdf)
+* [Mobile](wireframes/tablet-qa.pdf)
 
 ## Technologies Used 
 ---
