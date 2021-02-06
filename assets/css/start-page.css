@@ -10,5 +10,8 @@
 #start {
    display: flex;
    flex-direction: column;
+}
 
+#ready {
+    font-size: 5rem;
 }
