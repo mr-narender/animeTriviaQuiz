@@ -92,3 +92,43 @@ View wireframes for each device here:
 * [Gitpod](https://gitpod.io/workspaces/)
 * [JQuery](https://jquery.com/) 
 * [Popper](https://popper.js.org/)
+
+## Features 
+---
+**Features** that have been **implemented**:
+
+
+**Features** that will be **implemented** in the **future**:
+
+## Testing 
+---
+
+### Game is fun!
+**User Story: I want to have fun and enjoy the game.**
+* **Plan**<br>
+* **Implementation**<br>
+* **Test**<br>
+* **Results**<br>
+* **Verdict**<br>
+
+### Easy to learn
+**User Story: I want to easily learn how to play the game with little complication.**
+* **Plan**<br>
+* **Implementation**<br>
+* **Test**<br>
+* **Results**<br>
+* **Verdict**<br>
+
+
+
+## Bugs 
+---
+
+## Deployment 
+---
+
+## References 
+---
+### Code References 
+
+### Special Thanks 
