@@ -59,3 +59,6 @@
 ---
 **Fonts**
 I looked for a simple and asthetically pleasing font to match typical holiday themes of relaxations and good times. I chose [Palanquin](https://fonts.google.com/specimen/Palanquin?category=Sans+Serif&sort=popularity&query=pa#standard-styles) for all texts and headers. 
+
+**Colours**
+I chose to use the [Coolors](https://coolors.co/f72585-b5179e-7209b7-560bad-480ca8-3a0ca3-3f37c9-4361ee-4895ef-4cc9f0) colour scheme generator to find one suitable for this project. Below is a screenshot of the colour scheme. They are colours that are pleasant and to look.
