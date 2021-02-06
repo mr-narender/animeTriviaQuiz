@@ -2,4 +2,18 @@
 
 body {
     font-family: 'Palanquin', sans-serif;
+    background: 
+        linear-gradient(to top right, rgb(247, 37, 133), 
+            rgb(181, 23, 158), 
+            rgb(86, 11, 173), 
+            rgb(72, 12, 168), 
+            rgb(58, 12, 163), 
+            rgb(63, 25, 201), 
+            rgb(67, 97, 238), 
+            rgb(72, 149, 239), 
+            rgb(76, 201, 240));
+    background-blend-mode: screen, difference, lighten;
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;     
 }
