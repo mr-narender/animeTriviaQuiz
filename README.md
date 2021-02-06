@@ -42,3 +42,10 @@
 ### Site Owner Goals 
 * As a **site owner**, to entertain and keep user coming back to take the challenge again to beat the top score.
 * As a **site owner**, make the quiz fun for the user!
+
+### User Requirements and Expectations 
+
+**Requirements**
+* Web application should be on the header part of front-page to dominate the webpage.
+* Should be a one page website that has only web app on display to avoid distracting user from main feature.
+* Should be without lag and have good performance to make experience comfortable and easy.
