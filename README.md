@@ -84,3 +84,11 @@ View wireframes for each device here:
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+**Tools & Libraries**
+
+* [Bootstrap](https://getbootstrap.com/)
+* [Google Fonts](https://fonts.google.com/)
+* [Gitpod](https://gitpod.io/workspaces/)
+* [JQuery](https://jquery.com/) 
+* [Popper](https://popper.js.org/)
