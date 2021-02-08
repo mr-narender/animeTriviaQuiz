@@ -9,7 +9,12 @@
 
 .btn {
     font-size: 2.5rem;
-    width: 100%;
+    color: rgb(86, 11, 173);
+    padding: 2.5rem 0;
+    margin: 1.25rem auto;
+    width: 37.5rem;
+    border: 3px solid#ffffff;
+    background-color: #ffffff;
 }
 
 #formGroupExampleInput {
