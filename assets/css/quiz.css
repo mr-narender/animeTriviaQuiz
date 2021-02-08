@@ -6,6 +6,11 @@
     align-items: center;
 }
 
+#question {
+    font-size: 3.75rem;
+
+}
+
 .answer-container {
     background-color: #ffffff;
 }
