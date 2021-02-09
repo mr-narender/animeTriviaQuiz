@@ -6,6 +6,11 @@
     align-items: center;
 }
 
+#quiz {
+    background-color:#C40B08;
+    padding: 5rem;
+}
+
 #question {
     font-size: 3.75rem;
     margin: 0 auto 2.5rem;
