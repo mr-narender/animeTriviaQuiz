@@ -9,6 +9,8 @@
 #quiz {
     background-color:#C40B08;
     padding: 5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 #question {
