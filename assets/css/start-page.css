@@ -10,6 +10,7 @@
 #start {
    display: flex;
    flex-direction: column;
+   background-color:#C40B08;
 }
 
 #ready {
