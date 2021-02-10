@@ -18,6 +18,8 @@
     width: 25rem;
 }
 
+/*---Progress Bar----*/
+
 .game-display-item {
     text-align: center;
 }
@@ -26,6 +28,9 @@
     text-align: center;
     font-size: 2.5rem;
 }
+
+
+/*---Questions & Answers---*/
 
 #question {
     font-size: 3.75rem;
