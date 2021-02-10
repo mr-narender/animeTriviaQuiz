@@ -37,6 +37,11 @@
     margin: 0 auto;
 }
 
+#progress-bar-full {
+    height: 100%;
+    background: #ffffff;
+}
+
 /*---Questions & Answers---*/
 
 #question {
