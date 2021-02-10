@@ -27,6 +27,7 @@
 #progress-text {
     text-align: center;
     font-size: 2.5rem;
+    margin: 0;
 }
 
 #progress-bar {
