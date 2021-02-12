@@ -6,6 +6,7 @@ const progressBarFull = document.querySelector('#progress-bar-full');
 
 let questionCounter = 0;
 let score = 0;
+let currentQuestion = {};
 
 function gQuestion(listOfQ) {
   listOfQ.forEach(q => {
@@ -17,4 +18,4 @@ function apiQuestion() {
 .then(res => res.json())
 .then(rawData => gQuestion(rawData.results))
 }
-apiQuestion();
+apiQuestion(question);
