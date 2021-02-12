@@ -1,2 +1,2 @@
 const question = document.querySelector('#question');
-const answers = document.querySelectorAll('.answer-container');
+const answers = Array.from(document.querySelectorAll('.answer-container'));
