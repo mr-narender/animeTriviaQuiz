@@ -10,8 +10,10 @@ let currentQuestion = {};
 
 function gQuestion(listOfQ) {
   listOfQ.forEach(q => {
-    console.log(q.question.toString())
-    question.innerHTML = q.question.toString()
+    console.log(q.question.toString());
+    console.log(q.correct_answer.toString());
+    console.log(q.incorrect_answers.toString());
+    question.innerHTML = q.question.toString();
   })
 }
 
