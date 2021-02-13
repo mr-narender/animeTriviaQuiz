@@ -23,9 +23,11 @@ function gQuestion(listOfQ) {
     console.log(q.correct_answer.toString());
     console.log(q.incorrect_answers.toString());
 
-    for(let i = 0; i < titles.length; i++){
-    titles[i].innerHTML = titleList[i]
-}
+    q.incorrect_answers.push(q.correct_answer);   
+
+    for (let i = 0; i < answers.length; i++) {
+    answers[i].innerHTML = q.incorrect_answers.shift().toString();
+    }
   });
 }
 
