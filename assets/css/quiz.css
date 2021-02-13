@@ -63,7 +63,7 @@
     display: flex;
     font-size: 2.5rem;
     margin-bottom: 1.25rem;
-    justify-content: center;
+    justify-content: left;
 }
 
 .answer-container:hover {
