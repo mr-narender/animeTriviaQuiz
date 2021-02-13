@@ -13,9 +13,11 @@ function gQuestion(listOfQ) {
     console.log(q.question.toString())
   })
 }
+
 function apiQuestion() {
   fetch(`https://opentdb.com/api.php?amount=10&category=31&type=multiple`)
 .then(res => res.json())
 .then(rawData => gQuestion(rawData.results))
 }
+
 apiQuestion(question);
