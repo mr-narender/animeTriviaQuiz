@@ -15,6 +15,7 @@ function gQuestion(listOfQ) {
 
     console.log(q.correct_answer.toString());
     console.log(q.incorrect_answers.toString());
+    answers.innerHTML = (q.correct_answer.toString() || q.incorrect_answers.toString());
   })
 }
 
