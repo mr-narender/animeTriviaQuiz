@@ -14,8 +14,11 @@ function gQuestion(listOfQ) {
     question.innerHTML = q.question.toString();
 
     console.log(q.correct_answer.toString());
+    answers.innerHTML = q.correct_answer.toString();
+    
     console.log(q.incorrect_answers.toString());
-    answers.innerText = ((q.correct_answer.toString()) || q.incorrect_answers.toString());
+    answers.innerHTML = q.incorrect_answers.toString();
+
     console.log(answers);
   });
 }
