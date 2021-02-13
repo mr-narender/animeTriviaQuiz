@@ -11,6 +11,7 @@ let currentQuestion = {};
 function gQuestion(listOfQ) {
   listOfQ.forEach(q => {
     console.log(q.question.toString())
+    question.innerHTML = q.question.toString()
   })
 }
 
