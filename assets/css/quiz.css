@@ -71,6 +71,8 @@
 
 .answer-container:hover {
     font-size: 3.125rem;
+    color: #C40B08;
+    background-color: #ffffff;
 }
 
 .answer-label {
