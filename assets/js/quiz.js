@@ -1,5 +1,5 @@
 const question = document.querySelector('#question');
-const answers = document.querySelectorAll('.answer-text');
+const incorrectAnswers = document.querySelectorAll('.answer-text');
 const progressText = document.querySelector('#progress-text');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progress-bar-full');
