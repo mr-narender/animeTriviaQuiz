@@ -61,8 +61,8 @@
 
 .answer-container {
     display: flex;
-    color: #C40B08;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #C40B08;
     font-size: 2.5rem;
     margin-bottom: 1.25rem;
     justify-content: left;
