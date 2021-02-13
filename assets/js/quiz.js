@@ -1,5 +1,5 @@
 const question = document.querySelector('#question');
-const incorrectAnswers = document.querySelectorAll('.answer-text');
+const answers = document.querySelectorAll('.answer-text');
 const progressText = document.querySelector('#progress-text');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progress-bar-full');
@@ -22,6 +22,10 @@ function gQuestion(listOfQ) {
 
     console.log(q.correct_answer.toString());
     console.log(q.incorrect_answers.toString());
+
+    for(let i = 0; i < titles.length; i++){
+    titles[i].innerHTML = titleList[i]
+}
   });
 }
 
