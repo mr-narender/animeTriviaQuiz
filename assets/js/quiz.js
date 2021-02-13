@@ -14,12 +14,6 @@ function gQuestion(listOfQ) {
     console.log(q.question.toString());
     question.innerHTML = q.question.toString();
 
-    /*console.log(q.correct_answer.toString());
-    answers.innerHTML = q.correct_answer.toString();
-    
-    console.log(q.incorrect_answers.toString());
-    answers.innerHTML = q.incorrect_answers.toString();*/
-
     console.log(q.correct_answer.toString());
     console.log(q.incorrect_answers.toString());
 
