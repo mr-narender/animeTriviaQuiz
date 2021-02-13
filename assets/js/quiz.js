@@ -20,7 +20,8 @@ function gQuestion(listOfQ) {
     console.log(q.incorrect_answers.toString());
     answers.innerHTML = q.incorrect_answers.toString();*/
 
-    console.log(answers);
+    console.log(q.correct_answer.toString());
+    console.log(q.incorrect_answers.toString());
   });
 }
 
