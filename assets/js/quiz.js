@@ -14,14 +14,6 @@ function gQuestion(listOfQ) {
     console.log(q.question.toString());
     question.innerHTML = q.question.toString();
 
-    questionCounter++;
-    progressText.innerText = `Question ${questionCounter} of 10`;
-
-
-
-    /*console.log(q.correct_answer.toString());
-    console.log(q.incorrect_answers.toString());*/
-
     q.incorrect_answers.push(q.correct_answer); 
     
     function shuffle(array) {
@@ -42,6 +34,8 @@ function gQuestion(listOfQ) {
 
         return array;
     }
+
+    console.log(q.incorrect_answers.toString());
 
     // Used like so
     shuffle(q.incorrect_answers);
