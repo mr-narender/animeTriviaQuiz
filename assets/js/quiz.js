@@ -14,8 +14,8 @@ function gQuestion(listOfQ) {
     console.log(q.question.toString());
     question.innerHTML = q.question.toString();
 
-    console.log(q.correct_answer.toString());
-    console.log(q.incorrect_answers.toString());
+    /*console.log(q.correct_answer.toString());
+    console.log(q.incorrect_answers.toString());*/
 
     q.incorrect_answers.push(q.correct_answer); 
     
@@ -42,10 +42,10 @@ function gQuestion(listOfQ) {
     shuffle(q.incorrect_answers);
     console.log(q.incorrect_answers);
 
-    for (let i = 0; i < answers.length; i++) {
-    answers[i].innerHTML = q.incorrect_answers.shift().toString();
-    }
-  });
+        for (let i = 0; i < answers.length; i++) {
+        answers[i].innerHTML = q.incorrect_answers.shift().toString();
+        }
+    });
 }
 
 function apiQuestion() {
