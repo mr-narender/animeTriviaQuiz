@@ -47,7 +47,7 @@ function gQuestion(listOfQ) {
     });
 }
 
-function questionCounter() {
+function questionProgress() {
 
     if (questionCounter <= 10) {
         questionCounter++;
@@ -55,7 +55,7 @@ function questionCounter() {
         return window.location.assign('/end-page.html');
     }
 
-}
+};
 
 function apiQuestion() {
   fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
