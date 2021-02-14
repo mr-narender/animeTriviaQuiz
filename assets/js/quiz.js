@@ -17,7 +17,30 @@ function gQuestion(listOfQ) {
     console.log(q.correct_answer.toString());
     console.log(q.incorrect_answers.toString());
 
-    q.incorrect_answers.push(q.correct_answer);   
+    q.incorrect_answers.push(q.correct_answer); 
+    
+    function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+    }
+
+    // Used like so
+    shuffle(q.incorrect_answers);
+    console.log(q.incorrect_answers);
 
     for (let i = 0; i < answers.length; i++) {
     answers[i].innerHTML = q.incorrect_answers.shift().toString();
