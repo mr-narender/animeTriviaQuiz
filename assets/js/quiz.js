@@ -53,6 +53,7 @@ function questionProgress() {
         questionCounter++;
 
         progressText.innerText = `Question ${questionCounter} of 10`;
+        progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
     } else {
         return window.location.assign('/end-page.html');
     }
