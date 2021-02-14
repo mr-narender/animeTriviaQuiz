@@ -49,7 +49,7 @@ function gQuestion(listOfQ) {
 
 function questionProgress() {
 
-    if (questionCounter <= 10) {
+    if (questionCounter <= 9) {
         questionCounter++;
 
         progressText.innerText = `Question ${questionCounter} of 10`;
