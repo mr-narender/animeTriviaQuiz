@@ -51,6 +51,8 @@ function questionProgress() {
 
     if (questionCounter <= 10) {
         questionCounter++;
+
+        progressText.innerText = `Question ${questionCounter} of 10`;
     } else {
         return window.location.assign('/end-page.html');
     }
