@@ -47,7 +47,7 @@ function gQuestion(listOfQ) {
         shuffle(q.incorrect_answers);
         console.log(q.incorrect_answers);
 
-
+        // Individually display multiple answer choices in each .answer-container
         for (let i = 0; i < answers.length; i++) {
         answers[i].innerHTML = q.incorrect_answers.shift().toString();
         };
