@@ -1,4 +1,4 @@
-const question = document.querySelector('#question');
+const quizQuestion = document.querySelector('#question');
 const answers = document.querySelectorAll('.answer-text');
 const progressText = document.querySelector('#progress-text');
 const scoreText = document.querySelector('#score');
@@ -14,7 +14,7 @@ function gQuestion(listOfQ) {
     listOfQ.forEach(q => {
 
         console.log(q.question.toString());
-        question.innerHTML = q.question.toString();
+        quizQuestion.innerHTML = q.question.toString();
 
         //Combining correct and incorrect answers into single array
         q.incorrect_answers.push(q.correct_answer); 
