@@ -9,6 +9,27 @@ let score = 0;
 let currentQuestion = {};
 
 
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    // Return newly shuffled array
+    return array;
+}
+
+
 // Function that displays question in HTML
 function gQuestion(listOfQ) {
     listOfQ.forEach(q => {
@@ -19,7 +40,7 @@ function gQuestion(listOfQ) {
         //Combining correct and incorrect answers into single array
         q.incorrect_answers.push(q.correct_answer); 
         
-        //Defining shuffle() function 
+        /*//Defining shuffle() function 
         function shuffle(array) {
             var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -38,7 +59,7 @@ function gQuestion(listOfQ) {
 
             // Return newly shuffled array
             return array;
-        }
+        }*/
 
         //Log to console answers array
         console.log(q.incorrect_answers.toString());
@@ -53,7 +74,6 @@ function gQuestion(listOfQ) {
         };
     });
 };
-
 
 function questionProgress() {
 
@@ -73,7 +93,7 @@ function questionProgress() {
 function apiQuestion() {
   fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
 .then(res => res.json())
-.then(rawData => gQuestion(rawData.results))
+.then(rawData => gQuestion(shuffle(rawData.results)))
 }
 
 apiQuestion();
