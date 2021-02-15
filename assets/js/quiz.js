@@ -16,6 +16,7 @@ function gQuestion(listOfQ) {
         console.log(q.question.toString());
         question.innerHTML = q.question.toString();
 
+        //Combining correct and incorrect answers into single array
         q.incorrect_answers.push(q.correct_answer); 
         
         //Defining shuffle() function 
