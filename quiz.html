@@ -31,23 +31,25 @@
                         0
                     </div>
                 </div>
-                <h1 id="question">What is the right answer to this questions?</h1>
-                <div class="answer-container col-12" onclick="questionProgress()">
-                    <p class="answer-label">A</p>
-                    <p class="answer-text">Answer A</p>
+                <div id="questionsAnswers">
+                    <h1 id="question">What is the right answer to this questions?</h1>
+                    <div class="answer-container col-12" onclick="questionProgress();updateDiv();">
+                        <p class="answer-label">A</p>
+                        <p class="answer-text">Answer A</p>
+                    </div>
+                    <div class="answer-container col-12" onclick="questionProgress()">
+                        <p class="answer-label">B</p>
+                        <p class="answer-text">Answer B</p>
+                    </div> 
+                    <div class="answer-container col-12" onclick="questionProgress()">
+                        <p class="answer-label">C</p>
+                        <p class="answer-text"> Answer C</p>
+                    </div> 
+                    <div class="answer-container col-12" onclick="questionProgress()">
+                        <p class="answer-label">D</p>
+                        <p class="answer-text">Answer D</p>
+                    </div>  
                 </div>
-                <div class="answer-container col-12" onclick="questionProgress()">
-                    <p class="answer-label">B</p>
-                    <p class="answer-text">Answer B</p>
-                </div> 
-                <div class="answer-container col-12" onclick="questionProgress()">
-                    <p class="answer-label">C</p>
-                    <p class="answer-text"> Answer C</p>
-                </div> 
-                <div class="answer-container col-12" onclick="questionProgress()">
-                    <p class="answer-label">D</p>
-                    <p class="answer-text">Answer D</p>
-                </div>  
             </div>
         </div>
     </div>
