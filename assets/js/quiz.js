@@ -34,25 +34,23 @@ function shuffle(array) {
 function gQuestion(listOfQ) {
     listOfQ.forEach(q => {
 
-        console.log(q.question.toString());
         quizQuestion.innerHTML = q.question.toString();
 
         //Combining correct and incorrect answers into single array
         q.incorrect_answers.push(q.correct_answer); 
 
-        //Log to console answers array
-        console.log(q.incorrect_answers.toString());
-
         // Shuffling array containing answers
         shuffle(q.incorrect_answers);
-        console.log(q.incorrect_answers);
-
+        
         // Individually display multiple answer choices in each .answer-container
         for (let i = 0; i < answers.length; i++) {
         answers[i].innerHTML = q.incorrect_answers.shift().toString();
         };
     });
 };
+
+
+
 
 function questionProgress() {
 
@@ -61,18 +59,16 @@ function questionProgress() {
 
         progressText.innerText = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
-        
     } else {
         return window.location.assign('/end-page.html');
     }
 
 };
 
-
 function apiQuestion() {
   fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
 .then(res => res.json())
 .then(rawData => gQuestion(shuffle(rawData.results)))
-}
+};
 
 apiQuestion();
