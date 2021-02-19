@@ -61,7 +61,7 @@ function questionProgress() {
         progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
     } else {
         return window.location.assign('/end-page.html');
-    }
+    };
 
 };
 
