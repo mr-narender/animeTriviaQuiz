@@ -6,7 +6,7 @@ const progressBarFull = document.querySelector('#progress-bar-full');
 
 let questionCounter = 1;
 let score = 0;
-let currentAnswers = {};
+let correctAnswers = {};
 
 
 function shuffle(array) {
@@ -33,8 +33,6 @@ function shuffle(array) {
 // Function that displays question in HTML
 function gQuestion(listOfQ) {
     listOfQ.forEach(q => {
-
-        console.log(listOfQ);
 
         quizQuestion.innerHTML = q.question.toString();
 
