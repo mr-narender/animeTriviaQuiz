@@ -6,7 +6,7 @@ const progressBarFull = document.querySelector('#progress-bar-full');
 
 let questionCounter = 1;
 let score = 0;
-let currentQuestions = {};
+let currentAnswers = {};
 
 
 function shuffle(array) {
@@ -34,6 +34,8 @@ function shuffle(array) {
 function gQuestion(listOfQ) {
     listOfQ.forEach(q => {
 
+        console.log(listOfQ);
+
         quizQuestion.innerHTML = q.question.toString();
 
         //Combining correct and incorrect answers into single array
@@ -41,16 +43,37 @@ function gQuestion(listOfQ) {
 
         // Shuffling array containing answers
         shuffle(q.incorrect_answers);
-        
+
+        //console.log(q.correct_answer);
         // Individually display multiple answer choices in each .answer-container
         for (let i = 0; i < answers.length; i++) {
-        answers[i].innerHTML = q.incorrect_answers.shift().toString();
+            answers[i].innerHTML = q.incorrect_answers.shift().toString();
         };
+
+        console.log(q.correct_answer);
     });
 };
 
+/*
 
+function answerFeedback(correct_answer) {
 
+    for (let i = 0; i < answers.length; i++) {
+
+        if (answers[i] == correct_answer) {
+            console.log("CORRECT");
+            answers[i].style.color = 'green';
+        } else {
+            console.log("INCORRECT");
+            answers[i].style.color = 'blue';
+        };
+
+        console.log(correct_answer);
+
+    };
+};
+
+*/
 
 function questionProgress() {
 
@@ -59,16 +82,20 @@ function questionProgress() {
 
         progressText.innerText = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
-    } else {
-        return window.location.assign('/end-page.html');
-    };
 
+    } else {
+
+        return window.location.assign('/end-page.html');
+
+    };
 };
 
 function apiQuestion() {
   fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
-.then(res => res.json())
-.then(rawData => gQuestion(shuffle(rawData.results)))
+  .then(res => res.json())
+  .then(rawData => gQuestion(shuffle(rawData.results)));
 };
 
-apiQuestion();
+//console.log(rawData.results); 
+
+apiQuestion(); 
