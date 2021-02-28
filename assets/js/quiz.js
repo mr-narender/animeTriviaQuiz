@@ -74,26 +74,10 @@ function gQuestion(listOfQ) {
 
     console.log(correctAnswer);
 
-    console.log(incorrectAnswers);
-
     let multipleChoice = shuffle(correctAnswer.concat(incorrectAnswers));
-
-    console.log(multipleChoice);
 
     for (let i = 0; i < answers.length; i++) {
         answers[i].innerHTML = multipleChoice.shift().toString();
-    };
-
-    for (let i = 0; i < multipleChoice.length; i++) {
-
-        if (multipleChoice[i] == correctAnswer) {
-            console.log("CORRECT");
-            answers[i].style.color = 'green';
-        } else {
-            console.log("INCORRECT");
-            answers[i].style.color = 'blue';
-        };
-
     };
 };
 
@@ -122,6 +106,7 @@ function questionProgress() {
 
         progressText.innerText = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
+
         apiQuestion(); 
 
     } else {
