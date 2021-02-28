@@ -6,11 +6,11 @@ const progressBarFull = document.querySelector('#progress-bar-full');
 
 let questionCounter = 1;
 let score = 0;
-let correctAnswers = {};
-
+let correctAnswers;
+let listOfQuestions;
 
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    let currentIndex = array.length, temporaryValue, randomIndex;
 
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
@@ -32,9 +32,13 @@ function shuffle(array) {
 
 // Function that displays question in HTML
 function gQuestion(listOfQ) {
-    listOfQ.forEach(q => {
+   /* listOfQ.forEach(q => {
+
+        //console.log(q);
 
         quizQuestion.innerHTML = q.question.toString();
+        
+        //console.log(currentQuestion);
 
         //Combining correct and incorrect answers into single array
         q.incorrect_answers.push(q.correct_answer); 
@@ -48,8 +52,49 @@ function gQuestion(listOfQ) {
             answers[i].innerHTML = q.incorrect_answers.shift().toString();
         };
 
-        console.log(q.correct_answer);
+        //console.log(q.correct_answer);
+
     });
+
+    */
+
+    let questionElement = listOfQ[Math.floor(Math.random()*listOfQ.length)];
+
+    console.log(questionElement);
+
+    let questionArray = Object.values(questionElement);
+
+    let correctAnswer = questionArray[4].split(",");
+
+    let incorrectAnswers = questionArray[5];
+
+    console.log(questionArray[3]);    
+    
+    quizQuestion.innerHTML = questionArray[3].toString();
+
+    console.log(correctAnswer);
+
+    console.log(incorrectAnswers);
+
+    let multipleChoice = shuffle(correctAnswer.concat(incorrectAnswers));
+
+    console.log(multipleChoice);
+
+    for (let i = 0; i < answers.length; i++) {
+        answers[i].innerHTML = multipleChoice.shift().toString();
+    };
+
+    for (let i = 0; i < multipleChoice.length; i++) {
+
+        if (multipleChoice[i] == correctAnswer) {
+            console.log("CORRECT");
+            answers[i].style.color = 'green';
+        } else {
+            console.log("INCORRECT");
+            answers[i].style.color = 'blue';
+        };
+
+    };
 };
 
 /*
@@ -66,13 +111,10 @@ function answerFeedback(correct_answer) {
             answers[i].style.color = 'blue';
         };
 
-        console.log(correct_answer);
-
     };
 };
 
 */
-
 function questionProgress() {
 
     if (questionCounter <= 9) {
@@ -80,6 +122,7 @@ function questionProgress() {
 
         progressText.innerText = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
+        
 
     } else {
 
@@ -94,6 +137,6 @@ function apiQuestion() {
   .then(rawData => gQuestion(shuffle(rawData.results)));
 };
 
-//console.log(rawData.results); 
-
 apiQuestion(); 
+
+//console.log(correctAnswers);
