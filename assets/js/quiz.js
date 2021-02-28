@@ -60,8 +60,6 @@ function gQuestion(listOfQ) {
 
     let questionElement = listOfQ[Math.floor(Math.random()*listOfQ.length)];
 
-    console.log(questionElement);
-
     let questionArray = Object.values(questionElement);
 
     let correctAnswer = questionArray[4].split(",");
