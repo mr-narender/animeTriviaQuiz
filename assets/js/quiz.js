@@ -58,6 +58,8 @@ function gQuestion(listOfQ) {
 
     */
 
+    let progressText = 0;
+
     let questionElement = listOfQ[Math.floor(Math.random()*listOfQ.length)];
 
     let questionArray = Object.values(questionElement);
@@ -81,7 +83,7 @@ function gQuestion(listOfQ) {
         console.log(answers[i].innerText);  
 
         answers[i].addEventListener('click', function () {
-            if (answers[i].innerText === correctAnswer) { 
+            if (answers[i].innerText == correctAnswer.toString()) { 
             console.log("CORRECT");
             score += 10;
             scoreText.value = score;
