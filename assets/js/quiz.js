@@ -86,10 +86,9 @@ function gQuestion(listOfQ) {
             if (answers[i].innerText == correctAnswer.toString()) { 
             console.log("CORRECT");
             score += 10;
-            scoreText.value = score;
+            scoreText.innerHTML = score;
             } else {
             console.log("INCORRECT");
-            answers[i].style.color = 'blue';
             };
         });
     };
