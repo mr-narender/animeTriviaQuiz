@@ -78,15 +78,17 @@ function gQuestion(listOfQ) {
     for (let i = 0; i < answers.length; i++) {
         answers[i].innerHTML = multipleChoice.shift().toString();
 
+        console.log(answers[i].innerText);  
+
         answers[i].addEventListener('click', function () {
-            if (answers[i] == correctAnswer) {
+            if (answers[i].innerText === correctAnswer) { 
             console.log("CORRECT");
-            answers[i].style.color = 'green';
+            score += 10;
+            scoreText.value = score;
             } else {
             console.log("INCORRECT");
             answers[i].style.color = 'blue';
-        };
-
+            };
         });
     };
 };
