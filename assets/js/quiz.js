@@ -72,7 +72,7 @@ function gQuestion(listOfQ) {
     
     quizQuestion.innerHTML = questionArray[3].toString();
 
-    console.log(correctAnswer);
+    console.log(correctAnswer.toString());
     
 
     let multipleChoice = shuffle(correctAnswer.concat(incorrectAnswers));
@@ -84,9 +84,9 @@ function gQuestion(listOfQ) {
 
         answers[i].addEventListener('click', function () {
             if (answers[i].innerText == correctAnswer.toString()) { 
-            console.log("CORRECT");
             score += 10;
             scoreText.innerHTML = score;
+            console.log("CORRECT");
             } else {
             console.log("INCORRECT");
             };
@@ -94,25 +94,6 @@ function gQuestion(listOfQ) {
     };
 };
 
-
-/*
-
-function answerFeedback(correct_answer) {
-
-    for (let i = 0; i < answers.length; i++) {
-
-        if (answers[i] == correct_answer) {
-            console.log("CORRECT");
-            answers[i].style.color = 'green';
-        } else {
-            console.log("INCORRECT");
-            answers[i].style.color = 'blue';
-        };
-
-    };
-};
-
-*/
 function questionProgress() {
 
     if (questionCounter <= 9) {
