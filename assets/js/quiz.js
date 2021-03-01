@@ -71,13 +71,26 @@ function gQuestion(listOfQ) {
     quizQuestion.innerHTML = questionArray[3].toString();
 
     console.log(correctAnswer);
+    
 
     let multipleChoice = shuffle(correctAnswer.concat(incorrectAnswers));
 
     for (let i = 0; i < answers.length; i++) {
         answers[i].innerHTML = multipleChoice.shift().toString();
+
+        answers[i].addEventListener('click', function () {
+            if (answers[i] == correctAnswer) {
+            console.log("CORRECT");
+            answers[i].style.color = 'green';
+            } else {
+            console.log("INCORRECT");
+            answers[i].style.color = 'blue';
+        };
+
+        });
     };
 };
+
 
 /*
 
