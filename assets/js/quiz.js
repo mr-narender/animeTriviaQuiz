@@ -7,7 +7,6 @@ const progressBarFull = document.querySelector('#progress-bar-full');
 let questionCounter = 1;
 let score = 0;
 let correctAnswers;
-let listOfQuestions;
 
 function shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
