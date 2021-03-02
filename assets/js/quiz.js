@@ -5,8 +5,7 @@ const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progress-bar-full');
 
 let questionCounter = 1;
-let score = 0;
-let correctAnswers;
+let score = 0;  
 
 function shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
@@ -82,6 +81,7 @@ function gQuestion(listOfQ) {
         console.log(answers[i].innerText);  
 
         answers[i].addEventListener('click', function () {
+            console.log(answers[i]);
             if (answers[i].innerText == correctAnswer.toString()) { 
             score += 10;
             scoreText.innerHTML = score;
