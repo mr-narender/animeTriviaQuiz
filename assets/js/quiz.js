@@ -78,11 +78,11 @@ function gQuestion(listOfQ) {
     for (let i = 0; i < answers.length; i++) {
         answers[i].innerHTML = multipleChoice.shift().toString();
 
-        console.log(answers[i].innerText);  
+        console.log(answers[i].innerHTML);  
 
         answers[i].addEventListener('click', function () {
             console.log(answers[i]);
-            if (answers[i].innerText == correctAnswer.toString()) { 
+            if (answers[i].innerHTML == correctAnswer.toString()) { 
             score += 10;
             scoreText.innerHTML = score;
             console.log("CORRECT");
