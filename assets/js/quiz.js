@@ -76,13 +76,13 @@ function gQuestion(listOfQ) {
     let multipleChoice = shuffle(correctAnswer.concat(incorrectAnswers));
 
     for (let i = 0; i < answers.length; i++) {
-        answers[i].innerHTML = multipleChoice.shift().toString();
+        answers[i].innerText = multipleChoice.shift().toString();
 
-        console.log(answers[i].innerHTML);  
+        console.log(answers[i].innerText);  
 
         answers[i].addEventListener('click', function () {
             console.log(answers[i]);
-            if (answers[i].innerHTML == correctAnswer.toString()) { 
+            if (answers[i].innerText == correctAnswer.toString()) { 
             score += 10;
             scoreText.innerHTML = score;
             console.log("CORRECT");
