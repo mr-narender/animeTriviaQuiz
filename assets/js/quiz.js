@@ -84,7 +84,7 @@ function gQuestion(listOfQ) {
             console.log(answers[i]);
             if (answers[i].innerText == correctAnswer.toString()) { 
             score += 10;
-            scoreText.innerHTML = score;
+            scoreText.innerText = score;
             console.log("CORRECT");
             } else {
             console.log("INCORRECT");
