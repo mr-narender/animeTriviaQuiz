@@ -83,11 +83,11 @@ function gQuestion(listOfQ) {
         answers[i].addEventListener('click', function () {
             console.log(answers[i]);
             if (answers[i].innerText == correctAnswer.toString()) { 
-            score += 10;
-            scoreText.innerText = score;
-            console.log("CORRECT");
+                score += 10;
+                scoreText.innerText = score;
+                console.log("CORRECT");
             } else {
-            console.log("INCORRECT");
+                console.log("INCORRECT");
             };
         });
     };
