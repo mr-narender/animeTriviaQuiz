@@ -80,3 +80,7 @@
 .answer-label {
     margin-right: 2.5rem;
 }
+
+.answer-text {
+    width: 100%;
+}
