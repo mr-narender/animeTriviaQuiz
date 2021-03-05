@@ -70,7 +70,7 @@ function gQuestion(listOfQ) {
     
     quizQuestion.innerHTML = questionArray[3].toString();
 
-    console.log(correctAnswer.toString());
+    //console.log(correctAnswer.toString());
     
 
     let multipleChoice = shuffle(correctAnswer.concat(incorrectAnswers));
@@ -128,6 +128,8 @@ function answerFeedback(listOfQ) {
     let incorrectAnswers = questionArray[5];
 
     let multipleChoice = shuffle(correctAnswer.concat(incorrectAnswers));
+
+    console.log(correctAnswer.toString());
 
     for (let i = 0; i < answers.length; i++) {
         answers[i].addEventListener('click', function () {
