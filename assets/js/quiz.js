@@ -75,12 +75,13 @@ function gQuestion(listOfQ) {
 
     let multipleChoice = shuffle(correctAnswer.concat(incorrectAnswers));
 
-    /*
     
     for (let i = 0; i < answers.length; i++) {
         answers[i].innerText = multipleChoice.shift().toString();
 
         console.log(answers[i].innerText);  
+
+        /*
 
         answers[i].addEventListener('click', function () {
             console.log(answers[i]);
@@ -92,9 +93,9 @@ function gQuestion(listOfQ) {
                 console.log("INCORRECT");
             };
         });
+        
+        */
     };
-
-    */
 };
 
 function questionProgress() {
