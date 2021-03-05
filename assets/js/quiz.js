@@ -148,8 +148,9 @@ function apiQuestion() {
   fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
   .then(res => res.json())
   .then(rawData => {
-    gQuestion(shuffle(rawData.results)),
-    answerFeedback(shuffle(rawData.results))
+      let quizData = rawData.results; 
+    gQuestion(shuffle(quizData)),
+    answerFeedback(shuffle(quizData))
 });
 };
 
