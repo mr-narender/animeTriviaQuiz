@@ -133,7 +133,7 @@ function apiQuestion() {
   .then(res => res.json())
   .then(rawData => {
     gQuestion(shuffle(rawData.results));
-    questionProgress(shuffle(rawData.results));
+    answerFeedback(shuffle(rawData.results));
 });
 };
 
