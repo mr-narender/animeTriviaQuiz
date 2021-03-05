@@ -118,10 +118,7 @@ function questionProgress() {
 function answerFeedback() {
     for (let i = 0; i < answers.length; i++) {
 
-        console.log(answers[i].innerText);  
-
         answers[i].addEventListener('click', function () {
-            console.log(answers[i]);
             if (answers[i].innerText == correctAnswer.toString()) { 
                 score += 10;
                 scoreText.innerText = score;
