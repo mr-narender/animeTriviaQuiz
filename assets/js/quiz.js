@@ -151,7 +151,7 @@ function apiQuestion() {
       let quizData = shuffle(rawData.results); 
     gQuestion(quizData),
     answerFeedback(quizData)
-});
+    });
 };
 
 apiQuestion(); 
