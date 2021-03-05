@@ -117,5 +117,3 @@ function apiQuestion() {
 };
 
 apiQuestion(); 
-
-//console.log(correctAnswers);
