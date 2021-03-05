@@ -110,6 +110,24 @@ function questionProgress() {
     };
 };
 
+function answerFeedback() {
+    for (let i = 0; i < answers.length; i++) {
+
+        console.log(answers[i].innerText);  
+
+        answers[i].addEventListener('click', function () {
+            console.log(answers[i]);
+            if (answers[i].innerText == correctAnswer.toString()) { 
+                score += 10;
+                scoreText.innerText = score;
+                console.log("CORRECT");
+            } else {
+                console.log("INCORRECT");
+            };
+        });
+    };
+};
+
 function apiQuestion() {
   fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
   .then(res => res.json())
