@@ -75,6 +75,8 @@ function gQuestion(listOfQ) {
 
     let multipleChoice = shuffle(correctAnswer.concat(incorrectAnswers));
 
+    /*
+    
     for (let i = 0; i < answers.length; i++) {
         answers[i].innerText = multipleChoice.shift().toString();
 
@@ -91,6 +93,8 @@ function gQuestion(listOfQ) {
             };
         });
     };
+
+    */
 };
 
 function questionProgress() {
