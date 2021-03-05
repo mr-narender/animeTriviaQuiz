@@ -115,9 +115,21 @@ function questionProgress() {
     };
 };
 
-function answerFeedback() {
-    for (let i = 0; i < answers.length; i++) {
+function answerFeedback(listOfQ) {
+    
+    let progressText = 0;
 
+    let questionElement = listOfQ[Math.floor(Math.random()*listOfQ.length)];
+
+    let questionArray = Object.values(questionElement);
+
+    let correctAnswer = questionArray[4].split(",");
+
+    let incorrectAnswers = questionArray[5];
+
+    let multipleChoice = shuffle(correctAnswer.concat(incorrectAnswers));
+
+    for (let i = 0; i < answers.length; i++) {
         answers[i].addEventListener('click', function () {
             if (answers[i].innerText == correctAnswer.toString()) { 
                 score += 10;
