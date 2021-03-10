@@ -56,8 +56,6 @@ function gQuestion(listOfQ) {
 
     */
 
-    let progressText = 0;
-
     let questionElement = listOfQ.shift();
 
     let questionArray = Object.values(questionElement);
@@ -118,8 +116,6 @@ function questionProgress() {
 };
 
 function answerFeedback(listOfQ) {
-    
-    let progressText = 0;
 
     let questionElement = listOfQ.shift();
 
