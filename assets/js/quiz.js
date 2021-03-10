@@ -58,7 +58,7 @@ function gQuestion(listOfQ) {
 
     let progressText = 0;
 
-    let questionElement = listOfQ.pop();
+    let questionElement = listOfQ[Math.floor(Math.random()*listOfQ.length)];
 
     let questionArray = Object.values(questionElement);
 
@@ -119,7 +119,7 @@ function answerFeedback(listOfQ) {
     
     let progressText = 0;
 
-    let questionElement = listOfQ.pop();
+    let questionElement = listOfQ[Math.floor(Math.random()*listOfQ.length)];
 
     let questionArray = Object.values(questionElement);
 
