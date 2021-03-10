@@ -70,7 +70,7 @@ function gQuestion(listOfQ) {
     
     quizQuestion.innerHTML = questionArray[3].toString();
 
-    //console.log(correctAnswer.toString());
+    console.log(correctAnswer.toString());
     
 
     let multipleChoice = shuffle(correctAnswer.concat(incorrectAnswers));
