@@ -129,7 +129,7 @@ function answerFeedback(listOfQ) {
 
     let multipleChoice = shuffle(correctAnswer.concat(incorrectAnswers));
 
-    console.log(correctAnswer.toString());
+    console.log(";" + correctAnswer.toString());
 
     for (let i = 0; i < answers.length; i++) {
         answers[i].addEventListener('click', function () {
