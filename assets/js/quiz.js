@@ -96,6 +96,8 @@ function gQuestion(listOfQ) {
         
         */
     };
+
+    listOfQ.unshift(questionElement);
 };
 
 function questionProgress() {
@@ -142,6 +144,7 @@ function answerFeedback(listOfQ) {
             };
         });
     };
+
 };
 
 function apiQuestion() {
