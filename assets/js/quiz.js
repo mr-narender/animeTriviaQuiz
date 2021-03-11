@@ -31,31 +31,6 @@ function shuffle(array) {
 
 // Function that displays question in HTML
 function gQuestion(listOfQ) {
-   /* listOfQ.forEach(q => {
-
-        //console.log(q);
-
-        quizQuestion.innerHTML = q.question.toString();
-        
-        //console.log(currentQuestion);
-
-        //Combining correct and incorrect answers into single array
-        q.incorrect_answers.push(q.correct_answer); 
-
-        // Shuffling array containing answers
-        shuffle(q.incorrect_answers);
-
-        //console.log(q.correct_answer);
-        // Individually display multiple answer choices in each .answer-container
-        for (let i = 0; i < answers.length; i++) {
-            answers[i].innerHTML = q.incorrect_answers.shift().toString();
-        };
-
-        //console.log(q.correct_answer);
-
-    });
-
-    */
 
     let questionElement = listOfQ.shift();
 
@@ -79,25 +54,11 @@ function gQuestion(listOfQ) {
         answers[i].innerText = multipleChoice.shift().toString();
 
         console.log(answers[i].innerText);  
-
-        /*
-
-        answers[i].addEventListener('click', function () {
-            console.log(answers[i]);
-            if (answers[i].innerText == correctAnswer.toString()) { 
-                score += 10;
-                scoreText.innerText = score;
-                console.log("CORRECT");
-            } else {
-                console.log("INCORRECT");
-            };
-        });
-        
-        */
     };
 
     listOfQ.unshift(questionElement);
 };
+
 
 function answerFeedback(listOfQ) {
 
@@ -113,18 +74,15 @@ function answerFeedback(listOfQ) {
 
     console.log(";" + correctAnswer.toString());
 
-    for (let i = 0; i < answers.length; i++) {
-        answers[i].addEventListener('click', function () {
-            if (answers[i].innerText == correctAnswer.toString()) { 
-                score += 10;
-                scoreText.innerText = score;
-                console.log("CORRECT");
-            } else {
-                console.log("INCORRECT");
-            };
-        });
-    };
-
+    answers.addEventListener('click', function () {
+        if (answers.innerText == correctAnswer.toString()) { 
+            score += 10;
+            scoreText.innerText = score;
+            console.log("CORRECT");
+        } else {
+            console.log("INCORRECT");
+        };
+    });
 };
 
 function questionProgress() {
@@ -148,8 +106,8 @@ function apiQuestion() {
   fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
   .then(res => res.json())
   .then(rawData => {
-      let quizData = shuffle(rawData.results);
-      questionArray = quizData; 
+    let quizData = shuffle(rawData.results);
+    questionArray = quizData; 
     gQuestion(quizData),
     answerFeedback(quizData)
     console.log(quizData);
