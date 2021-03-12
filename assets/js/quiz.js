@@ -125,11 +125,10 @@ function apiQuestion() {
     let quizQuestion = quizData[0].question;
     let quizCorrectAnswer = quizData[0].correct_answer;
     let quizIncorrectAnswers = quizData[0].incorrect_answers;
-    console.log(quizIncorrectAnswer);
-    questionArray = quizData; 
+
     gQuestion(quizQuestion, quizCorrectAnswer, quizIncorrectAnswers),
     answerFeedback(quizQuestion, quizCorrectAnswer, quizIncorrectAnswers)
-    console.log(quizData);
+
     });
 };
 
