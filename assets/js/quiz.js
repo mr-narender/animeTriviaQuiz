@@ -74,15 +74,20 @@ function answerFeedback(listOfQ) {
 
     console.log(";" + correctAnswer.toString());
 
-    answers.addEventListener('click', function () {
-        if (answers.innerText == correctAnswer.toString()) { 
-            score += 10;
-            scoreText.innerText = score;
-            console.log("CORRECT");
-        } else {
-            console.log("INCORRECT");
-        };
-    });
+
+    for (let i = 0; i < answers.length; i++) {
+
+        answers[i].addEventListener('click', function () {
+            if (answers[i].innerText == correctAnswer.toString()) { 
+                score += 10;
+                scoreText.innerText = score;
+                console.log("CORRECT");
+            
+            } else {
+                console.log("INCORRECT");
+            };
+        });
+    };
 };
 
 function questionProgress() {
@@ -92,8 +97,6 @@ function questionProgress() {
 
         progressText.innerText = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
-
-        apiQuestion(); 
 
     } else {
 
@@ -107,6 +110,10 @@ function apiQuestion() {
   .then(res => res.json())
   .then(rawData => {
     let quizData = shuffle(rawData.results);
+    let quizQuestion = quizData[0].question;
+    let quizCorrectAnswer = quizData[0].correct_answer;
+    let quizIncorrectAnswers = quizData[0].incorrect_answers;
+    console.log(quizIncorrectAnswer);
     questionArray = quizData; 
     gQuestion(quizData),
     answerFeedback(quizData)
