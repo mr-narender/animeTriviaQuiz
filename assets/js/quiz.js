@@ -69,6 +69,9 @@ function gQuestion(question, correctAnswer, incorrectAnswers) {
     listOfQ.unshift(questionElement);
 
     */
+
+    quizQuestion.innerHTML = question;
+
 };
 
 
