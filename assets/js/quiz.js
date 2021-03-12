@@ -66,6 +66,10 @@ function gQuestion(question, correctAnswer, incorrectAnswers) {
 
 function answerFeedback(question, correctAnswer, incorrectAnswers) {
 
+
+    console.log(question);
+
+
     /*
 
     let questionElement = listOfQ.shift();
