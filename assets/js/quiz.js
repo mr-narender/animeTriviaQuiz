@@ -115,8 +115,8 @@ function apiQuestion() {
     let quizIncorrectAnswers = quizData[0].incorrect_answers;
     console.log(quizIncorrectAnswer);
     questionArray = quizData; 
-    gQuestion(quizData),
-    answerFeedback(quizData)
+    gQuestion(quizQuestion, quizCorrectAnswer, quizIncorrectAnswers),
+    answerFeedback(quizQuestion, quizCorrectAnswer, quizIncorrectAnswers)
     console.log(quizData);
     });
 };
