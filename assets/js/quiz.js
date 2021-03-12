@@ -32,6 +32,14 @@ function shuffle(array) {
 // Function that displays question in HTML
 function gQuestion(question, correctAnswer, incorrectAnswers) {
 
+
+    console.log(question);
+
+    console.log(correctAnswer);
+
+    console.log(incorrectAnswers);
+
+
     /*
     
     let questionElement = listOfQ.shift();
@@ -68,6 +76,10 @@ function answerFeedback(question, correctAnswer, incorrectAnswers) {
 
 
     console.log(question);
+
+    console.log(correctAnswer);
+
+    console.log(incorrectAnswers);
 
 
     /*
