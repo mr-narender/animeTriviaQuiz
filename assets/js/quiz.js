@@ -83,14 +83,6 @@ function gQuestion(question, correctAnswer, incorrectAnswers) {
 
 function answerFeedback(question, correctAnswer, incorrectAnswers) {
 
-
-    console.log(question);
-
-    console.log(correctAnswer);
-
-    console.log(incorrectAnswers);
-
-
     /*
 
     let questionElement = listOfQ.shift();
@@ -130,6 +122,8 @@ function questionProgress() {
 
         progressText.innerText = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
+
+        apiQuestion();
 
     } else {
 
