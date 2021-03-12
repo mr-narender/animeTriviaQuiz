@@ -32,6 +32,8 @@ function shuffle(array) {
 // Function that displays question in HTML
 function gQuestion(question, correctAnswer, incorrectAnswers) {
 
+    /*
+    
     let questionElement = listOfQ.shift();
 
     let questionArray = Object.values(questionElement);
@@ -57,10 +59,14 @@ function gQuestion(question, correctAnswer, incorrectAnswers) {
     };
 
     listOfQ.unshift(questionElement);
+
+    */
 };
 
 
 function answerFeedback(question, correctAnswer, incorrectAnswers) {
+
+    /*
 
     let questionElement = listOfQ.shift();
 
@@ -88,6 +94,8 @@ function answerFeedback(question, correctAnswer, incorrectAnswers) {
             };
         });
     };
+
+    */
 };
 
 function questionProgress() {
