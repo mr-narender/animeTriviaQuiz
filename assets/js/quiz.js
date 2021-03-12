@@ -30,7 +30,7 @@ function shuffle(array) {
 
 
 // Function that displays question in HTML
-function gQuestion(listOfQ) {
+function gQuestion(question, correctAnswer, incorrectAnswers) {
 
     let questionElement = listOfQ.shift();
 
@@ -60,7 +60,7 @@ function gQuestion(listOfQ) {
 };
 
 
-function answerFeedback(listOfQ) {
+function answerFeedback(question, correctAnswer, incorrectAnswers) {
 
     let questionElement = listOfQ.shift();
 
