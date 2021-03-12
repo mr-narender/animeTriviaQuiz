@@ -72,6 +72,12 @@ function gQuestion(question, correctAnswer, incorrectAnswers) {
 
     quizQuestion.innerHTML = question;
 
+    for (let i = 0; i < answers.length; i++) {
+        answers[i].innerText = incorrectAnswers.shift() || correctAnswer;
+
+        console.log(answers[i].innerText);  
+    };
+
 };
 
 
