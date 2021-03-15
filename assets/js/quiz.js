@@ -39,37 +39,6 @@ function gQuestion(question, correctAnswer, incorrectAnswers) {
 
     console.log(incorrectAnswers);
 
-
-    /*
-    
-    let questionElement = listOfQ.shift();
-
-    let questionArray = Object.values(questionElement);
-
-    let correctAnswer = questionArray[4].split(",");
-
-    let incorrectAnswers = questionArray[5];
-
-    console.log(questionArray[3]);    
-    
-    quizQuestion.innerHTML = questionArray[3].toString();
-
-    console.log(":" + correctAnswer.toString());
-    
-
-    let multipleChoice = shuffle(correctAnswer.concat(incorrectAnswers));
-
-    
-    for (let i = 0; i < answers.length; i++) {
-        answers[i].innerText = multipleChoice.shift().toString();
-
-        console.log(answers[i].innerText);  
-    };
-
-    listOfQ.unshift(questionElement);
-
-    */
-
     quizQuestion.innerHTML = question;
 
     for (let i = 0; i < answers.length; i++) {
@@ -83,36 +52,7 @@ function gQuestion(question, correctAnswer, incorrectAnswers) {
 
 function answerFeedback(question, correctAnswer, incorrectAnswers) {
 
-    /*
-
-    let questionElement = listOfQ.shift();
-
-    let questionArray = Object.values(questionElement);
-
-    let correctAnswer = questionArray[4].split(",");
-
-    let incorrectAnswers = questionArray[5];
-
-    let multipleChoice = shuffle(correctAnswer.concat(incorrectAnswers));
-
-    console.log(";" + correctAnswer.toString());
-
-
-    for (let i = 0; i < answers.length; i++) {
-
-        answers[i].addEventListener('click', function () {
-            if (answers[i].innerText == correctAnswer.toString()) { 
-                score += 10;
-                scoreText.innerText = score;
-                console.log("CORRECT");
-            
-            } else {
-                console.log("INCORRECT");
-            };
-        });
-    };
-
-    */
+    console.log(answers.nodeList.innerHTML);
 };
 
 function questionProgress() {
