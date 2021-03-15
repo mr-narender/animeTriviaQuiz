@@ -50,9 +50,7 @@ function gQuestion(question, correctAnswer, incorrectAnswers) {
 
 function answerFeedback(question, correctAnswer, incorrectAnswers) {
 
-    for (let i = 0; i < answers.length; i++) {
-        console.log(answers[i].innerText)
-    };
+
 };
 
 function questionProgress() {
