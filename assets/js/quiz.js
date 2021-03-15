@@ -43,8 +43,6 @@ function gQuestion(question, correctAnswer, incorrectAnswers) {
 
     for (let i = 0; i < answers.length; i++) {
         answers[i].innerText = incorrectAnswers.shift() || correctAnswer;
-
-        console.log(answers[i].innerText);  
     };
 
 };
@@ -52,7 +50,7 @@ function gQuestion(question, correctAnswer, incorrectAnswers) {
 
 function answerFeedback(question, correctAnswer, incorrectAnswers) {
 
-    console.log(answers.nodeList.innerHTML);
+    console.log(answers.toString());
 };
 
 function questionProgress() {
