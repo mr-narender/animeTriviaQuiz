@@ -33,11 +33,11 @@ function shuffle(array) {
 function gQuestion(question, correctAnswer, incorrectAnswers) {
 
 
-    console.log(question);
+    //console.log(question);
 
-    console.log(correctAnswer);
+    //console.log(correctAnswer);
 
-    console.log(incorrectAnswers);
+    //console.log(incorrectAnswers);
 
     quizQuestion.innerHTML = question;
 
