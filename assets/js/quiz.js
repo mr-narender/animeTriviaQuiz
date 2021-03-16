@@ -46,6 +46,11 @@ function getQuestion(question, correctAnswer, incorrectAnswers) {
         answers[i].addEventListener('click', function(event) {
             console.log(event);
             console.log(event.target.innerHTML);
+            if(event.target.innerHTML == correctAnswer) {
+                console.log('CORRECT');
+            } else {
+                console.log('INCORRECT');
+            }
         })
     };
 
