@@ -71,7 +71,7 @@ function questionProgress() {
         progressText.innerHTML = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
 
-        apiQuestion();
+        getQuestion();
 
     } else {
 
