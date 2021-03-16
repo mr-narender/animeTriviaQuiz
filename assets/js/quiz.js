@@ -46,6 +46,7 @@ function getQuestion(question, correctAnswer, incorrectAnswers) {
         answers[i].addEventListener('click', function(event) {
             console.log(event);
             console.log(event.target.innerHTML);
+            questionProgress();
             if(event.target.innerHTML == correctAnswer) {
                 console.log('CORRECT');
             } else {
@@ -71,7 +72,7 @@ function questionProgress() {
         progressText.innerHTML = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
 
-        getQuestion();
+        apiQuestion();
 
     } else {
 
