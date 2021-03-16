@@ -30,26 +30,31 @@ function shuffle(array) {
 
 
 // Function that displays question in HTML
-function gQuestion(question, correctAnswer, incorrectAnswers) {
+function getQuestion(question, correctAnswer, incorrectAnswers) {
 
 
-    //console.log(question);
+    console.log(question);
 
-    //console.log(correctAnswer);
+    console.log(correctAnswer);
 
-    //console.log(incorrectAnswers);
+    console.log(incorrectAnswers);
 
     quizQuestion.innerHTML = question;
 
     for (let i = 0; i < answers.length; i++) {
-        answers[i].innerText = incorrectAnswers.shift() || correctAnswer;
+        answers[i].innerHTML = incorrectAnswers.shift() || correctAnswer;
+        answers[i].addEventListener('click', function(event) {
+            console.log(event);
+            console.log(event.target.innerHTML);
+        })
     };
 
 };
 
 
-function answerFeedback(question, correctAnswer, incorrectAnswers) {
 
+function answerFeedback(question, correctAnswer, incorrectAnswers) {
+    
 
 };
 
@@ -58,7 +63,7 @@ function questionProgress() {
     if (questionCounter <= 9) {
         questionCounter++;
 
-        progressText.innerText = `Question ${questionCounter} of 10`;
+        progressText.innerHTML = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
 
         apiQuestion();
@@ -79,7 +84,7 @@ function apiQuestion() {
     let quizCorrectAnswer = quizData[0].correct_answer;
     let quizIncorrectAnswers = quizData[0].incorrect_answers;
 
-    gQuestion(quizQuestion, quizCorrectAnswer, quizIncorrectAnswers),
+    getQuestion(quizQuestion, quizCorrectAnswer, quizIncorrectAnswers),
     answerFeedback(quizQuestion, quizCorrectAnswer, quizIncorrectAnswers)
 
     });
