@@ -3,7 +3,7 @@ const answers = document.querySelectorAll('.answer-text');
 const progressText = document.querySelector('#progress-text');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progress-bar-full');
-let questionArray;
+let correct_answer;
 
 let questionCounter = 1;
 let score = 0;  
