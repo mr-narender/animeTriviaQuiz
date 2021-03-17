@@ -46,25 +46,22 @@ function getQuestion(question, correctAnswer, incorrectAnswers) {
     };
 };
 
-
-
 function answerFeedback(correctAnswer) {
-    for (let i = 0; i < answers.length; i++) {
-        answers[i].addEventListener('click', function(event) {
-            console.log(event);
-            console.log(event.target.innerHTML);
-            if (event.target.innerHTML == correctAnswer) {
-                console.log('CORRECT');
-            } else {
-                console.log('INCORRECT');
-            }
-        })
+    for (const answer of answers) {
+        console.log(event);
+        console.log(event.target.innerHTML);
+        questionProgress();
+        if (event.target.innerHTML == correctAnswer) {
+            console.log('CORRECT');
+        } else {
+            console.log('INCORRECT');
+        }
     };
 };
 
 function questionProgress() {
 
-    if (questionCounter <= 9) {
+if (questionCounter <= 9) {
         questionCounter++;
 
         progressText.innerHTML = `Question ${questionCounter} of 10`;
@@ -94,4 +91,4 @@ function apiQuestion() {
     });
 };
 
-apiQuestion(); 
+apiQuestion();
