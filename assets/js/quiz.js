@@ -48,10 +48,9 @@ function getQuestion(question, correctAnswer, incorrectAnswers) {
 
 function answerFeedback(correctAnswer) {
     for (const answer of answers) {
-        console.log(event);
-        console.log(event.target.innerHTML);
+        console.log(answer);
         questionProgress();
-        if (event.target.innerHTML == correctAnswer) {
+        if (answer == correctAnswer) {
             console.log('CORRECT');
         } else {
             console.log('INCORRECT');
