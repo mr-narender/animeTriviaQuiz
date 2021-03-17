@@ -43,25 +43,23 @@ function getQuestion(question, correctAnswer, incorrectAnswers) {
 
     for (let i = 0; i < answers.length; i++) {
         answers[i].innerHTML = incorrectAnswers.shift() || correctAnswer;
+    };
+};
+
+
+
+function answerFeedback(correctAnswer) {
+    for (let i = 0; i < answers.length; i++) {
         answers[i].addEventListener('click', function(event) {
             console.log(event);
             console.log(event.target.innerHTML);
-            questionProgress();
-            if(event.target.innerHTML == correctAnswer) {
+            if (event.target.innerHTML == correctAnswer) {
                 console.log('CORRECT');
             } else {
                 console.log('INCORRECT');
             }
         })
     };
-
-};
-
-
-
-function answerFeedback(question, correctAnswer, incorrectAnswers) {
-    
-
 };
 
 function questionProgress() {
@@ -91,7 +89,7 @@ function apiQuestion() {
     let quizIncorrectAnswers = quizData[0].incorrect_answers;
 
     getQuestion(quizQuestion, quizCorrectAnswer, quizIncorrectAnswers),
-    answerFeedback(quizQuestion, quizCorrectAnswer, quizIncorrectAnswers)
+    answerFeedback(quizCorrectAnswer)
 
     });
 };
