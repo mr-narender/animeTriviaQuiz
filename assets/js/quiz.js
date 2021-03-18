@@ -76,6 +76,8 @@ function answerFeedback(e) {
     }
 
     e.stopPropagation();
+
+    apiQuestion();
 };
 
 /*function questionProgress() {
