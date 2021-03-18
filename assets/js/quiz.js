@@ -49,6 +49,8 @@ function getQuestion(question, correctAnswer, incorrectAnswers) {
     };
 };
 
+/*
+
 function clickedAnswer(correctAnswer) {
     
     for (const answer of answers) {
@@ -63,6 +65,8 @@ function clickedAnswer(correctAnswer) {
     
 }
 
+*/
+
 function answerFeedback(e) {
 
     if (e.target !== e.currentTarget) {
@@ -76,7 +80,7 @@ function answerFeedback(e) {
     apiQuestion();
 };
 
-/*function questionProgress() {
+function questionProgress() {
 
 if (questionCounter <= 9) {
         questionCounter++;
@@ -89,7 +93,7 @@ if (questionCounter <= 9) {
         return window.location.assign('/end-page.html');
 
     };
-};*/
+};
 
 function apiQuestion() {
   fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
