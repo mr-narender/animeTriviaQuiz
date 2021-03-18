@@ -6,7 +6,7 @@ const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progress-bar-full');
 let questionArray;
 
-addEventListener('click', answerFeedback);
+answerParent.addEventListener('click', answerFeedback, false);
 
 let questionCounter = 1;
 let score = 0;  
