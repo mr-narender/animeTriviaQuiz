@@ -103,7 +103,7 @@ function apiQuestion() {
     let e;
 
     getQuestion(quizQuestion, quizCorrectAnswer, quizIncorrectAnswers),
-    answerFeedback(quizCorrectAnswer)
+    clickedAnswer(quizCorrectAnswer)
 
     });
 };
