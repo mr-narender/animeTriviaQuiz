@@ -1,9 +1,12 @@
 const quizQuestion = document.querySelector('#question');
+const answerParent = document.querySelector('#answerParent');
 const answers = document.getElementsByClassName('answer-text');
 const progressText = document.querySelector('#progress-text');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progress-bar-full');
 let questionArray;
+
+addEventListener('click', answerFeedback);
 
 let questionCounter = 1;
 let score = 0;  
