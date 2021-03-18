@@ -49,8 +49,6 @@ function getQuestion(question, correctAnswer, incorrectAnswers) {
     };
 };
 
-/*
-
 function clickedAnswer(correctAnswer) {
     
     for (const answer of answers) {
@@ -64,8 +62,6 @@ function clickedAnswer(correctAnswer) {
     };
     
 }
-
-*/
 
 function answerFeedback(e) {
 
@@ -105,7 +101,7 @@ function apiQuestion() {
     let quizQuestion = quizData[0].question;
     let quizCorrectAnswer = quizData[0].correct_answer;
     let quizIncorrectAnswers = quizData[0].incorrect_answers;
-    let e;
+
 
     getQuestion(quizQuestion, quizCorrectAnswer, quizIncorrectAnswers),
     clickedAnswer(quizCorrectAnswer)
