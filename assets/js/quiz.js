@@ -49,7 +49,10 @@ function getQuestion(question, correctAnswer, incorrectAnswers) {
     };
 };
 
-function answerFeedback(correctAnswer) {
+/*
+
+function clickedAnswer(correctAnswer) {
+    
     for (const answer of answers) {
         console.log(answer);
         questionProgress();
@@ -59,9 +62,22 @@ function answerFeedback(correctAnswer) {
             console.log('INCORRECT');
         }
     };
+    
+}
+
+*/
+
+function answerFeedback(e) {
+
+    if (e.target !== e.currentTarget) {
+        var clickedItem = e.target.id;
+        alert('hello' + clickedItem)
+    }
+
+    e.stopPropagation();
 };
 
-function questionProgress() {
+/*function questionProgress() {
 
 if (questionCounter <= 9) {
         questionCounter++;
@@ -69,14 +85,12 @@ if (questionCounter <= 9) {
         progressText.innerHTML = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
 
-        apiQuestion();
-
     } else {
 
         return window.location.assign('/end-page.html');
 
     };
-};
+};*/
 
 function apiQuestion() {
   fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
@@ -86,6 +100,7 @@ function apiQuestion() {
     let quizQuestion = quizData[0].question;
     let quizCorrectAnswer = quizData[0].correct_answer;
     let quizIncorrectAnswers = quizData[0].incorrect_answers;
+    let e;
 
     getQuestion(quizQuestion, quizCorrectAnswer, quizIncorrectAnswers),
     answerFeedback(quizCorrectAnswer)
