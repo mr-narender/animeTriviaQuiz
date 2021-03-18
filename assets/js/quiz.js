@@ -70,8 +70,9 @@ function clickedAnswer(correctAnswer) {
 function answerFeedback(e) {
 
     if (e.target !== e.currentTarget) {
-        var clickedItem = e.target.id;
-        alert('hello' + clickedItem)
+        var clickedItem = e.target.innerHTML;
+        alert('hello' + clickedItem);
+        console.log(clickedItem)
     }
 
     e.stopPropagation();
