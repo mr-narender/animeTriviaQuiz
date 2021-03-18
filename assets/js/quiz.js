@@ -84,8 +84,6 @@ if (questionCounter <= 9) {
         progressText.innerHTML = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
 
-        apiQuestion();
-
     } else {
 
         return window.location.assign('/end-page.html');
