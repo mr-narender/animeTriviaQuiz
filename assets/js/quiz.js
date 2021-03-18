@@ -6,7 +6,9 @@ const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progress-bar-full');
 let questionArray;
 
-answerParent.addEventListener('click', answerFeedback, false);
+//answerParent.addEventListener('click', answerFeedback, false);
+
+
 
 let questionCounter = 1;
 let score = 0;  
@@ -38,7 +40,7 @@ function getQuestion(question, correctAnswer, incorrectAnswers) {
 
     console.log(question);
 
-    //console.log(correctAnswer);
+    console.log(correctAnswer);
 
     console.log(incorrectAnswers);
 
@@ -50,21 +52,8 @@ function getQuestion(question, correctAnswer, incorrectAnswers) {
 };
 
 
-function answerFeedback(e) {
 
-    if (e.target !== e.currentTarget) {
-        let clickedItem = e.target.innerHTML;
-        
-        console.log(clickedItem)
-    }
 
-    e.stopPropagation();
-
-    apiQuestion();
-
-    console.log(quizCorrectAnswer)
-
-};
 
 function questionProgress() {
 
@@ -92,7 +81,6 @@ function apiQuestion() {
 
 
     getQuestion(quizQuestion, quizCorrectAnswer, quizIncorrectAnswers),
-    answerFeedback(quizCorrectAnswer)
 
     });
 };
