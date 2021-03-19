@@ -88,6 +88,9 @@ function apiQuestion() {
 
     getQuestion(quizQuestion, quizCorrectAnswer, quizIncorrectAnswers)
 
+    })
+    .catch((err) => {
+        console.log(err);
     });
 };
 
