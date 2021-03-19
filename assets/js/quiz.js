@@ -6,10 +6,6 @@ const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progress-bar-full');
 let questionArray;
 
-//answerParent.addEventListener('click', answerFeedback, false);
-
-
-
 let questionCounter = 1;
 let score = 0;  
 
@@ -69,7 +65,6 @@ function questionProgress() {
         };
     };
 
-function apiQuestion() {
   fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
   .then(res => res.json())
   .then(rawData => {
@@ -85,6 +80,5 @@ function apiQuestion() {
     .catch((err) => {
         console.error(err);
     });
-};
 
-apiQuestion();
+
