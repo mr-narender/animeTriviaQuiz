@@ -33,11 +33,11 @@ function shuffle(array) {
 function getQuestion() {
 
 
-    console.log(question);
+    console.log(quizQuestion);
 
-    console.log(correctAnswer);
+    console.log(quizCorrectAnswer);
 
-    console.log(incorrectAnswers);
+    console.log(quizIncorrectAnswers);
 
     quizQuestion.innerHTML = question;
 
@@ -67,13 +67,15 @@ function questionProgress() {
         };
     };
 
+
+    
   fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
   .then(res => res.json())
   .then(rawData => {
     let quizData = shuffle(rawData.results);
-    let quizQuestion = quizData[0].question;
-    let quizCorrectAnswer = quizData[0].correct_answer;
-    let quizIncorrectAnswers = quizData[0].incorrect_answers;
+    let question = quizData[0].question;
+    let correctAnswer = quizData[0].correct_answer;
+    let incorrectAnswers = quizData[0].incorrect_answers;
 
 
     getQuestion(quizQuestion, quizCorrectAnswer, quizIncorrectAnswers)
