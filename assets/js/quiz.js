@@ -82,6 +82,11 @@ function questionProgress() {
     let incorrectAnswers = quizData[0].incorrect_answers;
 
     quizQuestion.innerHTML = question;
+
+    for (let i = 0; i < answers.length; i++) {
+        answers[i].innerHTML = incorrectAnswers.shift() || correctAnswer;
+    };
+    
     })
     .catch((err) => {
         console.error(err);
