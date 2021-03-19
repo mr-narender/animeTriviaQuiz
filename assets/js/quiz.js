@@ -41,9 +41,11 @@ function getQuestion() {
 
     quizQuestion.innerHTML = question;
 
+    /*
     for (let i = 0; i < answers.length; i++) {
         answers[i].innerHTML = incorrectAnswers.shift() || correctAnswer;
     };
+    */
 };
 
 /*
@@ -69,6 +71,8 @@ function questionProgress() {
 
 
     
+    
+
   fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
   .then(res => res.json())
   .then(rawData => {
@@ -76,6 +80,8 @@ function questionProgress() {
     let question = quizData[0].question;
     let correctAnswer = quizData[0].correct_answer;
     let incorrectAnswers = quizData[0].incorrect_answers;
+
+    quizQuestion.innerHTML = question;
     })
     .catch((err) => {
         console.error(err);
