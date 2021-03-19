@@ -30,7 +30,7 @@ function shuffle(array) {
 }
 
 // Function that displays question in HTML
-function getQuestion(question, correctAnswer, incorrectAnswers) {
+function getQuestion() {
 
 
     console.log(question);
@@ -46,9 +46,11 @@ function getQuestion(question, correctAnswer, incorrectAnswers) {
     };
 };
 
+/*
 answers.forEach(answer => {
     answer.addEventListener('click', )
 })
+*/
 
 function questionProgress() {
 
@@ -80,5 +82,4 @@ function questionProgress() {
     .catch((err) => {
         console.error(err);
     });
-
 
