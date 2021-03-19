@@ -30,6 +30,8 @@ function shuffle(array) {
 }
 
 // Function that displays question in HTML
+
+/*
 function getQuestion() {
 
 
@@ -41,13 +43,12 @@ function getQuestion() {
 
     quizQuestion.innerHTML = question;
 
-    /*
     for (let i = 0; i < answers.length; i++) {
         answers[i].innerHTML = incorrectAnswers.shift() || correctAnswer;
     };
-    */
 };
 
+*/
 /*
 answers.forEach(answer => {
     answer.addEventListener('click', )
