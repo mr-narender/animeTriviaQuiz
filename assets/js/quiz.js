@@ -47,16 +47,6 @@ function getQuestion(question, correctAnswer, incorrectAnswers) {
 
     for (let i = 0; i < answers.length; i++) {
         answers[i].innerHTML = incorrectAnswers.shift() || correctAnswer;
-
-        answers[i].addEventListener('click', e => {
-            const selectedAnswer = e.target.innerHTML;
-        
-            console.log(selectedAnswer == correctAnswer);
-
-            apiQuestion();
-
-            e.stopPropagation();
-        }, true)
     };
 };
 
