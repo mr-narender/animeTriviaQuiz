@@ -60,6 +60,9 @@ function getQuestion(question, correctAnswer, incorrectAnswers) {
     };
 };
 
+answers.forEach(answer => {
+    answer.addEventListener('click', )
+})
 
 function questionProgress() {
 
@@ -90,7 +93,7 @@ function apiQuestion() {
 
     })
     .catch((err) => {
-        console.log(err);
+        console.error(err);
     });
 };
 
