@@ -4,7 +4,7 @@ const answers = Array.from(document.getElementsByClassName('answer-text'));
 const progressText = document.querySelector('#progress-text');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progress-bar-full');
-let questionArray;
+let correct_answer;
 
 let questionCounter = 1;
 let score = 0;  
@@ -58,38 +58,64 @@ answers.forEach(answer => {
 function questionProgress() {
 
     if (questionCounter <= 9) {
-            questionCounter++;
+        questionCounter++;
 
-            progressText.innerHTML = `Question ${questionCounter} of 10`;
-            progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
+        progressText.innerHTML = `Question ${questionCounter} of 10`;
+        progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
 
-        } else {
+    } else {
 
-            return window.location.assign('/end-page.html');
+        return window.location.assign('/end-page.html');
 
+    };
+};
+
+    
+
+
+
+function apiQuestion() {
+    fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
+    .then(res => res.json())
+    .then(rawData => {
+        let quizData = shuffle(rawData.results);
+        let question = quizData[0].question;
+        let correctAnswer = quizData[0].correct_answer;
+        let incorrectAnswers = quizData[0].incorrect_answers;
+
+        quizQuestion.innerHTML = question;
+
+        for (let i = 0; i < answers.length; i++) {
+            answers[i].innerHTML = incorrectAnswers.shift() || correctAnswer;
         };
-    };
 
+        console.log(correctAnswer);
 
-    
-    
+        answers.forEach(answer => {
+            answer.addEventListener('click', (e) => {
 
-  fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
-  .then(res => res.json())
-  .then(rawData => {
-    let quizData = shuffle(rawData.results);
-    let question = quizData[0].question;
-    let correctAnswer = quizData[0].correct_answer;
-    let incorrectAnswers = quizData[0].incorrect_answers;
+        
+                let choiceMade = e.target.innerHTML;
 
-    quizQuestion.innerHTML = question;
+                console.log(choiceMade);
+                
+                if (choiceMade == correctAnswer) {
+                    console.log('CORRECT!');
+                } else {
+                    console.log('INCORRECT!');
+                }
 
-    for (let i = 0; i < answers.length; i++) {
-        answers[i].innerHTML = incorrectAnswers.shift() || correctAnswer;
-    };
-    
+                apiQuestion();
+
+            })
+        })
+
     })
     .catch((err) => {
         console.error(err);
     });
+}
+    
+apiQuestion();
 
+console.log(correct_answer);
