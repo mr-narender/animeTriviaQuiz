@@ -1,6 +1,6 @@
 const quizQuestion = document.querySelector('#question');
 const answerParent = document.querySelector('#answerParent');
-const answers = document.getElementsByClassName('answer-text');
+const answers = Array.from(document.getElementsByClassName('answer-text'));
 const progressText = document.querySelector('#progress-text');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progress-bar-full');
@@ -33,7 +33,6 @@ function shuffle(array) {
     return array;
 }
 
-
 // Function that displays question in HTML
 function getQuestion(question, correctAnswer, incorrectAnswers) {
 
@@ -48,11 +47,18 @@ function getQuestion(question, correctAnswer, incorrectAnswers) {
 
     for (let i = 0; i < answers.length; i++) {
         answers[i].innerHTML = incorrectAnswers.shift() || correctAnswer;
+
+        answers[i].addEventListener('click', e => {
+            const selectedAnswer = e.target.innerHTML;
+        
+            console.log(selectedAnswer == correctAnswer);
+
+            apiQuestion();
+
+            e.stopPropagation();
+        }, true)
     };
 };
-
-
-
 
 
 function questionProgress() {
@@ -80,7 +86,7 @@ function apiQuestion() {
     let quizIncorrectAnswers = quizData[0].incorrect_answers;
 
 
-    getQuestion(quizQuestion, quizCorrectAnswer, quizIncorrectAnswers),
+    getQuestion(quizQuestion, quizCorrectAnswer, quizIncorrectAnswers)
 
     });
 };
