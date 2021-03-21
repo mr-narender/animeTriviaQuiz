@@ -76,32 +76,6 @@ function clickedChoice(correct_answer, clicked_answer) {
 
 };
 
-// Function that displays question in HTML
-
-/*
-function getQuestion() {
-
-
-    console.log(quizQuestion);
-
-    console.log(quizCorrectAnswer);
-
-    console.log(quizIncorrectAnswers);
-
-    quizQuestion.innerHTML = question;
-
-    for (let i = 0; i < answers.length; i++) {
-        answers[i].innerHTML = incorrectAnswers.shift() || correctAnswer;
-    };
-};
-
-*/
-/*
-answers.forEach(answer => {
-    answer.addEventListener('click', )
-})
-*/
-
 function questionProgress() {
 
     if (questionCounter <= 9) {
