@@ -96,8 +96,14 @@ function questionProgress() {
     };
 };
 
-function clickedChoice(i) {
-    console.log(i);           
+function clickedChoice(correct_answer, clicked_answer) {
+    
+    console.log(":" + correct_answer);
+
+    console.log(":" + clicked_answer);
+
+    console.log(correct_answer, clicked_answer)
+
 };
 
 
@@ -106,6 +112,8 @@ answers.forEach(answer => {
         console.log(e.target.innerHTML);
         let clickedAnswer = e.target.innerHTML;
 
-      clickedChoice();
+
+      clickedChoice({}, clickedAnswer);
+      
     })
 })
