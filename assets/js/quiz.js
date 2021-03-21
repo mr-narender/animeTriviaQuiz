@@ -51,15 +51,13 @@ function apiQuestion() {
                 answer.removeEventListener('click', clickFeedback)
                 let clickedItem = e.target.innerHTML;
 
-                console.log("Correct answer: " + correctAnswer);
-
                 if (clickedItem == correctAnswer) {
                     console.log("CORRECT!");
                 } else {
                     console.log("INCORRECT!");
                 }
-                
                 apiQuestion();
+                return;
             })
         });
 
