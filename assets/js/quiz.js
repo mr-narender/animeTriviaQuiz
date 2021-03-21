@@ -40,6 +40,15 @@ answers.forEach(answer => {
     })
 })
 
+function clickedChoice(correct_answer, clicked_answer) {
+    
+    console.log(":" + correct_answer);
+
+    console.log(":" + clicked_answer);
+
+    console.log(correct_answer, clicked_answer)
+
+};
 
 function apiQuestion() {
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
@@ -54,9 +63,9 @@ function apiQuestion() {
 
         clickedChoice(correctAnswer, {});
 
-        for (let i = 0; i < answers.length; i++) {
-            answers[i].innerHTML = incorrectAnswers.shift() || correctAnswer;
-        };
+        answers.forEach(answer => {
+            answer.innerHTML = incorrectAnswers.shift() || correctAnswer;
+        });
 
     })
     .catch((err) => {
@@ -65,16 +74,6 @@ function apiQuestion() {
 };
 
 apiQuestion();
-
-function clickedChoice(correct_answer, clicked_answer) {
-    
-    console.log(":" + correct_answer);
-
-    console.log(":" + clicked_answer);
-
-    console.log(correct_answer, clicked_answer)
-
-};
 
 function questionProgress() {
 
