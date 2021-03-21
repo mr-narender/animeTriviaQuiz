@@ -44,13 +44,22 @@ function apiQuestion() {
             answer.innerHTML = incorrectAnswers.shift() || correctAnswer;
         });
 
+        console.log("Correct answer: " + correctAnswer);
+
         answers.forEach(answer => {
-            answer.addEventListener('click', (e) => {
+            answer.addEventListener('click', clickFeedback = (e) => {
+                answer.removeEventListener('click', clickFeedback)
                 let clickedItem = e.target.innerHTML;
 
-                console.log("Chosen answer: " + clickedItem);
                 console.log("Correct answer: " + correctAnswer);
 
+                if (clickedItem == correctAnswer) {
+                    console.log("CORRECT!");
+                } else {
+                    console.log("INCORRECT!");
+                }
+                
+                apiQuestion();
             })
         });
 
