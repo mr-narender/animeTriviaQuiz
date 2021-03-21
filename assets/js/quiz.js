@@ -44,6 +44,16 @@ function apiQuestion() {
             answer.innerHTML = incorrectAnswers.shift() || correctAnswer;
         });
 
+        answers.forEach(answer => {
+            answer.addEventListener('click', (e) => {
+                let clickedItem = e.target.innerHTML;
+
+                console.log("Chosen answer: " + clickedItem);
+                console.log("Correct answer: " + correctAnswer);
+
+            })
+        });
+
     })
     .catch((err) => {
         console.error(err);
