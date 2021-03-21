@@ -29,27 +29,6 @@ function shuffle(array) {
     return array;
 }
 
-answers.forEach(answer => {
-    answer.addEventListener('click', (e) => {
-        console.log(e.target.innerHTML);
-        let clickedAnswer = e.target.innerHTML;
-
-
-      clickedChoice({}, clickedAnswer);
-      
-    })
-})
-
-function clickedChoice(correct_answer, clicked_answer) {
-    
-    console.log(":" + correct_answer);
-
-    console.log(":" + clicked_answer);
-
-    console.log(correct_answer, clicked_answer)
-
-};
-
 function apiQuestion() {
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
     .then(res => res.json())
@@ -60,8 +39,6 @@ function apiQuestion() {
         let incorrectAnswers = quizData[0].incorrect_answers;
 
         quizQuestion.innerHTML = question;
-
-        clickedChoice(correctAnswer, {});
 
         answers.forEach(answer => {
             answer.innerHTML = incorrectAnswers.shift() || correctAnswer;
