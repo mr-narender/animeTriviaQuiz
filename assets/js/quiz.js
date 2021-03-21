@@ -29,6 +29,17 @@ function shuffle(array) {
     return array;
 }
 
+answers.forEach(answer => {
+    answer.addEventListener('click', (e) => {
+        console.log(e.target.innerHTML);
+        let clickedAnswer = e.target.innerHTML;
+
+
+      clickedChoice({}, clickedAnswer);
+      
+    })
+})
+
 
 function apiQuestion() {
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
@@ -54,6 +65,16 @@ function apiQuestion() {
 };
 
 apiQuestion();
+
+function clickedChoice(correct_answer, clicked_answer) {
+    
+    console.log(":" + correct_answer);
+
+    console.log(":" + clicked_answer);
+
+    console.log(correct_answer, clicked_answer)
+
+};
 
 // Function that displays question in HTML
 
@@ -96,24 +117,5 @@ function questionProgress() {
     };
 };
 
-function clickedChoice(correct_answer, clicked_answer) {
-    
-    console.log(":" + correct_answer);
-
-    console.log(":" + clicked_answer);
-
-    console.log(correct_answer, clicked_answer)
-
-};
 
 
-answers.forEach(answer => {
-    answer.addEventListener('click', (e) => {
-        console.log(e.target.innerHTML);
-        let clickedAnswer = e.target.innerHTML;
-
-
-      clickedChoice({}, clickedAnswer);
-      
-    })
-})
