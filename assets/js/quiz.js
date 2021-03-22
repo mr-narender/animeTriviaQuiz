@@ -47,6 +47,9 @@ function apiQuestion() {
         console.log("Correct answer: " + correctAnswer);
 
         answers.forEach(answer => {
+
+            
+
             answer.addEventListener('click', clickFeedback = (e) => {
                 answer.removeEventListener('click', clickFeedback)
                 let clickedItem = e.target.innerHTML;
@@ -59,6 +62,7 @@ function apiQuestion() {
                 apiQuestion();
                 return;
             })
+
         });
 
     })
