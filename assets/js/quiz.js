@@ -47,13 +47,9 @@ function apiQuestion() {
         console.log("Correct answer: " + correctAnswer);
 
         answers.forEach(answer => {
-
-            
-
             answer.addEventListener('click', clickFeedback = (e) => {
                 answer.removeEventListener('click', clickFeedback)
                 let clickedItem = e.target.innerHTML;
-
                 if (clickedItem == correctAnswer) {
                     console.log("CORRECT!");
                 } else {
@@ -62,9 +58,7 @@ function apiQuestion() {
                 apiQuestion();
                 return;
             })
-
         });
-
     })
     .catch((err) => {
         console.error(err);
