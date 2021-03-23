@@ -29,10 +29,20 @@ function shuffle(array) {
     return array;
 }
 
+function getQuestion() {
+    var questions;
+    fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
+    .then(res => res.json()).then(data => {
+        questions = data.results;
+    });
+    return questions;
+}
+
 function apiQuestion() {
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
     .then(res => res.json())
     .then(rawData => {
+        
         let quizData = shuffle(rawData.results);
         let question = quizData[0].question;
         let correctAnswer = quizData[0].correct_answer;
@@ -40,24 +50,15 @@ function apiQuestion() {
 
         quizQuestion.innerHTML = question;
 
+        console.log('answers', answers)
         answers.forEach(answer => {
             answer.innerHTML = incorrectAnswers.shift() || correctAnswer;
+            answer.setAttribute("data-answer", incorrectAnswers.shift() || correctAnswer);
         });
-
         console.log("Correct answer: " + correctAnswer);
 
         answers.forEach(answer => {
-            answer.addEventListener('click', clickFeedback = (e) => {
-                answer.removeEventListener('click', clickFeedback)
-                let clickedItem = e.target.innerHTML;
-                if (clickedItem == correctAnswer) {
-                    console.log("CORRECT!");
-                } else {
-                    console.log("INCORRECT!");
-                }
-                apiQuestion();
-                return;
-            })
+            answer.addEventListener('click', clickHandler)
         });
     })
     .catch((err) => {
@@ -66,6 +67,17 @@ function apiQuestion() {
 };
 
 apiQuestion();
+
+function clickHandler(e) {
+    console.log(e);
+    let clickedItem = e.target.innerHTML;
+
+    if (clickedItem == e.currentTarget.getAttribute('data-answer')) {
+        console.log("CORRECT!");
+    } else {
+        console.log("INCORRECT!");
+    }
+};
 
 function questionProgress() {
 
