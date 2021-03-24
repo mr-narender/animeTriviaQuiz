@@ -37,6 +37,9 @@ function getQuestion(quizData) {
     let incorrectAnswers = quizData[0].incorrect_answers;
     let multipleChoices = incorrectAnswers.concat(correctAnswer);
 
+    addQuestionData(question, multipleChoices);
+
+    /*
     console.log(quizData[0]);
     
     console.log(question);
@@ -45,6 +48,7 @@ function getQuestion(quizData) {
     console.log(multipleChoices)
     questionData = quizData;
 
+    */
     return questionData;
     /*
     var questions;
@@ -64,7 +68,7 @@ function addQuestionData(question, multipleChoices) {
             answer.innerHTML = choice;
         }
     }
-    
+    return;
 }
 
 function apiQuestion() {
@@ -101,7 +105,6 @@ function apiQuestion() {
     });
 };
 
-apiQuestion();
 
 /*
 
