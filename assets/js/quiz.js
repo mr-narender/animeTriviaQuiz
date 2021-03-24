@@ -37,15 +37,13 @@ function getQuestion(quizData) {
     let incorrectAnswers = quizData[0].incorrect_answers;
     let multipleChoices = incorrectAnswers.concat(correctAnswer);
 
+    quizQuestion.innerHTML = question;
     /*
-    console.log(quizData[0]);
-    
     console.log(question);
     console.log(correctAnswer);
     console.log(incorrectAnswers);
     console.log(multipleChoices)
     questionData = quizData;
-
     */
     
     /*
@@ -58,9 +56,6 @@ function getQuestion(quizData) {
     */
 }
 
-
-
-addQuestionData();
 
 function apiQuestion() {
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
@@ -96,7 +91,7 @@ function apiQuestion() {
     });
 };
 
-
+apiQuestion();
 /*
 
 function clickHandler(e) {
