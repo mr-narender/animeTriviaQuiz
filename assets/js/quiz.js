@@ -42,7 +42,7 @@ function getQuestion(quizData) {
     console.log(question);
     console.log(correctAnswer);
     console.log(incorrectAnswers);
-    console.log(multipleChoice)
+    console.log(multipleChoices)
     questionData = quizData;
 
     return questionData;
@@ -58,6 +58,12 @@ function getQuestion(quizData) {
 
 function addQuestionData(question, multipleChoices) {
     quizQuestion.innerHTML = question;
+
+    for (answer in answers) {
+        for (choice in multipleChoices) {
+            answer.innerHTML = choice;
+        }
+    }
     
 }
 
