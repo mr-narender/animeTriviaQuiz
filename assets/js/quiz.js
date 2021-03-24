@@ -41,8 +41,8 @@ function getQuestion(quizData) {
 
     for (i in answers) {
         console.log(answers[i])
-        for (choice in multipleChoice) {
-            
+        for (x in multipleChoice) {
+            console.log(multipleChoice[x])
         }
     }
 
