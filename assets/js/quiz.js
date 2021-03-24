@@ -56,7 +56,7 @@ function getQuestion(quizData) {
     */
 }
 
-function addQuestionData(question, multipleChoice) {
+function addQuestionData(question, multipleChoices) {
     quizQuestion.innerHTML = question;
     
 }
