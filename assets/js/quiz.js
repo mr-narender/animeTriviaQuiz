@@ -32,10 +32,16 @@ function shuffle(array) {
 
 
 function getQuestion(quizData) {
-    console.log(quizData[0])
     let question = quizData[0].question;
-    let correctAnswer = quizData[0].correct_answer
-    console.log(question)
+    let correctAnswer = quizData[0].correct_answer;
+    let incorrectAnswers = quizData[0].incorrect_answers;
+    let multipleChoice;
+
+    console.log(quizData[0]);
+    
+    console.log(question);
+    console.log(correctAnswer);
+    console.log(incorrectAnswers);
     questionData = quizData;
 
     return questionData;
