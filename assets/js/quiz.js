@@ -66,6 +66,12 @@ function answerFeedback(correctAnswer) {
         let clickedAnswer = e.target.innerHTML;
         console.log(e);
         console.log(clickedAnswer);
+
+        if (clickedAnswer == correctAnswer) {
+            console.log('CORRECT!');
+        } else {
+            console.log('INCORRECT!');
+        }
     })
 }
 
