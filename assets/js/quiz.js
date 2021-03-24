@@ -29,6 +29,7 @@ function shuffle(array) {
     return array;
 }
 
+console.log(answers)
 
 
 function getQuestion(quizData) {
@@ -39,16 +40,6 @@ function getQuestion(quizData) {
 
     quizQuestion.innerHTML = question;
 
-    /*
-    for (i in answers) {
-        console.log(answers[i])
-        for (x in multipleChoice) {
-            console.log(multipleChoice[x])
-            answers.innerHTML = multipleChoice[x];
-        }
-    }
-    */
-
     for (x in multipleChoice) {
         console.log(multipleChoice[x])
         for (i in answers) {
@@ -56,24 +47,7 @@ function getQuestion(quizData) {
             answers[i].innerHTML = multipleChoice[i];
         }
     }
-
-    /*
-    console.log(question);
-    console.log(correctAnswer);
-    console.log(incorrectAnswers);
-    console.log(multipleChoices)
-    questionData = quizData;
-    */
-    
-    /*
-    var questions;
-    fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
-    .then(res => res.json()).then(data => {
-        questions = data.results;
-    });
-    return questions;
-    */
-}
+ }
 
 
 function apiQuestion() {
