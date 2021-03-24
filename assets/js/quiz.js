@@ -41,9 +41,7 @@ function getQuestion(quizData) {
     quizQuestion.innerHTML = question;
 
     for (x in multipleChoice) {
-        console.log(multipleChoice[x])
         for (i in answers) {
-            console.log(answers[i])
             answers[i].innerHTML = multipleChoice[i];
         }
     }
