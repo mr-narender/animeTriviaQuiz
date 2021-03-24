@@ -29,8 +29,6 @@ function shuffle(array) {
     return array;
 }
 
-console.log(answers)
-
 
 function getQuestion(quizData) {
     let question = quizData[0].question;
