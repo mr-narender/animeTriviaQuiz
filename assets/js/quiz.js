@@ -45,6 +45,7 @@ function getQuestion(quizData) {
             answers[i].innerHTML = multipleChoice[i];
         }
     }
+    answerFeedback(correctAnswer);
  }
 
 
@@ -62,7 +63,7 @@ function apiQuestion() {
 apiQuestion();
 
 function answerFeedback(correctAnswer) {
-console.log(correctAnswer);
+    console.log(correctAnswer);
 }
 
 /*
