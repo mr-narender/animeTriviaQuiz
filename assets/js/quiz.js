@@ -29,6 +29,8 @@ function shuffle(array) {
     return array;
 }
 
+
+
 function getQuestion() {
     var questions;
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
@@ -62,7 +64,7 @@ function apiQuestion() {
         answers.forEach(answer => {
             answer.addEventListener('click', clickHandler)
         });
-        
+
         */
     })
     .catch((err) => {
@@ -71,6 +73,8 @@ function apiQuestion() {
 };
 
 apiQuestion();
+
+/*
 
 function clickHandler(e) {
     console.log(e);
@@ -82,6 +86,8 @@ function clickHandler(e) {
         console.log("INCORRECT!");
     }
 };
+
+*/
 
 function questionProgress() {
 
