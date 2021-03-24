@@ -37,8 +37,6 @@ function getQuestion(quizData) {
     let incorrectAnswers = quizData[0].incorrect_answers;
     let multipleChoices = incorrectAnswers.concat(correctAnswer);
 
-    addQuestionData(question, multipleChoices);
-
     /*
     console.log(quizData[0]);
     
@@ -49,7 +47,7 @@ function getQuestion(quizData) {
     questionData = quizData;
 
     */
-    return questionData;
+    
     /*
     var questions;
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
@@ -60,16 +58,9 @@ function getQuestion(quizData) {
     */
 }
 
-function addQuestionData(question, multipleChoices) {
-    quizQuestion.innerHTML = question;
 
-    for (answer in answers) {
-        for (choice in multipleChoices) {
-            answer.innerHTML = choice;
-        }
-    }
-    return;
-}
+
+addQuestionData();
 
 function apiQuestion() {
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
