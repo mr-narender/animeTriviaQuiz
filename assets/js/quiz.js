@@ -45,6 +45,8 @@ function apiQuestion() {
     .then(res => res.json())
     .then(rawData => {
         
+        getQuestion(rawData);
+
         /*
 
         let quizData = shuffle(rawData.results);
