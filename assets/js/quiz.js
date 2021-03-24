@@ -43,6 +43,8 @@ function apiQuestion() {
     .then(res => res.json())
     .then(rawData => {
         
+        /*
+
         let quizData = shuffle(rawData.results);
         let question = quizData[0].question;
         let correctAnswer = quizData[0].correct_answer;
@@ -60,6 +62,8 @@ function apiQuestion() {
         answers.forEach(answer => {
             answer.addEventListener('click', clickHandler)
         });
+        
+        */
     })
     .catch((err) => {
         console.error(err);
