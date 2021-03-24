@@ -35,9 +35,11 @@ function getQuestion(quizData) {
     let question = quizData[0].question;
     let correctAnswer = quizData[0].correct_answer;
     let incorrectAnswers = quizData[0].incorrect_answers;
-    let multipleChoices = incorrectAnswers.concat(correctAnswer);
+    let multipleChoice = incorrectAnswers.concat(correctAnswer);
 
     quizQuestion.innerHTML = question;
+
+
     /*
     console.log(question);
     console.log(correctAnswer);
