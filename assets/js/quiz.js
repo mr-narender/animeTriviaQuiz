@@ -32,7 +32,11 @@ function shuffle(array) {
 
 
 function getQuestion(quizData) {
+    let question = quizData[0].question;
+    console.log(question)
+    questionData = quizData;
 
+    return questionData;
     /*
     var questions;
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
