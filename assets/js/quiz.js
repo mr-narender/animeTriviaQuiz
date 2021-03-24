@@ -48,7 +48,7 @@ function apiQuestion() {
     .then(res => res.json())
     .then(rawData => {
         
-        getQuestion(rawData);
+        getQuestion(rawData.results);
 
         /*
 
