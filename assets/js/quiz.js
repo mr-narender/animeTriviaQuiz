@@ -39,13 +39,23 @@ function getQuestion(quizData) {
 
     quizQuestion.innerHTML = question;
 
+    /*
     for (i in answers) {
         console.log(answers[i])
         for (x in multipleChoice) {
             console.log(multipleChoice[x])
+            answers.innerHTML = multipleChoice[x];
         }
     }
+    */
 
+    for (x in multipleChoice) {
+        console.log(multipleChoice[x])
+        for (i in answers) {
+            console.log(answers[i])
+            answers[i].innerHTML = multipleChoice[i];
+        }
+    }
 
     /*
     console.log(question);
