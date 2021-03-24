@@ -5,7 +5,7 @@ const progressText = document.querySelector('#progress-text');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progress-bar-full');
 
-let correct_answer; 
+let questionData = {}; 
 let questionCounter = 1;
 let score = 0;  
 
