@@ -39,6 +39,12 @@ function getQuestion(quizData) {
 
     quizQuestion.innerHTML = question;
 
+    for (answer in answers) {
+        for (choice in multipleChoice) {
+            
+        }
+    }
+
 
     /*
     console.log(question);
