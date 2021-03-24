@@ -32,7 +32,9 @@ function shuffle(array) {
 
 
 function getQuestion(quizData) {
+    console.log(quizData[0])
     let question = quizData[0].question;
+    let correctAnswer = quizData[0].correct_answer
     console.log(question)
     questionData = quizData;
 
