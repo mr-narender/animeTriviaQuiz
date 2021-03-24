@@ -62,6 +62,11 @@ function apiQuestion() {
 };
 
 apiQuestion();
+
+function answerFeedback(correctAnswer) {
+console.log(correctAnswer);
+}
+
 /*
 
 function clickHandler(e) {
