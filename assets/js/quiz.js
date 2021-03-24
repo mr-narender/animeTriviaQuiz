@@ -67,6 +67,7 @@ function answerFeedback(correctAnswer) {
     addEventListener('click', (e) => {
         let clickedAnswer = e.path[0].innerHTML;
         console.log(e);
+        console.log(clickedAnswer);
     })
 }
 
