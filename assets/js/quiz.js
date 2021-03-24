@@ -80,30 +80,7 @@ function apiQuestion() {
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
     .then(res => res.json())
     .then(rawData => {
-        
         getQuestion(rawData.results);
-
-        /*
-
-        let quizData = shuffle(rawData.results);
-        let question = quizData[0].question;
-        let correctAnswer = quizData[0].correct_answer;
-        let incorrectAnswers = quizData[0].incorrect_answers;
-
-        quizQuestion.innerHTML = question;
-
-        console.log('answers', answers)
-        answers.forEach(answer => {
-            answer.innerHTML = incorrectAnswers.shift() || correctAnswer;
-            answer.setAttribute("data-answer", incorrectAnswers.shift() || correctAnswer);
-        });
-        console.log("Correct answer: " + correctAnswer);
-
-        answers.forEach(answer => {
-            answer.addEventListener('click', clickHandler)
-        });
-
-        */
     })
     .catch((err) => {
         console.error(err);
