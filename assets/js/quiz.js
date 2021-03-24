@@ -75,21 +75,6 @@ function answerFeedback(correctAnswer) {
     })
 }
 
-/*
-
-function clickHandler(e) {
-    console.log(e);
-    let clickedItem = e.target.innerHTML;
-
-    if (clickedItem == e.currentTarget.getAttribute('data-answer')) {
-        console.log("CORRECT!");
-    } else {
-        console.log("INCORRECT!");
-    }
-};
-
-*/
-
 function questionProgress() {
 
     if (questionCounter <= 9) {
