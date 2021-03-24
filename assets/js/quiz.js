@@ -64,6 +64,10 @@ apiQuestion();
 
 function answerFeedback(correctAnswer) {
     console.log(correctAnswer);
+    addEventListener('click', (e) => {
+        let clickedAnswer = e.path[0].innerHTML;
+        console.log(e);
+    })
 }
 
 /*
