@@ -32,12 +32,15 @@ function shuffle(array) {
 
 
 function getQuestion(quizData) {
+
+    /*
     var questions;
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
     .then(res => res.json()).then(data => {
         questions = data.results;
     });
     return questions;
+    */
 }
 
 function apiQuestion() {
