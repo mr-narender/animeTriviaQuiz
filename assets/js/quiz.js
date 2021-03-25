@@ -63,8 +63,9 @@ apiQuestion();
 
 function answerFeedback(correctAnswer, incorrectAnswers) {
  
-    addEventListener('click', (e) => {
+    $('.answer-text').click(e => {
         console.log(e)
+        console.log(e.target.innerHTML)
     })
 }
 
