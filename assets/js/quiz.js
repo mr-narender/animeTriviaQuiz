@@ -73,6 +73,7 @@ function answerFeedback(correctAnswer) {
     
         if (correctAnswer == choice) {
             console.log('CORRECT!')
+
         } else {
             console.log('INCORRECT!')
         }
@@ -86,8 +87,6 @@ function questionProgress() {
 
         progressText.innerHTML = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
-
-        apiQuestion();
 
     } else {
 
