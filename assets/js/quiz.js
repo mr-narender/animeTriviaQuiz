@@ -28,6 +28,7 @@ function shuffle(array) {
 
 function getQuestion(quizData) {
     let question = quizData[0].question;
+    let questions = quizData;
     let correctAnswer = quizData[0].correct_answer;
     let incorrectAnswers = quizData[0].incorrect_answers;
     let multipleChoice = incorrectAnswers.concat(correctAnswer);
@@ -40,6 +41,7 @@ function getQuestion(quizData) {
         }
     }
     answerFeedback(correctAnswer);
+    console.log(questions)
  }
 
 
