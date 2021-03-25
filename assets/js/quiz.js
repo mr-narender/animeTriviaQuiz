@@ -64,8 +64,12 @@ apiQuestion();
 function answerFeedback(correctAnswer) {
  
     $('.answer-text').click(e => {
+
+        let choice = e.target.innerHTML;
         console.log(e)
-        console.log(e.target.innerHTML)
+        console.log(choice)
+        
+
         
     })
 }
