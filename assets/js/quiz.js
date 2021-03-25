@@ -70,6 +70,8 @@ function answerFeedback(correctAnswer, incorrectAnswers) {
 
         if (clickedAnswer == correctAnswer) {
             console.log('CORRECT!');
+        } else if (clickedAnswer == incorrectAnswers){
+            console.log('NO ANSWER SELECTED!')
         } else {
             console.log('INCORRECT!');
         }
