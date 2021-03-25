@@ -9,6 +9,7 @@ let questionData = {};
 let questionCounter = 1;
 let score = 0;  
 
+
 function shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -61,12 +62,9 @@ function apiQuestion() {
 apiQuestion();
 
 function answerFeedback(correctAnswer, incorrectAnswers) {
-    console.log(incorrectAnswers)
-    console.log(correctAnswer);
-    addEventListener('click', (e) => {
-        let clickedAnswer = e.target.innerHTML;
-        console.log(e)
-        console.log(clickedAnswer);
+ 
+    answers.addEventListener('click', (e) => {
+        let clickedAnswer = e.target.className;
     })
 }
 
