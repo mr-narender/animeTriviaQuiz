@@ -68,15 +68,15 @@ function answerFeedback(correctAnswer) {
     $('.answer-text').click(e => {
         
         let choice = e.target.innerHTML;
-        console.log(e)
-        console.log(choice)
     
         if (correctAnswer == choice) {
             console.log('CORRECT!')
+            let score = scoreText.innerHTML += 10;
+            console.log(score)
         } else {
             console.log('INCORRECT!')
         }
-        questionProgress()
+        questionProgress();
     })
 }
 
