@@ -7,6 +7,7 @@ const progressBarFull = document.querySelector('#progress-bar-full');
 
 let questionData = {}; 
 let questionCounter = 1;  
+let score = 0;
 
 function shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
@@ -70,6 +71,11 @@ function answerFeedback(correctAnswer) {
         }
         questionProgress();
     })
+}
+
+function scoreAddition() {
+    score += 10;
+    scoreText.innerHTML = score;
 }
 
 function questionProgress() {
