@@ -66,17 +66,17 @@ function answerFeedback(correctAnswer) {
     console.log(correctAnswer)
  
     $('.answer-text').click(e => {
-
+        
         let choice = e.target.innerHTML;
         console.log(e)
         console.log(choice)
     
         if (correctAnswer == choice) {
             console.log('CORRECT!')
-
         } else {
             console.log('INCORRECT!')
         }
+        questionProgress()
     })
 }
 
