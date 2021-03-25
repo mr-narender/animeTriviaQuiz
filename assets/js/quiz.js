@@ -6,26 +6,20 @@ const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progress-bar-full');
 
 let questionData = {}; 
-let questionCounter = 1;
-let score = 0;  
-
+let questionCounter = 1;  
 
 function shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
-
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
-
         // Pick a remaining element...
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
-
         // And swap it with the current element.
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
     }
-
     // Return newly shuffled array
     return array;
 }
@@ -71,8 +65,7 @@ function answerFeedback(correctAnswer) {
     
         if (correctAnswer == choice) {
             console.log('CORRECT!')
-            let score = scoreText.innerHTML += 10;
-            console.log(score)
+            scoreText.innerHTML += 10;
         } else {
             console.log('INCORRECT!')
         }
