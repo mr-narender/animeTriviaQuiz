@@ -65,7 +65,6 @@ function answerFeedback(correctAnswer) {
     
         if (correctAnswer == choice) {
             console.log('CORRECT!')
-            scoreText.innerHTML += 10;
         } else {
             console.log('INCORRECT!')
         }
