@@ -63,7 +63,7 @@ apiQuestion();
 
 function answerFeedback(correctAnswer, incorrectAnswers) {
  
-    answers.addEventListener('click', (e) => {
+    addEventListener('click', (e) => {
         console.log(e)
     })
 }
