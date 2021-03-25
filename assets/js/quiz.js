@@ -66,6 +66,7 @@ function answerFeedback(correctAnswer) {
     
         if (correctAnswer == choice) {
             console.log('CORRECT!')
+            scoreAddition()
         } else {
             console.log('INCORRECT!')
         }
