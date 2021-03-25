@@ -65,16 +65,8 @@ function answerFeedback(correctAnswer, incorrectAnswers) {
     console.log(correctAnswer);
     addEventListener('click', (e) => {
         let clickedAnswer = e.target.innerHTML;
-        console.log(e);
+        console.log(e)
         console.log(clickedAnswer);
-
-        if (clickedAnswer == correctAnswer) {
-            console.log('CORRECT!');
-        } else if (clickedAnswer == incorrectAnswers){
-            console.log('NO ANSWER SELECTED!')
-        } else {
-            console.log('INCORRECT!');
-        }
     })
 }
 
