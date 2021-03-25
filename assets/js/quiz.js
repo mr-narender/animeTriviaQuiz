@@ -25,10 +25,8 @@ function shuffle(array) {
     return array;
 }
 
-
 function getQuestion(quizData) {
     let question = quizData[0].question;
-    let questions = quizData;
     let correctAnswer = quizData[0].correct_answer;
     let incorrectAnswers = quizData[0].incorrect_answers;
     let multipleChoice = incorrectAnswers.concat(correctAnswer);
@@ -41,7 +39,6 @@ function getQuestion(quizData) {
         }
     }
     answerFeedback(correctAnswer);
-    console.log(questions)
  }
 
 
@@ -59,13 +56,9 @@ function apiQuestion() {
 apiQuestion();
 
 function answerFeedback(correctAnswer) {
-
     console.log(correctAnswer)
- 
     $('.answer-text').click(e => {
-        
         let choice = e.target.innerHTML;
-    
         if (correctAnswer == choice) {
             console.log('CORRECT!')
             scoreAddition()
@@ -82,17 +75,12 @@ function scoreAddition() {
 }
 
 function questionProgress() {
-
     if (questionCounter <= 9) {
         questionCounter++;
-
         progressText.innerHTML = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
-
     } else {
-
         return window.location.assign('/end-page.html');
-
     };
 };
 
