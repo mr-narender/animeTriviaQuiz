@@ -43,7 +43,7 @@ function getQuestion(quizData) {
             answers[i].innerHTML = multipleChoice[i];
         }
     }
-    answerFeedback(correctAnswer);
+    answerFeedback(correctAnswer, incorrectAnswers);
  }
 
 
@@ -60,7 +60,8 @@ function apiQuestion() {
 
 apiQuestion();
 
-function answerFeedback(correctAnswer) {
+function answerFeedback(correctAnswer, incorrectAnswers) {
+    console.log(incorrectAnswers)
     console.log(correctAnswer);
     addEventListener('click', (e) => {
         let clickedAnswer = e.target.innerHTML;
