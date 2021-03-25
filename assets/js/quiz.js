@@ -64,7 +64,7 @@ apiQuestion();
 function answerFeedback(correctAnswer, incorrectAnswers) {
  
     answers.addEventListener('click', (e) => {
-        let clickedAnswer = e.target.className;
+        console.log(e)
     })
 }
 
