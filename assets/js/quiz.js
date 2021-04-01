@@ -41,6 +41,8 @@ function getQuestion(quizData) {
     console.log(q);
     console.log(questionData.correct_answer)
     console.log(questionData.incorrect_answers)
+
+    quizQuestion.innerHTML = q;
     
 
     /*
