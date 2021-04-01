@@ -70,6 +70,7 @@ function answerFeedback(correctAnswer) {
             console.log('INCORRECT!')
         }
         questionProgress();
+        getQuestion();
     })
 }
 
