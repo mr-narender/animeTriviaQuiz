@@ -38,10 +38,8 @@ function getQuestion(quizData) {
             answers[i].innerHTML = multipleChoice[i];
         }
     }
-
-    quizData.slice(1);
     console.log(quizData)
-
+    shuffle(quizData);
     answerFeedback(correctAnswer);
  }
 
