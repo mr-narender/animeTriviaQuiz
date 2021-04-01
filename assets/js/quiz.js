@@ -52,7 +52,7 @@ function getQuestion(quizData) {
         }
     }
 
-
+    answerFeedback(correctAnswer);
     /*
     let question = quizData[0].question;
     let correctAnswer = quizData[0].correct_answer;
