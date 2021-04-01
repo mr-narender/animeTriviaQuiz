@@ -27,13 +27,20 @@ function shuffle(array) {
 
 function getQuestion(quizData) {
 
-    let question = [];
+    let question = '';
+    let correctAnswer = '';
+    let incorrectAnswers = '';
 
     for (let i of quizData) {
-        console.log(i);
 
-        return question.push(i);
+        question = i.question;
+        correctAnswer = i.correct_answer;
+        incorrectAnswers = i.incorrect_answers;
     }
+
+    console.log(question);
+    console.log(correctAnswer);
+    console.log(incorrectAnswers);
 
     /*
     let question = quizData[0].question;
