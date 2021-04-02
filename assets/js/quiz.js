@@ -86,7 +86,8 @@ function apiQuestion() {
 
 apiQuestion();
 
-function answerFeedback(correctAnswer) {
+function answerFeedback(correctAnswer, quizData) {
+    console.log(quizData)
     console.log(correctAnswer)
     $('.answer-text').click(e => {
         let choice = e.target.innerHTML;
