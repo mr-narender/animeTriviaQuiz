@@ -29,11 +29,9 @@ function getQuestion(quizData) {
 
     let questionData = '';
 
-    for (let i = 0; i < quizData.length; ++i) {
+    for (let i of quizData) {
 
-        questionData = quizData[quizData.length - 1];
-
-        console.log(questionData);
+        questionData = i;
     }
 
     let q = questionData.question;
@@ -54,7 +52,7 @@ function getQuestion(quizData) {
         }
     }
 
-    answerFeedback(correctAnswer);
+    answerFeedback(correctAnswer, quizData);
     /*
     let question = quizData[0].question;
     let correctAnswer = quizData[0].correct_answer;
