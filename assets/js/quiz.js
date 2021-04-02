@@ -53,23 +53,6 @@ function getQuestion(quizData) {
     }
 
     answerFeedback(correctAnswer, quizData);
-    /*
-    let question = quizData[0].question;
-    let correctAnswer = quizData[0].correct_answer;
-    let incorrectAnswers = quizData[0].incorrect_answers;
-    let multipleChoice = incorrectAnswers.concat(correctAnswer);
-
-    quizQuestion.innerHTML = question;
-
-    for (x in multipleChoice) {
-        for (i in answers) {
-            answers[i].innerHTML = multipleChoice[i];
-        }
-    }
-    console.log(quizData)
-    shuffle(quizData);
-    answerFeedback(correctAnswer);
-    */
  }
 
 
