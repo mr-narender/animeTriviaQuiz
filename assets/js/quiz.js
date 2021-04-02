@@ -29,9 +29,11 @@ function getQuestion(quizData) {
 
     let questionData = '';
 
-    for (let i of quizData) {
+    for (let i = 0; i < quizData.length; ++i) {
 
-        questionData = i;
+        questionData = quizData[quizData.length - 1];
+
+        console.log(questionData);
     }
 
     let q = questionData.question;
