@@ -87,7 +87,6 @@ function apiQuestion() {
 apiQuestion();
 
 function answerFeedback(correctAnswer, quizData) {
-    console.log(quizData)
     console.log(correctAnswer)
     $('.answer-text').click(e => {
         let choice = e.target.innerHTML;
@@ -98,7 +97,7 @@ function answerFeedback(correctAnswer, quizData) {
             console.log('INCORRECT!')
         }
         questionProgress();
-        getQuestion();
+        getQuestion(quizData.slice(1));
     })
 }
 
