@@ -26,9 +26,13 @@ function shuffle(array) {
     return array;
 }
 
-/*
-function getQuestion(quizData) {
 
+
+
+function getQuestion() {
+
+
+    /*
     shuffle(quizData);
     let q = quizData[0].question;
     let correctAnswer = quizData[0].correct_answer;
@@ -55,8 +59,10 @@ function getQuestion(quizData) {
         }
     }
     answerFeedback(correctAnswer);
+    */
  }
 
+ /*
 function apiQuestion() {
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
     .then(res => res.json())
