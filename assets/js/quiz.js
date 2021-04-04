@@ -39,6 +39,8 @@ function getQuestion() {
     progressText.innerHTML = `Question ${questionCounter} of 10`;
     progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
 
+    let questionIndex = Math.floor(Math.random() * questionData.length)
+
     /*
     shuffle(quizData);
     let q = quizData[0].question;
@@ -69,7 +71,7 @@ function getQuestion() {
     */
  }
 
- /*
+ 
 function apiQuestion() {
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
     .then(res => res.json())
@@ -81,6 +83,8 @@ function apiQuestion() {
     });
 };
 
+apiQuestion();
+/*
 
 apiQuestion();
 
