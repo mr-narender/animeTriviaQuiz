@@ -8,8 +8,8 @@ const progressBarFull = document.querySelector('#progress-bar-full');
 let questionData = []; 
 let questionCounter = 1;  
 let score = 0;
-let i = 0;
 
+/*
 function shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
     // While there remain elements to shuffle...
@@ -28,9 +28,10 @@ function shuffle(array) {
 
 function getQuestion(quizData) {
 
-    let q = quizData[i].question;
-    let correctAnswer = quizData[i].correct_answer;
-    let incorrectAnswers = quizData[i].incorrect_answers;
+    shuffle(quizData);
+    let q = quizData[0].question;
+    let correctAnswer = quizData[0].correct_answer;
+    let incorrectAnswers = quizData[0].incorrect_answers;
 
 
     console.log(q);
@@ -52,6 +53,7 @@ function getQuestion(quizData) {
             answers[i].innerHTML = incorrectAnswers[i] || correctAnswer;
         }
     }
+    answerFeedback(correctAnswer);
  }
 
 function apiQuestion() {
@@ -78,7 +80,6 @@ function answerFeedback(correctAnswer) {
             console.log('INCORRECT!')
         }
         questionProgress();
-        getQuestion();
     })
 }
 
@@ -98,4 +99,4 @@ function questionProgress() {
 };
 
 
-
+*/
