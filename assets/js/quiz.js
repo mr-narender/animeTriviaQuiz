@@ -8,8 +8,8 @@ const progressBarFull = document.querySelector('#progress-bar-full');
 let questionData = []; 
 let questionCounter = 1;  
 let score = 0;
+let i = 0;
 
-console.log(questionData);
 function shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
     // While there remain elements to shuffle...
@@ -28,23 +28,17 @@ function shuffle(array) {
 
 function getQuestion(quizData) {
 
-    let questionData = [];
+    let q = quizData[i].question;
+    let correctAnswer = quizData[i].correct_answer;
+    let incorrectAnswers = quizData[i].incorrect_answers;
 
-
-    let q = questionData.question;
-    let correctAnswer = questionData.correct_answer;
-    let incorrectAnswers = questionData.incorrect_answers;
-
-    for (let i of quizData) {
-        questionData = i;
-    }
 
     console.log(q);
 
     
     console.log(q);
-    console.log(questionData.correct_answer)
-    console.log(questionData.incorrect_answers)
+    console.log(correctAnswer)
+    console.log(incorrectAnswers)
     
 
     //console.log(questionData);
@@ -58,15 +52,13 @@ function getQuestion(quizData) {
             answers[i].innerHTML = incorrectAnswers[i] || correctAnswer;
         }
     }
-
-    answerFeedback(correctAnswer);
  }
 
 function apiQuestion() {
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
     .then(res => res.json())
     .then(rawData => {
-        return questionData.push(rawData.results);
+        getQuestion(rawData.results);
     })
     .catch((err) => {
         console.error(err);
@@ -86,6 +78,7 @@ function answerFeedback(correctAnswer) {
             console.log('INCORRECT!')
         }
         questionProgress();
+        getQuestion();
     })
 }
 
