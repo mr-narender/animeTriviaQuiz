@@ -26,6 +26,7 @@ function shuffle(array) {
     return array;
 }
 
+/*
 function getQuestion(quizData) {
 
     shuffle(quizData);
@@ -67,7 +68,7 @@ function apiQuestion() {
     });
 };
 
-/*
+
 apiQuestion();
 
 function answerFeedback(correctAnswer) {
