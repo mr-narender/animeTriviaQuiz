@@ -80,7 +80,6 @@ function answerFeedback(correctAnswer, quizData) {
             console.log('INCORRECT!')
         }
         questionProgress();
-        getQuestion(quizData.slice(1));
     })
 }
 
