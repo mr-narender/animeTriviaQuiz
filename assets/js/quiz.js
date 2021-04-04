@@ -5,10 +5,11 @@ const progressText = document.querySelector('#progress-text');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progress-bar-full');
 
-let currentQuestion = '';
+let currentQuestion = [];
 let questionData = []; 
 let questionCounter = 1;  
 let score = 0;
+console.log(currentQuestion);
 
 console.log(questionData)
 function shuffle(array) {
@@ -30,7 +31,7 @@ function shuffle(array) {
 
 
 
-function getQuestion() {
+function getQuestion(questionData) {
 
     if (questionCounter === 10) {
         return window.location.assign('/end-page.html');
@@ -42,7 +43,11 @@ function getQuestion() {
 
     let questionIndex = Math.floor(Math.random() * questionData.length);
 
-    currentQuestion
+    currentQuestion.push(questionData[questionIndex]);
+
+    console.log(currentQuestion);
+    
+    //questionData.innerHTML = currentQuestion.question;
 
     /*
     shuffle(quizData);
