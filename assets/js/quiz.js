@@ -27,12 +27,18 @@ function shuffle(array) {
 
 function getQuestion(quizData) {
 
-    let questionData = '';
+    let questionData = [];
 
 
     let q = questionData.question;
     let correctAnswer = questionData.correct_answer;
     let incorrectAnswers = questionData.incorrect_answers;
+
+    for (let i of quizData) {
+        questionData = i;
+    }
+
+    console.log(q);
 
     /*
     console.log(q);
@@ -40,11 +46,11 @@ function getQuestion(quizData) {
     console.log(questionData.incorrect_answers)
     */
 
-    console.log(questionData);
+    //console.log(questionData);
 
     quizQuestion.innerHTML = q;
 
-    console.log(incorrectAnswers)
+    //console.log(incorrectAnswers)
 
     for (x in incorrectAnswers) {
         for (i in answers) {
@@ -52,7 +58,7 @@ function getQuestion(quizData) {
         }
     }
 
-    answerFeedback(correctAnswer, quizData);
+    answerFeedback(correctAnswer);
  }
 
 
@@ -69,13 +75,13 @@ function apiQuestion() {
 
 apiQuestion();
 
-function answerFeedback(correctAnswer, quizData) {
+function answerFeedback(correctAnswer) {
     console.log(correctAnswer)
     $('.answer-text').click(e => {
         let choice = e.target.innerHTML;
         if (correctAnswer == choice) {
             console.log('CORRECT!')
-            scoreAddition()
+            scoreAddition();
         } else {
             console.log('INCORRECT!')
         }
