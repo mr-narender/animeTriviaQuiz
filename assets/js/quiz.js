@@ -27,7 +27,7 @@ function shuffle(array) {
 
 function getQuestion(quizData) {
 
-    let questionData = quizData[0];
+    let questionData = '';
 
 
     let q = questionData.question;
