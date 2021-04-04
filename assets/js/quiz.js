@@ -9,6 +9,7 @@ let questionData = [];
 let questionCounter = 1;  
 let score = 0;
 
+console.log(questionData)
 function shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
     // While there remain elements to shuffle...
@@ -59,7 +60,7 @@ function apiQuestion() {
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
     .then(res => res.json())
     .then(rawData => {
-        getQuestion(rawData.results);
+        return questionData.push(rawData.results);
     })
     .catch((err) => {
         console.error(err);
