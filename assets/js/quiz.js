@@ -9,9 +9,19 @@ let currentQuestion = [];
 let questionData = []; 
 let questionCounter = 1;  
 let score = 0;
-console.log(currentQuestion);
 
-console.log(questionData)
+console.log(currentQuestion);
+console.log(questionData);
+
+fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
+    .then(res => res.json())
+    .then(rawData => {
+        return questionData.push(rawData.results);
+    })
+    .catch((err) => {
+        console.error(err);
+    });
+
 function shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
     // While there remain elements to shuffle...
@@ -28,9 +38,6 @@ function shuffle(array) {
     return array;
 }
 
-
-
-
 function getQuestion(questionData) {
 
     if (questionCounter === 10) {
@@ -43,7 +50,8 @@ function getQuestion(questionData) {
 
     let questionIndex = Math.floor(Math.random() * questionData.length);
 
-    currentQuestion.push(questionData[questionIndex]);
+    return currentQuestion.push(questionData[questionIndex]);
+
 
     console.log(currentQuestion);
     
@@ -79,7 +87,7 @@ function getQuestion(questionData) {
     */
  }
 
- 
+ /*
 function apiQuestion() {
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
     .then(res => res.json())
@@ -90,12 +98,10 @@ function apiQuestion() {
         console.error(err);
     });
 };
+*/
 
-apiQuestion();
+
 /*
-
-apiQuestion();
-
 function answerFeedback(correctAnswer) {
     console.log(correctAnswer)
     $('.answer-text').click(e => {
