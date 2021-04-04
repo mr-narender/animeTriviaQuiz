@@ -9,7 +9,6 @@ let questionData = [];
 let questionCounter = 1;  
 let score = 0;
 
-/*
 function shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
     // While there remain elements to shuffle...
@@ -99,4 +98,3 @@ function questionProgress() {
 };
 
 
-*/
