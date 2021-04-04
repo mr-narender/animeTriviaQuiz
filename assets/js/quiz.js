@@ -22,6 +22,12 @@ fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
         console.error(err);
     });
 
+function start() {
+    questionCounter = 1;
+    score = 0;
+    getQuestion();
+}
+
 function shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
     // While there remain elements to shuffle...
