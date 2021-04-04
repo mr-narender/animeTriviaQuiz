@@ -67,6 +67,7 @@ function apiQuestion() {
     });
 };
 
+/*
 apiQuestion();
 
 function answerFeedback(correctAnswer) {
@@ -83,11 +84,6 @@ function answerFeedback(correctAnswer) {
     })
 }
 
-function scoreAddition() {
-    score += 10;
-    scoreText.innerHTML = score;
-}
-
 function questionProgress() {
     if (questionCounter <= 9) {
         questionCounter++;
@@ -98,4 +94,9 @@ function questionProgress() {
     };
 };
 
+*/
 
+function scoreAddition() {
+    score += 10;
+    scoreText.innerHTML = score;
+}
