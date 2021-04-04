@@ -31,6 +31,12 @@ function shuffle(array) {
 
 function getQuestion() {
 
+    if (questionCounter === 10) {
+        return window.location.assign('/end-page.html');
+    }
+    questionCounter++;
+    progressText.innerHTML = `Question ${questionCounter} of 10`;
+    progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
 
     /*
     shuffle(quizData);
