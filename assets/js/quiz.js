@@ -5,6 +5,7 @@ const progressText = document.querySelector('#progress-text');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progress-bar-full');
 
+let currentQuestion = '';
 let questionData = []; 
 let questionCounter = 1;  
 let score = 0;
@@ -39,7 +40,9 @@ function getQuestion() {
     progressText.innerHTML = `Question ${questionCounter} of 10`;
     progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
 
-    let questionIndex = Math.floor(Math.random() * questionData.length)
+    let questionIndex = Math.floor(Math.random() * questionData.length);
+
+    currentQuestion
 
     /*
     shuffle(quizData);
