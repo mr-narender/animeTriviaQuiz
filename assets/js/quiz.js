@@ -5,24 +5,25 @@ const progressText = document.querySelector('#progress-text');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progress-bar-full');
 
-let currentQuestion = [];
-let questionData = []; 
-let questionCounter = 1;  
+let questionCounter = 0;  
 let score = 0;
 
-console.log(currentQuestion);
-console.log(questionData);
+
 
 function apiQuestion() {
-fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
+    fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
     .then(res => res.json())
     .then(rawData => {
         questionData.push(rawData.results);
+    
+        //getQuestion(questionData);
     })
     .catch((err) => {
         console.error(err);
     });
 }
+
+apiQuestion();
 
 function shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
@@ -52,10 +53,10 @@ function getQuestion(questionData) {
 
     let questionIndex = Math.floor(Math.random() * questionData.length);
 
-    currentQuestion.push(questionData[questionIndex]);
+    currentQuestion = questionData[questionIndex];
 
 
-    console.log(currentQuestion);
+    console.log(questionData);
     
     //questionData.innerHTML = currentQuestion.question;
 
