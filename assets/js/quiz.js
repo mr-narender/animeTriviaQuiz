@@ -75,25 +75,6 @@ function getQuestion(questionData) {
     }
 
     answerFeedback(correctAnswer);
-    /*
-    console.log(q);
-    console.log(correctAnswer)
-    console.log(incorrectAnswers)
-    
-
-    //console.log(questionData);
-
-    quizQuestion.innerHTML = q;
-
-    //console.log(incorrectAnswers)
-
-    for (x in incorrectAnswers) {
-        for (i in answers) {
-            answers[i].innerHTML = incorrectAnswers[i] || correctAnswer;
-        }
-    }
-    answerFeedback(correctAnswer);
-    */
  }
 
  /*
