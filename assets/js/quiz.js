@@ -7,6 +7,8 @@ const progressBarFull = document.querySelector('#progress-bar-full');
 
 let questionCounter = 0;  
 let score = 0;
+let questionData = [];
+let questionIndex = Math.floor(Math.random() * questionData.length);
 
 
 
@@ -14,7 +16,7 @@ function apiQuestion() {
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
     .then(res => res.json())
     .then(rawData => {
-        getQuestion(rawData.results);
+        questionData.push(rawData.results);
     })
     .catch((err) => {
         console.error(err);
@@ -55,6 +57,7 @@ function getQuestion(questionData) {
             answers[i].innerHTML = incorrectAnswers[i] || correctAnswer;
         }
     }
+}
 
 function scoreAddition() {
     score += 10;
