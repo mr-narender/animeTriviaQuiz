@@ -56,53 +56,6 @@ function getQuestion(questionData) {
         }
     }
 
-    //answerFeedback(correctAnswer, questionData);
- }
-
-
-
- /*
- function answerFeedback(correctAnswer, questionData) {
-    console.log(correctAnswer)
-    $('.answer-text').click(e => {
-        let choice = e.target.innerHTML;
-        if (correctAnswer == choice) {
-            console.log('CORRECT!')
-            scoreAddition();
-        } else {
-            console.log('INCORRECT!')
-        }
-    })
-}
-
-function apiQuestion() {
-    fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
-    .then(res => res.json())
-    .then(rawData => {
-        return questionData.push(rawData.results);
-    })
-    .catch((err) => {
-        console.error(err);
-    });
-};
-*/
-
-
-/*
-
-
-function questionProgress() {
-    if (questionCounter <= 9) {
-        questionCounter++;
-        progressText.innerHTML = `Question ${questionCounter} of 10`;
-        progressBarFull.style.width = `${(questionCounter/10 * 100)}%`;
-    } else {
-        return window.location.assign('/end-page.html');
-    };
-};
-
-*/
-
 function scoreAddition() {
     score += 10;
     scoreText.innerHTML = score;
