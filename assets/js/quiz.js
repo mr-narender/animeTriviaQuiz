@@ -13,19 +13,15 @@ let score = 0;
 console.log(currentQuestion);
 console.log(questionData);
 
+function apiQuestion() {
 fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
     .then(res => res.json())
     .then(rawData => {
-        return questionData.push(rawData.results);
+        questionData.push(rawData.results);
     })
     .catch((err) => {
         console.error(err);
     });
-
-function start() {
-    questionCounter = 1;
-    score = 0;
-    getQuestion();
 }
 
 function shuffle(array) {
@@ -56,7 +52,7 @@ function getQuestion(questionData) {
 
     let questionIndex = Math.floor(Math.random() * questionData.length);
 
-    return currentQuestion.push(questionData[questionIndex]);
+    currentQuestion.push(questionData[questionIndex]);
 
 
     console.log(currentQuestion);
