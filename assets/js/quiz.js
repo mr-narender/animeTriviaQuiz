@@ -74,10 +74,11 @@ function getQuestion(questionData) {
         }
     }
 
-    answerFeedback(correctAnswer);
+    answerFeedback(correctAnswer, questionData);
  }
 
- function answerFeedback(correctAnswer) {
+ /*
+ function answerFeedback(correctAnswer, questionData) {
     console.log(correctAnswer)
     $('.answer-text').click(e => {
         let choice = e.target.innerHTML;
@@ -90,7 +91,6 @@ function getQuestion(questionData) {
     })
 }
 
- /*
 function apiQuestion() {
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
     .then(res => res.json())
