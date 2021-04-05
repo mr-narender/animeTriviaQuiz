@@ -65,6 +65,12 @@ function getQuestion(questionData) {
 
     console.log(correctAnswer)
     console.log(incorrectAnswers)
+
+    for (x in incorrectAnswers) {
+        for (i in answers) {
+            answers[i].innerHTML = incorrectAnswers[i] || correctAnswer;
+        }
+    }
     /*
     console.log(q);
     console.log(correctAnswer)
