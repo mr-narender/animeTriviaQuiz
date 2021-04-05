@@ -87,7 +87,6 @@ function getQuestion(questionData) {
         } else {
             console.log('INCORRECT!')
         }
-        questionProgress();
     })
 }
 
