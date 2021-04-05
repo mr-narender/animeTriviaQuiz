@@ -59,16 +59,13 @@ function getQuestion(questionData) {
     
     quizQuestion.innerHTML = currentQuestion.question;
 
+    let correctAnswer = currentQuestion.correct_answer;
+    let incorrectAnswers = currentQuestion.incorrect_answers;
+
+
+    console.log(correctAnswer)
+    console.log(incorrectAnswers)
     /*
-    shuffle(quizData);
-    let q = quizData[0].question;
-    let correctAnswer = quizData[0].correct_answer;
-    let incorrectAnswers = quizData[0].incorrect_answers;
-
-
-    console.log(q);
-
-    
     console.log(q);
     console.log(correctAnswer)
     console.log(incorrectAnswers)
