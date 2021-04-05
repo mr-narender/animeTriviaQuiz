@@ -23,6 +23,7 @@ function apiQuestion() {
 
 apiQuestion();
 
+/*
 function shuffle(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;
     // While there remain elements to shuffle...
@@ -38,6 +39,7 @@ function shuffle(array) {
     // Return newly shuffled array
     return array;
 }
+*/
 
 function getQuestion(questionData) {
 
