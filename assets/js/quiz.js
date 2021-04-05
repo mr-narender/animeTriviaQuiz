@@ -77,6 +77,20 @@ function getQuestion(questionData) {
     answerFeedback(correctAnswer);
  }
 
+ function answerFeedback(correctAnswer) {
+    console.log(correctAnswer)
+    $('.answer-text').click(e => {
+        let choice = e.target.innerHTML;
+        if (correctAnswer == choice) {
+            console.log('CORRECT!')
+            scoreAddition();
+        } else {
+            console.log('INCORRECT!')
+        }
+        questionProgress();
+    })
+}
+
  /*
 function apiQuestion() {
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
@@ -92,19 +106,7 @@ function apiQuestion() {
 
 
 /*
-function answerFeedback(correctAnswer) {
-    console.log(correctAnswer)
-    $('.answer-text').click(e => {
-        let choice = e.target.innerHTML;
-        if (correctAnswer == choice) {
-            console.log('CORRECT!')
-            scoreAddition();
-        } else {
-            console.log('INCORRECT!')
-        }
-        questionProgress();
-    })
-}
+
 
 function questionProgress() {
     if (questionCounter <= 9) {
