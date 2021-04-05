@@ -74,8 +74,10 @@ function getQuestion(questionData) {
         }
     }
 
-    answerFeedback(correctAnswer, questionData);
+    //answerFeedback(correctAnswer, questionData);
  }
+
+
 
  /*
  function answerFeedback(correctAnswer, questionData) {
