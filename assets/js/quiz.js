@@ -73,6 +73,8 @@ function getQuestion(questionData) {
             answers[i].innerHTML = incorrectAnswers[i] || correctAnswer;
         }
     }
+
+    answerFeedback(correctAnswer);
     /*
     console.log(q);
     console.log(correctAnswer)
