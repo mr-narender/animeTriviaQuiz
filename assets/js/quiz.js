@@ -14,9 +14,7 @@ function apiQuestion() {
     fetch(`https://opentdb.com/api.php?amount=39&category=31&type=multiple`)
     .then(res => res.json())
     .then(rawData => {
-        questionData.push(rawData.results);
-    
-        //getQuestion(questionData);
+        getQuestion(rawData.results);
     })
     .catch((err) => {
         console.error(err);
@@ -57,8 +55,9 @@ function getQuestion(questionData) {
 
 
     console.log(questionData);
+    console.log(currentQuestion);
     
-    //questionData.innerHTML = currentQuestion.question;
+    quizQuestion.innerHTML = currentQuestion.question;
 
     /*
     shuffle(quizData);
