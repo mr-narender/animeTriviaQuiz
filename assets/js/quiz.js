@@ -36,8 +36,8 @@ fetch('https://opentdb.com/api.php?amount=1&category=31&type=multiple')
         let correctAnswer = questionData[0].correct_answer;
         let incorrectAnswers = questionData[0].incorrect_answers;
 
-        getQuestion(question);
-        getAnswerChoices(correctAnswer, incorrectAnswers);
+        addQuestion(question);
+        addChoices(correctAnswer, incorrectAnswers);
 
         console.log(questionData);
     })
@@ -46,11 +46,11 @@ fetch('https://opentdb.com/api.php?amount=1&category=31&type=multiple')
 
 apiQuestion();
 
-function getQuestion(question) {
+function addQuestion(question) {
     quizQuestion.innerHTML = question;
 };
 
-function getAnswerChoices(correctAnswer, incorrectAnswers) {
+function addChoices(correctAnswer, incorrectAnswers) {
     console.log("getAnswerChoices:", correctAnswer);
     console.log("getAnswerChoices:", incorrectAnswers);
 
