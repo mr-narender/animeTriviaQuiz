@@ -12,8 +12,7 @@ let score = 0;
 fetch('https://opentdb.com/api.php?amount=1&category=31&type=multiple')
     .then(res => res.json())
     .then(data => { 
-        console.log(data.results); 
-        return data.results;
+        let questionData = data.results;
     })
     .catch(err => console.error(err));
 
