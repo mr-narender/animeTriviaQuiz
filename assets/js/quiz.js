@@ -17,10 +17,16 @@ fetch('https://opentdb.com/api.php?amount=1&category=31&type=multiple')
         let correctAnswer = questionData[0].correct_answer;
         let incorrectAnswers = questionData[0].incorrect_answers;
 
+        getQuestion(question);
+
         console.log(questionData);
         console.log(question);
         console.log(correctAnswer);
         console.log(incorrectAnswers);
     })
     .catch(err => console.error(err));
+}
+
+function getQuestion(question) {
+    console.log(question);
 }
