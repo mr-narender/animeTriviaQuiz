@@ -29,5 +29,5 @@ fetch('https://opentdb.com/api.php?amount=1&category=31&type=multiple')
 }
 
 function getQuestion(question) {
-    console.log(question);
+    quizQuestion.innerHTML = question;
 }
