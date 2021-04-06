@@ -38,6 +38,7 @@ fetch('https://opentdb.com/api.php?amount=1&category=31&type=multiple')
 
         addQuestion(question);
         addChoices(correctAnswer, incorrectAnswers);
+        answerFeedback(correctAnswer);
 
         console.log(questionData);
     })
@@ -60,3 +61,16 @@ function addChoices(correctAnswer, incorrectAnswers) {
     answers[2].innerHTML = incorrectAnswers[1];
     answers[3].innerHTML = incorrectAnswers[2];
 };
+
+function answerFeedback (correctAnswer) {
+    $(".answer-text").unbind().click(e => {
+        let selectedAnswer = e.target.innerHTML;
+        
+        if (selectedAnswer === correctAnswer) {
+            console.log('CORRECT!');
+        } else {
+            console.log('INCORRECT!');
+        }
+        apiQuestion();
+    })
+}
