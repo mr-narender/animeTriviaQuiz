@@ -78,10 +78,9 @@ function answerFeedback (correctAnswer) {
 
 function questionProgress() {
     if (questionCounter <= 10) {
-        questionCounter = 1;
         questionCounter++;
         progressText.innerHTML = `Question ${questionCounter} of 10`;
     } else {
-        window.location.assign('/end.html');
+        window.location.assign('/end-page.html');
     }
 }
