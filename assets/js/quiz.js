@@ -7,7 +7,6 @@ const progressBarFull = document.querySelector('#progress-bar-full');
 
 let questionCounter = 0;  
 let score = 0;
-//let questionIndex = Math.floor(Math.random() * questionData.length);
 
 fetch('https://opentdb.com/api.php?amount=1&category=31&type=multiple')
     .then(res => res.json())
