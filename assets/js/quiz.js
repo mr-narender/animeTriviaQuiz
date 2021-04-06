@@ -8,7 +8,25 @@ const progressBarFull = document.querySelector('#progress-bar-full');
 let questionCounter = 0;  
 let score = 0;
 
-apiQuestion();
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
 function apiQuestion() {
 fetch('https://opentdb.com/api.php?amount=1&category=31&type=multiple')
     .then(res => res.json())
@@ -22,12 +40,11 @@ fetch('https://opentdb.com/api.php?amount=1&category=31&type=multiple')
         getAnswerChoices(correctAnswer, incorrectAnswers);
 
         console.log(questionData);
-        console.log(question);
-        console.log(correctAnswer);
-        console.log(incorrectAnswers);
     })
     .catch(err => console.error(err));
 }
+
+apiQuestion();
 
 function getQuestion(question) {
     quizQuestion.innerHTML = question;
@@ -36,4 +53,10 @@ function getQuestion(question) {
 function getAnswerChoices(correctAnswer, incorrectAnswers) {
     console.log("getAnswerChoices:", correctAnswer);
     console.log("getAnswerChoices:", incorrectAnswers);
+
+
+    answers[0].innerHTML = correctAnswer;
+    answers[1].innerHTML = incorrectAnswers[0];
+    answers[2].innerHTML = incorrectAnswers[1];
+    answers[3].innerHTML = incorrectAnswers[2];
 };
