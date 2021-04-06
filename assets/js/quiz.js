@@ -13,7 +13,13 @@ fetch('https://opentdb.com/api.php?amount=1&category=31&type=multiple')
     .then(res => res.json())
     .then(data => { 
         let questionData = data.results;
+        let question = questionData[0].question;
+        let correctAnswer = questionData[0].correct_answer;
+        let incorrectAnswers = questionData[0].incorrect_answers;
+
+        console.log(questionData);
+        console.log(question);
+        console.log(correctAnswer);
+        console.log(incorrectAnswers);
     })
     .catch(err => console.error(err));
-
-console.log(data.results)
