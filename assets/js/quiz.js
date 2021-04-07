@@ -70,16 +70,22 @@ function addChoices(correctAnswer, incorrectAnswers) {
 
 // Checks if answer clicked is correct (adds points) or incorrect, requests new question and updates progress
 function answerFeedback (correctAnswer) {
+
+    // Click event listener
     $(".answer-text").unbind().click(e => {
         let selectedAnswer = e.target;
         
         if (selectedAnswer.innerHTML === correctAnswer) {
+
+            // If answer is correct, gives users 10 points and updates score
             console.log('CORRECT!');
             score += 10;
             scoreText.innerHTML = score;
         } else {
             console.log('INCORRECT!');
         }
+
+        // requests new question and updates users' progress
         apiQuestion();
         questionProgress();
     })
@@ -88,10 +94,14 @@ function answerFeedback (correctAnswer) {
 // Used to display progress in the quiz, sends to end page if quiz is completed
 function questionProgress() {
     if (questionCounter < 10) {
+
+        // Updates users on their progress while they have not completed all questions
         questionCounter++;
         progressText.innerHTML = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10)* 100}%`;
     } else {
+
+        // Sends users to end-page once they have answered all questions
         window.location.assign('/end-page.html');
     }
 }
