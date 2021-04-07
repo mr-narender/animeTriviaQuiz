@@ -8,6 +8,7 @@ const progressBarFull = document.querySelector('#progress-bar-full');
 let questionCounter = 1;  
 let score = 0;
 
+// Fisher-Yates Shuffle Algorithm
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -23,47 +24,51 @@ function shuffle(array) {
     array[currentIndex] = array[randomIndex];
     array[randomIndex] = temporaryValue;
   }
-
   return array;
 }
 
+// Question data is fetched from opentbd api
 function apiQuestion() {
 fetch('https://opentdb.com/api.php?amount=1&category=31&type=multiple')
     .then(res => res.json())
     .then(data => { 
+
+        // Separating question, correct answer and incorrect answers into their own variables
         let questionData = data.results;
         let question = questionData[0].question;
         let correctAnswer = questionData[0].correct_answer;
         let incorrectAnswers = questionData[0].incorrect_answers;
 
+        // Passing the data into the functions to be handled
         addQuestion(question);
         addChoices(correctAnswer, incorrectAnswers);
         answerFeedback(correctAnswer);
-
-        console.log(questionData);
     })
     .catch(err => console.error(err));
 }
 
+// Calls first question when page is opened
 apiQuestion();
 
+// Adds question into quiz HTML page
 function addQuestion(question) {
     quizQuestion.innerHTML = question;
 };
 
+// Adds answer choices into quiz HTML page
 function addChoices(correctAnswer, incorrectAnswers) {
-    console.log("getAnswerChoices:", correctAnswer);
-    console.log("getAnswerChoices:", incorrectAnswers);
 
-
+    // Answers constant is an array of an array length of 4
     answers[0].innerHTML = correctAnswer;
     answers[1].innerHTML = incorrectAnswers[0];
     answers[2].innerHTML = incorrectAnswers[1];
     answers[3].innerHTML = incorrectAnswers[2];
 
+    // Answers constant is shuffled so correct answer does not appear in same place
     return shuffle(answers);
 };
 
+// Checks if answer clicked is correct (adds points) or incorrect, requests new question and updates progress
 function answerFeedback (correctAnswer) {
     $(".answer-text").unbind().click(e => {
         let selectedAnswer = e.target;
@@ -80,6 +85,7 @@ function answerFeedback (correctAnswer) {
     })
 }
 
+// Used to display progress in the quiz, sends to end page if quiz is completed
 function questionProgress() {
     if (questionCounter < 10) {
         questionCounter++;
