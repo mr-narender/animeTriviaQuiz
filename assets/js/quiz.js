@@ -86,7 +86,7 @@ function questionProgress(score) {
         progressText.innerHTML = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10)* 100}%`;
     } else {
+        console.log(score);
         window.location.assign('/end-page.html');
     }
-    console.log(score);
 }
