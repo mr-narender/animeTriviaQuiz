@@ -81,7 +81,7 @@ function answerFeedback (correctAnswer) {
 }
 
 function questionProgress() {
-    if (questionCounter <= 10) {
+    if (questionCounter < 10) {
         questionCounter++;
         progressText.innerHTML = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10)* 100}%`;
