@@ -66,7 +66,7 @@ function answerFeedback (correctAnswer) {
     $(".answer-text").unbind().click(e => {
         let selectedAnswer = e.target;
         
-        if (selectedAnswer === correctAnswer) {
+        if (selectedAnswer.innerHTML === correctAnswer) {
             console.log('CORRECT!');
         } else {
             console.log('INCORRECT!');
