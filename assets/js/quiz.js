@@ -64,7 +64,7 @@ function addChoices(correctAnswer, incorrectAnswers) {
 
 function answerFeedback (correctAnswer) {
     $(".answer-text").unbind().click(e => {
-        let selectedAnswer = e.target.innerHTML;
+        let selectedAnswer = e.target;
         
         if (selectedAnswer === correctAnswer) {
             console.log('CORRECT!');
