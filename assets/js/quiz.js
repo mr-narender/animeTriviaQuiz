@@ -76,11 +76,11 @@ function answerFeedback (correctAnswer) {
             console.log('INCORRECT!');
         }
         apiQuestion();
-        questionProgress(score);
+        questionProgress();
     })
 }
 
-function questionProgress(score) {
+function questionProgress() {
     if (questionCounter < 10) {
         questionCounter++;
         progressText.innerHTML = `Question ${questionCounter} of 10`;
