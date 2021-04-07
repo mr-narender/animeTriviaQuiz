@@ -1,6 +1,6 @@
 const quizQuestion = document.querySelector('#question');
 const answerParent = document.querySelector('#answerParent');
-const answers = shuffle(Array.from(document.getElementsByClassName('answer-text')));
+const answers = Array.from(document.getElementsByClassName('answer-text'));
 const progressText = document.querySelector('#progress-text');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progress-bar-full');
