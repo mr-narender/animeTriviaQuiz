@@ -144,7 +144,11 @@ View wireframes for each device here:
 
 ## Bugs 
 ---
+### When answer is clicked, the event is repeated
 
+* **Bug**<br>Each time the user selects an answer, whether it is correct or incorrect, it is repeated. The click event repetitions doubled with each additional click the user made.
+
+* **Fix**<br>
 ## Deployment 
 ---
 
