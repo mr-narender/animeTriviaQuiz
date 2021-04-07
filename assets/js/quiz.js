@@ -68,6 +68,8 @@ function answerFeedback (correctAnswer) {
         
         if (selectedAnswer.innerHTML === correctAnswer) {
             console.log('CORRECT!');
+            score += 10;
+            scoreText.innerHTML = score;
         } else {
             console.log('INCORRECT!');
         }
