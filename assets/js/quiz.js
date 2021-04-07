@@ -60,6 +60,8 @@ function addChoices(correctAnswer, incorrectAnswers) {
     answers[1].innerHTML = incorrectAnswers[0];
     answers[2].innerHTML = incorrectAnswers[1];
     answers[3].innerHTML = incorrectAnswers[2];
+
+    return shuffle(answers);
 };
 
 function answerFeedback (correctAnswer) {
