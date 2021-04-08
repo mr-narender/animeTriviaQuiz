@@ -42,8 +42,6 @@ fetch('https://opentdb.com/api.php?amount=39&category=31&type=multiple')
         let incorrectAnswers = questionData[0].incorrect_answers;
         */
 
-        console.log(questionData);
-
         // Passing the data into the functions to be handled
         addQuestion(questionData);
 
@@ -61,6 +59,10 @@ apiQuestion();
 
 // Adds question into quiz HTML page
 function addQuestion(questionData) {
+
+    console.log(questionData);
+
+    let random = Math.floor(Math.random() * questionData.length);
     quizQuestion.innerHTML = question;
 };
 
