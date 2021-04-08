@@ -151,6 +151,14 @@ View wireframes for each device here:
 * **Fix**<br>I refactored the code so that the fetch request inside the function ```apiQuestion()``` is limited to fetching the data and declaring it in a variable to be passed to ```addQuestion()``` and ```addChoices()``` functions. Before code refactoring, ```apiQuestion()``` also handled the functionality of displaying questions and choices to the quiz. I separated these into their own functions to improve readability so I could find the bug and avoid more potential bugs.<br>As I was writing the code, I used ```console.log()``` with each line of code to see where the bug appeared. It appear where I was using ```addEventListener()``` and for the sake of speed, I used JQuery's click event handler ```.click()``` alongside ```.unbind()``` .
 
 * **Verdict**<br>The click event listener works and the intended result has been achieved. I may return to it in order to improve it further. 
+
+### Slow performance when changing questions
+
+* **Bug**<br>It looks a relatively long time to move on to the next question when the users chose an answer. Within that time period when waiting for the next question, if users clicked on the answer again it would add to the number of questions it was going to retrieve. This in turn added to the time waiting for a new question.
+
+* **Fix**<br>Instead of making a fetch request for each new question, I requested all relevant questions once at the start of application. I declared this data in a variable ```questionData``` and passed it to ```addQuestion()``` function to use it to select a question from the available questions. 
+
+* **Verdict**<br>Performance has enormously improved and the side effect of poor performance, which is the potential for users to click on answer multiple times to increase time delay, has been avoided. 
 ## Deployment 
 ---
 
