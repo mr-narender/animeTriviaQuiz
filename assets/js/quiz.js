@@ -29,7 +29,7 @@ function shuffle(array) {
 
 // Question data is fetched from opentbd api
 function apiQuestion() {
-fetch('https://opentdb.com/api.php?amount=1&category=31&type=multiple')
+fetch('https://opentdb.com/api.php?amount=10&category=31&type=multiple')
     .then(res => res.json())
     .then(data => { 
 
@@ -38,6 +38,8 @@ fetch('https://opentdb.com/api.php?amount=1&category=31&type=multiple')
         let question = questionData[0].question;
         let correctAnswer = questionData[0].correct_answer;
         let incorrectAnswers = questionData[0].incorrect_answers;
+
+        console.log(questionData);
 
         // Passing the data into the functions to be handled
         addQuestion(question);
