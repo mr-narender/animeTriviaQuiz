@@ -60,11 +60,17 @@ apiQuestion();
 // Adds question into quiz HTML page
 function addQuestion(questionData) {
 
-    console.log(questionData);
-
     let random = Math.floor(Math.random() * questionData.length);
+    let correctAnswer = questionData[random].correct_answer;
+    let incorrectAnswers = questionData[random].incorrect_answers;
+
+    console.log(questionData[random]);
+    console.log(correctAnswer)
 
     quizQuestion.innerHTML = questionData[random].question;
+
+    addChoices(correctAnswer, incorrectAnswers);
+    
 };
 
 // Adds answer choices into quiz HTML page
