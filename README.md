@@ -146,9 +146,11 @@ View wireframes for each device here:
 ---
 ### When answer is clicked, the event is repeated
 
-* **Bug**<br>Each time the user selects an answer, whether it is correct or incorrect, it is repeated. The click event repetitions doubled with each additional click the user made.
+* **Bug**<br>Each time the user selects an answer, whether it is correct or incorrect, the click event is repeated. The click event repetitions doubled with each additional click the user made. For example, when the user clicks to choose answer to second question, it iterated the click twice and fetches two question instead of just one. On third click, it iterated the click four times and fetched four questions.
 
-* **Fix**<br>
+* **Fix**<br>I refactored the code so that the fetch request inside the function ```apiQuestion()``` is limited to fetching the data and declaring it in a variable to be passed to ```addQuestion()``` and ```addChoices()``` functions. Before code refactoring, ```apiQuestion()``` also handled the functionality of displaying questions and choices to the quiz. I separated these into their own functions to improve readability so I could find the bug and avoid more potential bugs.<br>As I was writing the code, I used ```console.log()``` with each line of code to see where the bug appeared. It appear where I was using ```addEventListener()``` and for the sake of speed, I used JQuery's click event handler ```.click()``` alongside ```.unbind()``` .
+
+* **Verdict**<br>The click event listener works and the intended result has been achieved. I may return to it in order to improve it further. 
 ## Deployment 
 ---
 
