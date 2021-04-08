@@ -63,7 +63,8 @@ function addQuestion(questionData) {
     console.log(questionData);
 
     let random = Math.floor(Math.random() * questionData.length);
-    quizQuestion.innerHTML = question;
+
+    quizQuestion.innerHTML = questionData[random].question;
 };
 
 // Adds answer choices into quiz HTML page
