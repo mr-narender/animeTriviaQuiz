@@ -36,20 +36,8 @@ fetch('https://opentdb.com/api.php?amount=39&category=31&type=multiple')
         // Separating question, correct answer and incorrect answers into their own variables
         let questionData = data.results;
 
-        /*
-        let question = questionData[0].question;
-        let correctAnswer = questionData[0].correct_answer;
-        let incorrectAnswers = questionData[0].incorrect_answers;
-        */
-
         // Passing the data into the functions to be handled
         addQuestion(questionData);
-
-        /*
-        addChoices(correctAnswer, incorrectAnswers);
-        answerFeedback(correctAnswer);
-        */
-
     })
     .catch(err => console.error(err));
 }
