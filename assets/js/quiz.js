@@ -45,8 +45,8 @@ fetch('https://opentdb.com/api.php?amount=39&category=31&type=multiple')
         console.log(questionData);
 
         // Passing the data into the functions to be handled
-        addQuestion(question);
-        
+        addQuestion(questionData);
+
         /*
         addChoices(correctAnswer, incorrectAnswers);
         answerFeedback(correctAnswer);
@@ -60,7 +60,7 @@ fetch('https://opentdb.com/api.php?amount=39&category=31&type=multiple')
 apiQuestion();
 
 // Adds question into quiz HTML page
-function addQuestion(question) {
+function addQuestion(questionData) {
     quizQuestion.innerHTML = question;
 };
 
