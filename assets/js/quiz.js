@@ -70,7 +70,7 @@ function addQuestion(questionData) {
     quizQuestion.innerHTML = questionData[random].question;
 
     addChoices(correctAnswer, incorrectAnswers);
-    
+    answerFeedback(correctAnswer);
 };
 
 // Adds answer choices into quiz HTML page
