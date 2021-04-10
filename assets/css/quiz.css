@@ -1,86 +1,104 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .quiz-container {
-    height: 100vh;
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
+  background-color: #c40b08;
+  align-content: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 
-#quiz {
-    background-color:#C40B08;
-    padding: 5rem;
-    display: flex;
-    flex-direction: column;
+.questionsAnswers,
+.answerParent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 75%;
+}
+
+.answerParent {
+  width: 75vw;
 }
 
 #game-display {
-    text-align: center;
-    width: 50rem;
+  text-align: center;
+  width: 50rem;
 }
 
 /*---Game Progress----*/
 
 .game-display-item {
-    text-align: center;
+  text-align: center;
 }
 
 #progress-text {
-    text-align: center;
-    font-size: 2.5rem;
+  text-align: center;
+  font-size: 2.5rem;
 }
 
 #progress-bar {
-    width: 20rem;
-    height: 3rem;
-    border: 0.2rem solid #ffffff;
-    border-radius: 12.5rem;
-    margin: 0 auto;
+  width: 20rem;
+  height: 3rem;
+  border: 0.2rem solid #ffffff;
+  border-radius: 12.5rem;
+  margin: 0 auto;
 }
 
 #progress-bar-full {
-    height: 100%;
-    background: #ffffff;
-    width: 0%;
-    border-radius: 12.5rem;
+  height: 100%;
+  background: #ffffff;
+  width: 0%;
+  border-radius: 12.5rem;
 }
 
 #score-label {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 #score {
-    font-size: 5rem;
+  font-size: 5rem;
 }
 
 /*---Questions & Answers---*/
 
 #question {
-    font-size: 3.75rem;
-    margin: 0 auto 2.5rem;
-    text-align: center;
+  font-size: 3.75rem;
+  margin: 0 auto 2.5rem;
+  text-align: center;
 }
 
 .answer-container {
-    display: flex;
-    color: #ffffff;
-    background-color: #C40B08;
-    border: 0.2rem solid #ffffff;
-    font-size: 2.5rem;
-    margin-bottom: 1.25rem;
-    justify-content: left;
-    padding: 0.625rem 1.25rem 0.625rem;
-    border-radius: 1.25rem;
+  display: flex;
+  color: #ffffff;
+  background-color: #c40b08;
+  border: 0.2rem solid #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  justify-content: left;
+  padding: 0.625rem 1.25rem 0.625rem;
+  border-radius: 1.25rem;
 }
 
 .answer-container:hover {
-    color: #C40B08;
-    background-color: #ffffff;
+  color: #c40b08;
+  background-color: #ffffff;
 }
 
 .answer-label {
-    margin-right: 2.5rem;
+  margin-right: 2.5rem;
 }
 
 .answer-text {
-    width: 100%;
+  width: 100%;
 }

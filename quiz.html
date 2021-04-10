@@ -1,64 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/quiz.css">
-<title>Anime Trivia Quiz!</title>
-</head>
-<body>
-    <div class="container-fluid quiz-container">
-        <div id="quiz"  class="game-display-container">
-            <div id="game-display" class="justify-center row">
-                <div class="game-display-item col-6">
-                    <p id="progress-text">
-                        Question 1 of 10
-                    </p>
-                    <div id="progress-bar">
-                        <div id="progress-bar-full"></div>
-                    </div>   
-                </div>
-                <div class="game-display-item col-6">
-                    <div id="score-label">
-                        Score
-                    </div>
-                    <div id="score">
-                        0
-                    </div>
-                </div>
-                <div id="questionsAnswers">
-                    <h1 id="question">What is the right answer to these questions?</h1>
-                    <div id="answerParent">
-                        <div class="answer-container col-12">
-                            <!--<p class="answer-label">A</p>-->
-                            <p class="answer-text"></p>
-                        </div>
-                        <div class="answer-container col-12">
-                            <!--<p class="answer-label">B</p>-->
-                            <p class="answer-text"></p>
-                        </div> 
-                        <div class="answer-container col-12">
-                            <!--<p class="answer-label">C</p>-->
-                            <p class="answer-text"></p>
-                        </div> 
-                        <div class="answer-container col-12">
-                            <!--<p class="answer-label">D</p>-->
-                            <p class="answer-text"></p>
-                        </div> 
-                    </div>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/quiz.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"
+      defer
+    ></script>
+    <script src="assets/js/quiz.js" defer></script>
+    <title>Anime Trivia Quiz!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="quiz-container">
+        <div class="game-display-item col-6">
+          <p id="progress-text">Question 1 of 10</p>
+          <div id="progress-bar">
+            <div id="progress-bar-full"></div>
+          </div>
         </div>
+        <div class="game-display-item col-6">
+          <div id="score-label">Score</div>
+          <div id="score">0</div>
+        </div>
+        <div id="questionsAnswers" class="questionsAnswers">
+          <h1 id="question">What is the right answer to these questions?</h1>
+          <div id="answerParent" class="answerParent">
+            <div class="answer-container col-12 col-sm-6 col-md-4 col-lg-3">
+              <p class="answer-text"></p>
+            </div>
+            <div class="answer-container col-12 col-sm-6 col-md-4 col-lg-3">
+              <p class="answer-text"></p>
+            </div>
+            <div class="answer-container col-12 col-sm-6 col-md-4 col-lg-3">
+              <p class="answer-text"></p>
+            </div>
+            <div class="answer-container col-12 col-sm-6 col-md-4 col-lg-3">
+              <p class="answer-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="assets/js/quiz.js"></script>
-</body>
+  </body>
 </html>

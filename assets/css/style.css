@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap");
 
 html {
-    font-size: 62.5%;
+  height: 100%;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: 'Bubblegum Sans', cursive;
-    color: #ffffff;
-    background: url("../images/animeTriviaBg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;     
+  font-family: "Bubblegum Sans", cursive;
+  background-color: #ffffff;
+  background-image: url("../images/animeTriviaBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
