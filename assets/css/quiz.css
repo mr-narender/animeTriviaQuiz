@@ -11,6 +11,7 @@
     background-color: #C40B08;
     align-content: center;
     position: relative;
+    display: flex;
 }
 
 #quiz {
