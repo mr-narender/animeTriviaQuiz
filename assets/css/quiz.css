@@ -18,6 +18,16 @@
     width: 100%;
 }
 
+.questionsAnswers, .answerParent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 75%;
+}
+
+
 
 #game-display {
     text-align: center;
