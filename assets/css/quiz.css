@@ -60,6 +60,10 @@
     text-align: center;
 }
 
+.answerParent {
+    width: 75vw;
+}
+
 .answer-container {
     display: flex;
     color: #ffffff;
