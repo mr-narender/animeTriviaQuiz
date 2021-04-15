@@ -18,12 +18,6 @@
     width: 100%;
 }
 
-#quiz {
-    background-color:#C40B08;
-    padding: 5rem;
-    display: flex;
-    flex-direction: column;
-}
 
 #game-display {
     text-align: center;
