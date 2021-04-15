@@ -9,7 +9,8 @@
 
 .quiz-container {
     background-color: #C40B08;
-    
+    align-content: center;
+    position: relative;
 }
 
 #quiz {
