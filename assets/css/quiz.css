@@ -27,6 +27,10 @@
     width: 75%;
 }
 
+#question {
+    width: 70%;
+}
+
 .answerParent {
     width: 75vw;
     margin: 0 auto;
