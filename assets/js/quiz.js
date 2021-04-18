@@ -92,7 +92,6 @@ function answerFeedback (correctAnswer) {
         }
 
         // requests new question and updates users' progress
-        apiQuestion();
         questionProgress();
     })
 }
@@ -105,6 +104,7 @@ function questionProgress() {
         questionCounter++;
         progressText.innerHTML = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10)* 100}%`;
+        apiQuestion();
     } else {
 
         // Sends users to end-page once they have answered all questions
