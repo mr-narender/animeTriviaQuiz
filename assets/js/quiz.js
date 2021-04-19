@@ -43,9 +43,7 @@ function apiQuestion() {
 }
 
 // Calls first question when page is opened
-//apiQuestion();
-
-$("#startButton").click(apiQuestion());
+apiQuestion();
 
 // Adds question into quiz HTML page
 function addQuestion(questionData) {
@@ -56,6 +54,10 @@ function addQuestion(questionData) {
 
     console.log(questionData[random]);
     console.log(correctAnswer)
+    
+    if (quizQuestion === null) {
+        return;
+    }
 
     quizQuestion.innerHTML = questionData[random].question;
 
@@ -95,6 +97,7 @@ function answerFeedback (correctAnswer) {
 
         // requests new question and updates users' progress
         questionProgress();
+        apiQuestion();
     })
 }
 
@@ -106,7 +109,6 @@ function questionProgress() {
         questionCounter++;
         progressText.innerHTML = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10)* 100}%`;
-        apiQuestion();
     } else {
 
         // Sends users to end-page once they have answered all questions
