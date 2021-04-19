@@ -7,6 +7,11 @@ const progressBarFull = document.querySelector('#progress-bar-full');
 
 let questionCounter = 1;  
 let score = 0;
+let currentScore = {
+        name: '',
+        score: ''
+    }
+    
 
 // Fisher-Yates Shuffle Algorithm
 function shuffle(array) {
