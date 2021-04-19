@@ -29,21 +29,23 @@ function shuffle(array) {
 
 // Question data is fetched from opentbd api
 function apiQuestion() {
-fetch('https://opentdb.com/api.php?amount=39&category=31&type=multiple')
-    .then(res => res.json())
-    .then(data => { 
+    fetch('https://opentdb.com/api.php?amount=39&category=31&type=multiple')
+        .then(res => res.json())
+        .then(data => { 
 
-        // Separating question, correct answer and incorrect answers into their own variables
-        let questionData = data.results;
+            // Separating question, correct answer and incorrect answers into their own variables
+            let questionData = data.results;
 
-        // Passing the data into the functions to be handled
-        addQuestion(questionData);
-    })
-    .catch(err => console.error(err));
+            // Passing the data into the functions to be handled
+            addQuestion(questionData);
+        })
+        .catch(err => console.error(err));
 }
 
 // Calls first question when page is opened
-apiQuestion();
+//apiQuestion();
+
+$("#startButton").click(apiQuestion());
 
 // Adds question into quiz HTML page
 function addQuestion(questionData) {
