@@ -7,11 +7,6 @@ const progressBarFull = document.querySelector('#progress-bar-full');
 
 let questionCounter = 1;  
 let score = 0;
-let currentScore = {
-        name: '',
-        score: ''
-    }
-    
 
 // Fisher-Yates Shuffle Algorithm
 function shuffle(array) {
@@ -115,6 +110,12 @@ function questionProgress() {
         progressText.innerHTML = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10)* 100}%`;
     } else {
+
+        let currentScore = {
+                name: '',
+                score: score
+            }
+
 
         // Sends users to end-page once they have answered all questions
         window.location.assign('/end-page.html');
