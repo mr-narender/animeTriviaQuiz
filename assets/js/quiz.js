@@ -110,13 +110,7 @@ function questionProgress() {
         progressText.innerHTML = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10)* 100}%`;
     } else {
-
-        let currentScore = {
-                name: '',
-                score: score
-            }
-
-
+        
         // Sends users to end-page once they have answered all questions
         window.location.assign('/end-page.html');
     }
