@@ -162,6 +162,13 @@ View wireframes for each device here:
 * **Results**<br>No results yet.
 * **Verdict**<br>It has not been implemented due to lack of time as most of the time was occupied working on the other functionalities. It shall be implemented in the future.
 
+### Displaying user progress
+**As a user, I would like to know my progress through the test in terms of how much of test has been completed.**
+* **Plan**<br>To allow the user to know where they are in their progress of the quiz and what question they are on.
+* **Implementation**<br>To display a progress bar that fills up as user progresses through the quiz and display how many questions have been completed.
+* **Test**<br>I manually tested the quiz by going through it 15 times.
+* **Results**<br>The progress bar was displayed with no problem and updates with each question. The question counter increments correctly by one with each question.
+* **Verdict**<br>The test has passed all the criteria and works as intended.
 
 ## Bugs 
 ---
