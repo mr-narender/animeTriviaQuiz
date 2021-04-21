@@ -132,15 +132,15 @@ View wireframes for each device here:
 
 ### Game is fun!
 **User Story: I want to have fun and enjoy the game.**
-* **Plan**<br>
-* **Implementation**<br>
-* **Test**<br>
-* **Results**<br>
-* **Verdict**<br>
+* **Plan**<br>Give the user questions that are challenging with varying difficulty levels and ask about a wide variety of anime.
+* **Implementation**<br>I have included questions of all difficulty level that are randomly selected in order to catch the user by surprise and challenge them.
+* **Test**<br>I asked my sister who is a huge anime and manga fan to test it out. 
+* **Results**<br>She found it really fun and challenging. The challenging questions were the most satisfying to solve for her.
+* **Verdict**<br>The test has passed all the criteria and works as intended.
 
 ### Easy to learn
 **User Story: I want to easily learn how to play the game with little complication.**
-* **Plan**<br>
+* **Plan**<br>Build the quiz game as simple as possible that no instructions are needed. User learns to use it immediately.
 * **Implementation**<br>
 * **Test**<br>
 * **Results**<br>
