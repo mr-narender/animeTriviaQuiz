@@ -138,7 +138,7 @@ View wireframes for each device here:
 * **Results**<br>She found it really fun and challenging. The challenging questions were the most satisfying to solve for her.
 * **Verdict**<br>The test has passed all the criteria and works as intended.
 
-### Easy to learn to Use
+### Easy to Learn to Use
 **User Story: I want to easily learn how to play the game with little complication.**
 * **Plan**<br>Build the quiz game as simple as possible so that no instructions are needed. User learns to use it immediately.
 * **Implementation**<br>Kept the UI simple and easy to deal with. Creates an effect on buttons and answer choices to change colour during mouse hover event. This allows users to know what to click. I also avoided including unnecessary features that was not relevant. 
@@ -146,6 +146,21 @@ View wireframes for each device here:
 * **Results**<br>She immediately was able to start and complete the game without giving her instructions. She said there was no problem.
 * **Verdict**<br>The test has passed all the criteria and works as intended.
 
+### Questions are randomly chosen
+**User Story: As a user, I want the questions to be randomised so I can come back to the challenge with new questions every-time.**
+* **Plan**<br>To selected random question each user begins or proceeds to new question.
+* **Implementation**<br>I passed the ```questionData``` variable, containing an array of questions along with their corresponding answers, as argument to ```addQuestion()```. Declared variable ```random``` that selects a random number within the range of the array length. I then used this variable as an index to the ```questionData``` array when selecting each question.
+* **Test**<br>I took the quiz 5 times and my sister did it twice.
+* **Results**<br>The questions displayed were randomized and rarely appeared.
+* **Verdict**<br>The test passed all the criteria and works as intended. It will be more random with addition of more questions in the future.
+
+### Saving and displaying top score to challenge user
+**As a user, should be able to have my top score saved to beat next time or challenge others to do so.**
+* **Plan**<br>To allow user to save their score and to display high scores to challenge new users or the same user to try it again.
+* **Implementation**<br>It has not yet been implemented.
+* **Test**<br>I shall test once I have implemented.
+* **Results**<br>No results yet.
+* **Verdict**<br>It has not been implemented due to lack of time as most of the time was occupied working on the other functionalities. It shall be implemented in the future.
 
 
 ## Bugs 
