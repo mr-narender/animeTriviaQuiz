@@ -208,5 +208,11 @@ Use the **"git clone" command** and paste the url copied in the second step.
 ## References 
 ---
 ### Code References 
+* [Fisher-Yates Shuffle Algorithm](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+* [How to assign the innerHTML of array elements to the values in another array](https://stackoverflow.com/questions/62235124/how-to-assign-the-innerhtml-of-array-elements-to-the-values-in-another-array)
+* [Using fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+* [Displaying each answers array value in each .answer-container](https://stackoverflow.com/questions/62235124/how-to-assign-the-innerhtml-of-array-elements-to-the-values-in-another-array)
+* [Select Random Item from an Array](https://css-tricks.com/snippets/javascript/select-random-item-array/)
+* [Javascript Object Values](https://www.w3schools.com/jsref/jsref_obj_array.asp)
 
 ### Special Thanks 
