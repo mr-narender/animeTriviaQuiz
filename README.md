@@ -117,7 +117,10 @@ View wireframes for each device here:
 ## Features 
 ---
 **Features** that have been **implemented**:
-
+* Ten questions per quiz attempt
+* Multiple choice answers
+* Score keeping
+* Progress bar
 
 **Features** that will be **implemented** in the **future**:
 
