@@ -216,3 +216,11 @@ Use the **"git clone" command** and paste the url copied in the second step.
 * [Javascript Object Values](https://www.w3schools.com/jsref/jsref_obj_array.asp)
 
 ### Special Thanks 
+* First and foremost, I would like to thank my mentor and the Grandmaster Yoda [Eventyret](https://github.com/Eventyret). He helped me calm down during stressful moments and gave me golden advice to keep pushing forward.
+* I would also like to thank the Code Institute tutors who had to deal with all my endless questions and trying to make sense of my spaghetti code. 
+* I would like to thank the Code Institute Slack community who are always helpful and encouraging. 
+* My friend, [Said Ali](https://github.com/said-ali?tab=repositories), was helpful in getting me out of trouble and I thank him too.
+* My sister, Hawa, who is an artist and fellow anime fan for giving me some suggestions on UI and for testing the quiz app.
+* [ByIlsa](https://github.com/byIlsa/Aloy-from-outcast-to-heroine) and [Anouk Smet](https://github.com/AnoukSmet/Brain-Quizzers) for their awesome, well-structured READMEs that helped me to write mine.
+
+**For educational purposes only.**
