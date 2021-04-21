@@ -189,6 +189,21 @@ View wireframes for each device here:
 * **Verdict**<br>Performance has enormously improved and the side effect of poor performance, which is the potential for users to click on answer multiple times to increase time delay, has been avoided. 
 ## Deployment 
 ---
+This project was deployed via GitHub by executing the following steps. After writing the code, committing and pushing it to GitHub:
+
+* Navigate to the repository on github and click **Settings**.
+* From there, go to the **Source section** within the Github Pages section.
+* Select **master branch** on the dropdown menu, and click save.
+* Now the website is live on:
+```https://yourgithubusername.github.io/your-repo-name```
+* Any time commits and pushes are sent to Github, the Github Pages site should update shortly after.
+
+To run the project locally:
+Click the **green Clone** or **Download button** on the Github Repository
+Using the **Clone with HTTPS option**, copy the link displayed.
+Open your IDE, and ensure the Git Terminal is open.
+Change the working directory to the location where the cloned directory is to go.
+Use the **"git clone" command** and paste the url copied in the second step.
 
 ## References 
 ---
