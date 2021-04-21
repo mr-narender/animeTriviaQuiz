@@ -140,11 +140,11 @@ View wireframes for each device here:
 
 ### Easy to learn
 **User Story: I want to easily learn how to play the game with little complication.**
-* **Plan**<br>Build the quiz game as simple as possible that no instructions are needed. User learns to use it immediately.
-* **Implementation**<br>
-* **Test**<br>
-* **Results**<br>
-* **Verdict**<br>
+* **Plan**<br>Build the quiz game as simple as possible so that no instructions are needed. User learns to use it immediately.
+* **Implementation**<br>Kept the UI simple and easy to deal with. Creates an effect on buttons and answer choices to change colour during mouse hover event. This allows users to know what to click. I also avoided including unnecessary features that was not relevant. 
+* **Test**<br>I asked my sister to test it out.
+* **Results**<br>She immediately was able to start and complete the game without giving her instructions. She said there was no problem.
+* **Verdict**<br>The test has passed all the criteria and works as intended.
 
 
 
