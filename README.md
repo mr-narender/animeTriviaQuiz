@@ -123,6 +123,9 @@ View wireframes for each device here:
 * Progress bar
 
 **Features** that will be **implemented** in the **future**:
+* Saving and displaying high score at the end of the quiz
+* Sound effects 
+* Background music 
 
 ## Testing 
 ---
