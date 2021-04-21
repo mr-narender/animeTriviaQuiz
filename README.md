@@ -138,7 +138,7 @@ View wireframes for each device here:
 * **Results**<br>She found it really fun and challenging. The challenging questions were the most satisfying to solve for her.
 * **Verdict**<br>The test has passed all the criteria and works as intended.
 
-### Easy to learn
+### Easy to learn to Use
 **User Story: I want to easily learn how to play the game with little complication.**
 * **Plan**<br>Build the quiz game as simple as possible so that no instructions are needed. User learns to use it immediately.
 * **Implementation**<br>Kept the UI simple and easy to deal with. Creates an effect on buttons and answer choices to change colour during mouse hover event. This allows users to know what to click. I also avoided including unnecessary features that was not relevant. 
