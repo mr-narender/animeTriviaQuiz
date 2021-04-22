@@ -18,6 +18,10 @@
     width: 100%;
 }
 
+#replacement-container {
+    display: none;
+}
+
 .questionsAnswers, .answerParent {
     display: flex;
     justify-content: center;
@@ -106,6 +110,12 @@
 }
 
 @media (orientation: landscape) {
+    body {
+        background: none;
+        color: #C40B08;
+        font-size: 5rem;
+    }
+
     .app-container {
         display: none;
     }
