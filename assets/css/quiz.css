@@ -113,7 +113,6 @@
     body {
         background: none;
         color: #C40B08;
-        font-size: 5rem;
     }
 
     .app-container {
@@ -124,5 +123,6 @@
         display: flex;
         margin: 2rem;
         height: 100vh;
+        font-size: 2.5rem;
     }
 }
