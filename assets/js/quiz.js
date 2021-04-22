@@ -9,6 +9,7 @@ let questionCounter = 1;
 let score = 0;
 
 // Fisher-Yates Shuffle Algorithm
+
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -33,16 +34,13 @@ function apiQuestion() {
         .then(res => res.json())
         .then(data => { 
 
-            // Separating question, correct answer and incorrect answers into their own variables
             let questionData = data.results;
 
-            // Passing the data into the functions to be handled
             addQuestion(questionData);
         })
         .catch(err => console.error(err));
 }
 
-// Calls first question when page is opened
 apiQuestion();
 
 // Adds question into quiz HTML page
@@ -68,26 +66,22 @@ function addQuestion(questionData) {
 // Adds answer choices into quiz HTML page
 function addChoices(correctAnswer, incorrectAnswers) {
 
-    // Answers constant is an array of an array length of 4
     answers[0].innerHTML = correctAnswer;
     answers[1].innerHTML = incorrectAnswers[0];
     answers[2].innerHTML = incorrectAnswers[1];
     answers[3].innerHTML = incorrectAnswers[2];
 
-    // Answers constant is shuffled so correct answer does not appear in same place
     return shuffle(answers);
 };
 
 // Checks if answer clicked is correct (adds points) or incorrect, requests new question and updates progress
 function answerFeedback (correctAnswer) {
 
-    // Click event listener
     $(".answer-text").unbind().click(e => {
         let selectedAnswer = e.target;
         
         if (selectedAnswer.innerHTML === correctAnswer) {
 
-            // If answer is correct, gives users 10 points and updates score
             console.log('CORRECT!');
             score += 10;
             scoreText.innerHTML = score;
@@ -95,7 +89,6 @@ function answerFeedback (correctAnswer) {
             console.log('INCORRECT!');
         }
 
-        // requests new question and updates users' progress
         questionProgress();
         apiQuestion();
     })
@@ -105,13 +98,11 @@ function answerFeedback (correctAnswer) {
 function questionProgress() {
     if (questionCounter < 10) {
 
-        // Updates users on their progress while they have not completed all questions
         questionCounter++;
         progressText.innerHTML = `Question ${questionCounter} of 10`;
         progressBarFull.style.width = `${(questionCounter/10)* 100}%`;
     } else {
         
-        // Sends users to end-page once they have answered all questions
         window.location.assign('end-page.html');
     }
 }
