@@ -121,6 +121,8 @@
     }
 
     #replacement-container {
-        display: block;
+        display: flex;
+        margin: 2rem;
+
     }
 }
