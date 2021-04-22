@@ -8,8 +8,11 @@ const progressBarFull = document.querySelector('#progress-bar-full');
 let questionCounter = 1;  
 let score = 0;
 
-// Fisher-Yates Shuffle Algorithm
-
+/**
+ * Fisher-Yates Shuffle Algorithm
+ * Used to randomise the order of the array elements
+ * https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+ */
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
 
