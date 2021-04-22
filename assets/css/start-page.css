@@ -34,3 +34,13 @@
     border: 3px solid#ffffff;
     background-color: #ffffff;
 }
+
+@media (max-width: 450px) {
+    #start {
+        width: 30rem;
+    }
+
+    .btn {
+        width: 25rem;
+    }
+}
