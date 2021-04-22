@@ -104,3 +104,13 @@
 .answer-text {
     width: 100%;
 }
+
+@media (orientation: landscape) {
+    .app-container {
+        display: none;
+    }
+
+    #replacement-container {
+        display: block;
+    }
+}
