@@ -6,6 +6,7 @@ html {
 
 body {
     font-family: 'Bubblegum Sans', cursive;
+    font-size: 1.6rem;
     color: #ffffff;
     background: url("../images/animeTriviaBg.jpg");
     background-size: cover;
