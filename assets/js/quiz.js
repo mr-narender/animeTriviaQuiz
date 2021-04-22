@@ -112,6 +112,6 @@ function questionProgress() {
     } else {
         
         // Sends users to end-page once they have answered all questions
-        window.location.assign('animeTriviaQuiz/end-page.html');
+        window.location.assign('/workspace/animeTriviaQuiz/end-page.html');
     }
 }
