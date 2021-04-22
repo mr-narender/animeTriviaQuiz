@@ -49,9 +49,6 @@ function addQuestion(questionData) {
     let random = Math.floor(Math.random() * questionData.length);
     let correctAnswer = questionData[random].correct_answer;
     let incorrectAnswers = questionData[random].incorrect_answers;
-
-    console.log(questionData[random]);
-    console.log(correctAnswer)
     
     if (quizQuestion === null) {
         return;
@@ -82,12 +79,9 @@ function answerFeedback (correctAnswer) {
         
         if (selectedAnswer.innerHTML === correctAnswer) {
 
-            console.log('CORRECT!');
             score += 10;
             scoreText.innerHTML = score;
-        } else {
-            console.log('INCORRECT!');
-        }
+        } 
 
         questionProgress();
         apiQuestion();
