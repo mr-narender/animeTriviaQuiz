@@ -31,3 +31,9 @@
 #formGroupExampleInput {
     font-size: 2.5rem;
 }
+
+@media (max-width: 450px) {
+    .btn {
+        width: 15rem;
+    }
+}
