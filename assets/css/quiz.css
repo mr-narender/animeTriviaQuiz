@@ -1,4 +1,4 @@
-.container {
+.app-container {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -64,11 +64,11 @@
 }
 
 #score-label {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 #score {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 /*---Questions & Answers---*/
