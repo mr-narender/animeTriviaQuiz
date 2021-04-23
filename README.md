@@ -110,7 +110,7 @@ View wireframes for each device here:
 
 * [Bootstrap](https://getbootstrap.com/)
 * [Google Fonts](https://fonts.google.com/)
-* [Gitpod](https://gitpod.io/workspaces/)
+* [Gitpod](https://gitpod.io/)
 * [JQuery](https://jquery.com/) 
 * [Popper](https://popper.js.org/)
 
