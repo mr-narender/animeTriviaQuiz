@@ -187,6 +187,15 @@ View wireframes for each device here:
 * **Fix**<br>Instead of making a fetch request for each new question, I requested all relevant questions once at the start of application. I declared this data in a variable ```questionData``` and passed it to ```addQuestion()``` function to use it to select a question from the available questions. 
 
 * **Verdict**<br>Performance has enormously improved and the side effect of poor performance, which is the potential for users to click on answer multiple times to increase time delay, has been avoided. 
+
+### Answer is still highlighted from previous question
+
+* **Bug**<br>On mobile and tablets, the answer is still highlighted in the next question after user taps on answer. 
+
+* **Fix**<br>I shall leave it to be fixed later.
+
+* **Verdict**<br>It does not affect the functionality of the game. It just does not look good but it can be fixed later since it is not urgent. 
+
 ## Deployment 
 ---
 This project was deployed via GitHub by executing the following steps. After writing the code, committing and pushing it to GitHub:
