@@ -35,12 +35,12 @@
 
 * As a **user**, I want the web app to be **easy to use** and **is easy to learn to use**.
 * As a **user**, I want the **questions to be randomised** so I can come back to the **challenge with new questions** every-time. 
-* As a **user**, should be able to have my **top score saved** to beat next time or challenge others to do so. 
-* As a **user**, I would like to **know my progress** through the test in terms of **how much** of test **has been completed**.
+* As a **user**, I would like to be able to have my **top score saved** to beat next time or challenge others to do so. 
+* As a **user**, I would like to **know my progress** through the test in terms of **how much** of the test **has been completed**.
 
 ### Site Owner Goals 
-* As a **site owner**, to entertain and keep user coming back to take the challenge again to beat the top score.
-* As a **site owner**, make the quiz fun for the user!
+* As a **site owner**, I would like to entertain and keep user coming back to take the challenge again to beat the top score.
+* As a **site owner**, I would like to make the quiz fun for the user!
 
 ### User Requirements and Expectations 
 
@@ -48,23 +48,23 @@
 * Web application should be on the header part of front-page to dominate the webpage.
 * Should be a one page website that has only web app on display to avoid distracting user from main feature.
 * Should be without lag and have good performance to make experience comfortable and easy.
-* A start page that displays top score and user presses button to begin quiz.
+* A start page where user presses button to begin quiz.
 * End of quiz should show a page to save score by entering name and a choice to restart quiz.
 
 **Expectations**
 * Visually appealing website that is easy on the eyes and make the UX very positive emotionally.
 * Looks fun and the colour schemes should relax user to enjoy their free time.
-* Satisfy all user goals to the best of ability by including all relevant features, user should feel site was very enjoyable.
+* Satisfy all user goals to the best of ability by including relevant features, user should feel site was very enjoyable.
 
 ### Design Choices 
 ---
 **Fonts**
 
-I looked for a simple and asthetically pleasing font to match typical holiday themes of relaxations and good times. I chose [Bubblegum Sans](https://fonts.google.com/specimen/Bubblegum+Sans?preview.text_type=custom&sidebar.open=true&selection.family=Bubblegum+Sans) for all texts and headers. 
+I looked for a simple and asthetically pleasing font to match the manga font style. I chose [Bubblegum Sans](https://fonts.google.com/specimen/Bubblegum+Sans?preview.text_type=custom&sidebar.open=true&selection.family=Bubblegum+Sans) for all texts and headers. 
 
 **Colours**
 
-I chose to use the [Coolors](https://coolors.co/) colour scheme generator to find one suitable for this project. Below is a screenshot of the colour scheme. They are colours that are pleasant and to look.
+I chose to use the [Coolors](https://coolors.co/) colour scheme generator to find one suitable for this project. Below is a screenshot of the colour scheme. They are colours that are pleasant to look at.
 
 ![Colour Scheme](wireframes/animeTriviaQuizColours.png)
 
@@ -96,6 +96,10 @@ View wireframes for each device here:
 * [Desktop](wireframes/end-page-desktop.pdf)
 * [Tablet](wireframes/end-page-tablet.pdf)
 * [Mobile](wireframes/end-page-mobile.pdf)
+
+I adjusted the UI/UX of this project to be more efficient in terms of use and development. The reality of the development process has shown that certain design features were not really useful or there was not enough time to implement them right away. 
+
+In hindsight, the layout shown in the wireframes were not completely practical and would not allow for proper use of the screen space. It appeared differently in practice too. I adjusted the layout a little bit according to each screen. 
 
 ## Technologies Used 
 ---
