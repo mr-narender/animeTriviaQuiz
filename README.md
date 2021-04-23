@@ -229,7 +229,7 @@ I used [JSHint](https://jshint.com/) to test the JavaScript code and the result 
 
 ### Possibility of queueing up click events
 
-* **Bug**<br>Through testing, I found out that sometimes when user is moving on to next question, there are occasional delays. The user could assume that they may need to make another click to make it work. They may assume they either did not click properly or did not click at all. When repeated clicks are made, the repeated call to ```apiQuestion()``` function is queued up and multiple questions are iterated through. It takes the repeated click as the answer to all the queued up questions that appeared.
+* **Bug**<br>Through testing, I found out that sometimes when user is moving on to next question, there are occasional delays. The user could assume that they may need to make another click to make it work. They may assume they either did not click properly or did not click at all. When repeated clicks are made, the repeated call to ```apiQuestion()``` function is queued up and multiple questions are iterated through. It takes the repeated click as the answer to all the queued up questions that appeared. This bug also occurs when user double clicks on the answer very quickly. 
 
 * **Fix**<br>It has not been fixed yet. A possible fix could be to add a loading animation to show next question is coming or give clear feedback that the user has clicked on answer. 
 
