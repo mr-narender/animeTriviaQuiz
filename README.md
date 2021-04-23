@@ -113,6 +113,7 @@ View wireframes for each device here:
 * [Gitpod](https://gitpod.io/)
 * [JQuery](https://jquery.com/) 
 * [Popper](https://popper.js.org/)
+* [Open Trivia DB](https://opentdb.com/)
 
 ## Features 
 ---
