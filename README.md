@@ -132,29 +132,29 @@ View wireframes for each device here:
 ### Game is fun!
 **User Story: I want to have fun and enjoy the game.**
 * **Plan**<br>Give the user questions that are challenging with varying difficulty levels and ask about a wide variety of anime.
-* **Implementation**<br>I have included questions of all difficulty level that are randomly selected in order to catch the user by surprise and challenge them.
-* **Test**<br>I asked my sister who is a huge anime and manga fan to test it out. 
+* **Implementation**<br>I have included questions of all difficulty levels that are randomly selected in order to catch the user by surprise and challenge them.
+* **Test**<br>I asked my sister, who is a huge anime and manga fan, to test it out. 
 * **Results**<br>She found it really fun and challenging. The challenging questions were the most satisfying to solve for her.
 * **Verdict**<br>The test has passed all the criteria and works as intended.
 
 ### Easy to Learn to Use
 **User Story: I want to easily learn how to play the game with little complication.**
 * **Plan**<br>Build the quiz game as simple as possible so that no instructions are needed. User learns to use it immediately.
-* **Implementation**<br>Kept the UI simple and easy to deal with. Creates an effect on buttons and answer choices to change colour during mouse hover event. This allows users to know what to click. I also avoided including unnecessary features that was not relevant. 
+* **Implementation**<br>Kept the UI simple and easy to deal with. Creates an effect on buttons and answer choices to change colour during mouse hover event. This allows users to know what to click. I also avoided including unnecessary features that were not relevant. 
 * **Test**<br>I asked my sister to test it out.
 * **Results**<br>She immediately was able to start and complete the game without giving her instructions. She said there was no problem.
 * **Verdict**<br>The test has passed all the criteria and works as intended.
 
 ### Questions are randomly chosen
 **User Story: As a user, I want the questions to be randomised so I can come back to the challenge with new questions every-time.**
-* **Plan**<br>To selected random question each user begins or proceeds to new question.
-* **Implementation**<br>I passed the ```questionData``` variable, containing an array of questions along with their corresponding answers, as argument to ```addQuestion()```. Declared variable ```random``` that selects a random number within the range of the array length. I then used this variable as an index to the ```questionData``` array when selecting each question.
+* **Plan**<br>To selected a random question each time user begins or proceeds to new question.
+* **Implementation**<br>I passed the ```questionData``` variable, containing an array of questions along with their corresponding answers, as an argument to ```addQuestion()```. Declared variable ```random``` that selects a random number within the range of the array length. I then used this variable as an index to the ```questionData``` array when selecting each question.
 * **Test**<br>I took the quiz 5 times and my sister did it twice.
 * **Results**<br>The questions displayed were randomized and rarely appeared.
 * **Verdict**<br>The test passed all the criteria and works as intended. It will be more random with addition of more questions in the future.
 
 ### Saving and displaying top score to challenge user
-**As a user, should be able to have my top score saved to beat next time or challenge others to do so.**
+**As a user, I would like to be able to have my top score saved to beat next time or challenge others to do so.**
 * **Plan**<br>To allow user to save their score and to display high scores to challenge new users or the same user to try it again.
 * **Implementation**<br>It has not yet been implemented.
 * **Test**<br>I shall test once I have implemented.
