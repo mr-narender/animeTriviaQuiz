@@ -27,14 +27,13 @@
 * To build a trivia question web app on anime and manga with multiple choice questions.
 
 ### User Goals 
-* Have my Japanese anime and manga knowledge challenge.
+* Have my Japanese anime and manga knowledge challenged.
 * Challenge myself to beat my previous high score.
 * Have fun!
 
 ### User Stories 
 
 * As a **user**, I want the web app to be **easy to use** and **is easy to learn to use**.
-* As a **user**, I want to **have fun** without **interruptions from errors or bugs**.
 * As a **user**, I want the **questions to be randomised** so I can come back to the **challenge with new questions** every-time. 
 * As a **user**, should be able to have my **top score saved** to beat next time or challenge others to do so. 
 * As a **user**, I would like to **know my progress** through the test in terms of **how much** of test **has been completed**.
