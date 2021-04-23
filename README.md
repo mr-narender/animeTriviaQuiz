@@ -196,6 +196,14 @@ View wireframes for each device here:
 
 * **Verdict**<br>It does not affect the functionality of the game. It just does not look good but it can be fixed later since it is not urgent. 
 
+### Quiz page was not responsive in landscape mode
+
+* **Bug**<br>On mobile screens, the quiz page was not responsive because the top and bottom of the page would be cut off. The page also did not allow for scrolling up and down the page when this was the case. 
+
+* **Fix**<br>For now, I set up the page to display a message telling user that the game is best played in portrait mode when the user turns device to landscape mode.
+
+* **Verdict**<br>The overall functionality of the game has not been affected and this bug is not high on the priority list. I shall return to it later on.
+
 ## Deployment 
 ---
 This project was deployed via GitHub by executing the following steps. After writing the code, committing and pushing it to GitHub:
