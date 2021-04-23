@@ -175,17 +175,17 @@ View wireframes for each device here:
 
 * **Bug**<br>Each time the user selects an answer, whether it is correct or incorrect, the click event is repeated. The click event repetitions doubled with each additional click the user made. For example, when the user clicks to choose answer to second question, it iterated the click twice and fetches two question instead of just one. On third click, it iterated the click four times and fetched four questions.
 
-* **Fix**<br>I refactored the code so that the fetch request inside the function ```apiQuestion()``` is limited to fetching the data and declaring it in a variable to be passed to ```addQuestion()``` and ```addChoices()``` functions. Before code refactoring, ```apiQuestion()``` also handled the functionality of displaying questions and choices to the quiz. I separated these into their own functions to improve readability so I could find the bug and avoid more potential bugs.<br>As I was writing the code, I used ```console.log()``` with each line of code to see where the bug appeared. It appear where I was using ```addEventListener()``` and for the sake of speed, I used JQuery's click event handler ```.click()``` alongside ```.unbind()``` .
+* **Fix**<br>I refactored the code so that the fetch request inside the function ```apiQuestion()``` is limited to fetching the data and declaring it in a variable to be passed to ```addQuestion()``` and ```addChoices()``` functions. Before code refactoring, ```apiQuestion()``` also handled the functionality of displaying questions and choices to the quiz. I separated these into their own functions to improve readability so I could find the bug and avoid more potential bugs.<br>As I was writing the code, I used ```console.log()``` with each line of code to see where the bug appeared. It appeared where I was using ```addEventListener()``` and for the sake of speed, I used JQuery's click event handler ```.click()``` alongside ```.unbind()``` .
 
 * **Verdict**<br>The click event listener works and the intended result has been achieved. I may return to it in order to improve it further. 
 
 ### Slow performance when changing questions
 
-* **Bug**<br>It looks a relatively long time to move on to the next question when the users chose an answer. Within that time period when waiting for the next question, if users clicked on the answer again it would add to the number of questions it was going to retrieve. This in turn added to the time waiting for a new question.
+* **Bug**<br>It took a relatively long time to move on to the next question when the user chose an answer. 
 
 * **Fix**<br>Instead of making a fetch request for each new question, I requested all relevant questions once at the start of application. I declared this data in a variable ```questionData``` and passed it to ```addQuestion()``` function to use it to select a question from the available questions. 
 
-* **Verdict**<br>Performance has enormously improved and the side effect of poor performance, which is the potential for users to click on answer multiple times to increase time delay, has been avoided. 
+* **Verdict**<br>Performance has enormously improved and it works as intended.
 
 ### Answer is still highlighted from previous question
 
@@ -205,19 +205,19 @@ View wireframes for each device here:
 
 ### Quiz page is not responsive on narrow screens
 
-* **Bug**<br>On screens with narrow width (<320px) like Galaxy Fold and iPhone 5/SE, the page is not responsive in that the top and bottom of the page is cut off. It also does not allow scrolling when this is the case.
+* **Bug**<br>On screens with narrow width (<320px) like Galaxy Fold and iPhone 5/SE, the page is not responsive which results in the top and bottom of the page is cut off. It also does not allow scrolling when this is the case.
 
 * **Fix**<br>I shall return to it later. 
 
-* **Verdict**<br>The game works on all other devices I tested it on. It just is not reponsive on the Galaxy Fold and iPhone 5/SE so I would recommend users use other devices, if not a different mobile, a computer or tablet. It will be fixed later on since it is not much of a priority and there is a lack of time.
+* **Verdict**<br>The game works on all other devices I tested it on. It just is not reponsive on the Galaxy Fold and iPhone 5/SE so I would recommend users use other devices: a different mobile, a computer or tablet. It will be fixed later on since it is not much of a priority and there was a lack of time.
 
 ### Possibility of queueing up click events
 
-* **Bug**<br>Through testing, I found out that sometimes when user is moving on to next question, there may be a delay. The user could take it as they may need to make another click to make it work. They may assume they either did not click properly or did not click at all. When repeated clicks are made, the repeated call to ```apiQuestion()``` function is queued up and multiple questions are iterated through. It takes the repeated click as the answer to all the queued up questions.
+* **Bug**<br>Through testing, I found out that sometimes when user is moving on to next question, there are occasional delays. The user could assume that they may need to make another click to make it work. They may assume they either did not click properly or did not click at all. When repeated clicks are made, the repeated call to ```apiQuestion()``` function is queued up and multiple questions are iterated through. It takes the repeated click as the answer to all the queued up questions that appeared.
 
 * **Fix**<br>It has not been fixed yet.
 
-* **Verdict**<br>It does not happen often and it shall be fixed later on. Apart from these uncommon occasions, it works as intended.
+* **Verdict**<br>It does not happen often and it shall be fixed later on. Apart from this uncommon occasion, it works as intended.
 
 ## Deployment 
 ---
