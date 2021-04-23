@@ -59,7 +59,7 @@ function addQuestion(questionData) {
 
     addChoices(correctAnswer, incorrectAnswers);
     answerFeedback(correctAnswer);
-};
+}
 
 // Adds answer choices into quiz HTML page
 function addChoices(correctAnswer, incorrectAnswers) {
@@ -70,7 +70,7 @@ function addChoices(correctAnswer, incorrectAnswers) {
     answers[3].innerHTML = incorrectAnswers[2];
 
     return shuffle(answers);
-};
+}
 
 // Checks if answer clicked is correct (adds points) or incorrect, requests new question and updates progress
 function answerFeedback (correctAnswer) {
@@ -86,7 +86,7 @@ function answerFeedback (correctAnswer) {
 
         questionProgress();
         apiQuestion();
-    })
+    });
 }
 
 // Used to display progress in the quiz, sends to end page if quiz is completed
