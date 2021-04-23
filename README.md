@@ -71,7 +71,7 @@ I chose to use the [Coolors](https://coolors.co/) colour scheme generator to fin
 
 **Background Image**
 
-I used a manga panel montage as the background to match the theme of anime/manga in the design of web application.
+I used a [manga panel wallpaper](https://www.reddit.com/r/wallpaper/comments/i5f7ua/animemanga_crossover_wallpaper_19201080/) as the background to match the theme of anime/manga in the design of web application.
 
 ![manga panel montage](assets/images/animeTriviaBg.jpg)
 
