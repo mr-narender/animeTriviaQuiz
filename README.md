@@ -235,6 +235,14 @@ I used [JSHint](https://jshint.com/) to test the JavaScript code and the result 
 
 * **Verdict**<br>It does not happen often and it shall be fixed later on. Apart from this uncommon occasion, it works as intended.
 
+### One extra question is fetched
+
+* **Bug**<br>One extra question is fetched. It sometimes appears a split second after answering the last tenth question before proceeding to the end page.
+
+* **Fix**<br>It has not been fixed yet.
+
+* **Verdict**<br>It is a minor bug which no effect on the game's functionality. I shall return to it later on to fix it.
+
 ## Deployment 
 ---
 This project was deployed via GitHub by executing the following steps. After writing the code, committing and pushing it to GitHub:
