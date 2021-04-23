@@ -129,6 +129,15 @@ View wireframes for each device here:
 ## Testing 
 ---
 
+I've tested the CSS code by direct input with the [CSS Validator](http://jigsaw.w3.org/css-validator/) and it came out **no errors found**. Everytime CSS validator was used, it was by direct input of the code. 
+
+I tested the HTML code by direct input with the [HTML Validator](https://validator.w3.org/) and it came out **no errors found**.
+
+I used [JSHint](https://jshint.com/) to test the JavaScript code and the result showed:
+
+* An unused ```const answerParent``` which I removed 
+* Unnecessarily used semicolons and semicolons that were missing in certain places which I fixed right away
+
 ### Game is fun!
 **User Story: I want to have fun and enjoy the game.**
 * **Plan**<br>Give the user questions that are challenging with varying difficulty levels and ask about a wide variety of anime.
