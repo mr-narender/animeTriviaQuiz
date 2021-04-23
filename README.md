@@ -204,6 +204,14 @@ View wireframes for each device here:
 
 * **Verdict**<br>The overall functionality of the game has not been affected and this bug is not high on the priority list. I shall return to it later on.
 
+### Quiz page is not responsive on narrow screens
+
+* **Bug**<br>On screens with narrow width (<320px) like Galaxy Fold and iPhone 5/SE, the page is not responsive in that the top and bottom of the page is cut off. It also does not allow scrolling when this is the case.
+
+* **Fix**<br>I shall return to it later. 
+
+* **Verdict**<br>The game works on all other devices I tested it on. It just is not reponsive on the Galaxy Fold and iPhone 5/SE so I would recommend users use other devices, if not a different mobile, a computer or tablet. It will be fixed later on since it is not much of a priority and there is a lack of time.
+
 ## Deployment 
 ---
 This project was deployed via GitHub by executing the following steps. After writing the code, committing and pushing it to GitHub:
