@@ -1,5 +1,4 @@
 const quizQuestion = document.querySelector('#question');
-const answerParent = document.querySelector('#answerParent');
 const answers = Array.from(document.getElementsByClassName('answer-text'));
 const progressText = document.querySelector('#progress-text');
 const scoreText = document.querySelector('#score');
