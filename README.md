@@ -212,6 +212,14 @@ View wireframes for each device here:
 
 * **Verdict**<br>The game works on all other devices I tested it on. It just is not reponsive on the Galaxy Fold and iPhone 5/SE so I would recommend users use other devices, if not a different mobile, a computer or tablet. It will be fixed later on since it is not much of a priority and there is a lack of time.
 
+### Possibility of queueing up click events
+
+* **Bug**<br>Through testing, I found out that sometimes when user is moving on to next question, there may be a delay. The user could take it as they may need to make another click to make it work. They may assume they either did not click properly or did not click at all. When repeated clicks are made, the repeated call to ```apiQuestion()``` function is queued up and multiple questions are iterated through. It takes the repeated click as the answer to all the queued up questions.
+
+* **Fix**<br>It has not been fixed yet.
+
+* **Verdict**<br>It does not happen often and it shall be fixed later on. Apart from these uncommon occasions, it works as intended.
+
 ## Deployment 
 ---
 This project was deployed via GitHub by executing the following steps. After writing the code, committing and pushing it to GitHub:
