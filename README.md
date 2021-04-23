@@ -143,7 +143,8 @@ I used [JSHint](https://jshint.com/) to test the JavaScript code and the result 
 
 ### Game is fun!
 **User Story: I want to have fun and enjoy the game.**
-* **Plan**<br>Give the user questions that are challenging with varying difficulty levels and ask about a wide variety of anime.
+* **Plan**<br>Give the user questions that are challenging with varying difficulty levels and ask about a wide variety of anime. 
+
 * **Implementation**<br>I have included questions of all difficulty levels that are randomly selected in order to catch the user by surprise and challenge them.
 * **Test**<br>I asked my sister, who is a huge anime and manga fan, to test it out. 
 * **Results**<br>She found it really fun and challenging. The challenging questions were the most satisfying to solve for her.
@@ -152,6 +153,7 @@ I used [JSHint](https://jshint.com/) to test the JavaScript code and the result 
 ### Easy to Learn to Use
 **User Story: I want to easily learn how to play the game with little complication.**
 * **Plan**<br>Build the quiz game as simple as possible so that no instructions are needed. User learns to use it immediately.
+
 * **Implementation**<br>Kept the UI simple and easy to deal with. Creates an effect on buttons and answer choices to change colour during mouse hover event. This allows users to know what to click. I also avoided including unnecessary features that were not relevant. 
 * **Test**<br>I asked my sister to test it out.
 * **Results**<br>She immediately was able to start and complete the game without giving her instructions. She said there was no problem.
@@ -159,7 +161,8 @@ I used [JSHint](https://jshint.com/) to test the JavaScript code and the result 
 
 ### Questions are randomly chosen
 **User Story: As a user, I want the questions to be randomised so I can come back to the challenge with new questions every-time.**
-* **Plan**<br>To selected a random question each time user begins or proceeds to new question.
+* **Plan**<br>To selected a random question each time user begins or proceeds to a new question.
+
 * **Implementation**<br>I passed the ```questionData``` variable, containing an array of questions along with their corresponding answers, as an argument to ```addQuestion()```. Declared variable ```random``` that selects a random number within the range of the array length. I then used this variable as an index to the ```questionData``` array when selecting each question.
 * **Test**<br>I took the quiz 5 times and my sister did it twice.
 * **Results**<br>The questions displayed were randomized and rarely appeared.
@@ -168,6 +171,7 @@ I used [JSHint](https://jshint.com/) to test the JavaScript code and the result 
 ### Saving and displaying top score to challenge user
 **As a user, I would like to be able to have my top score saved to beat next time or challenge others to do so.**
 * **Plan**<br>To allow user to save their score and to display high scores to challenge new users or the same user to try it again.
+
 * **Implementation**<br>It has not yet been implemented.
 * **Test**<br>I shall test once I have implemented.
 * **Results**<br>No results yet.
@@ -176,6 +180,7 @@ I used [JSHint](https://jshint.com/) to test the JavaScript code and the result 
 ### Displaying user progress
 **As a user, I would like to know my progress through the test in terms of how much of test has been completed.**
 * **Plan**<br>To allow the user to know where they are in their progress of the quiz and what question they are on.
+
 * **Implementation**<br>To display a progress bar that fills up as user progresses through the quiz and display how many questions have been completed.
 * **Test**<br>I manually tested the quiz by going through it 15 times.
 * **Results**<br>The progress bar was displayed with no problem and updates with each question. The question counter increments correctly by one with each question.
@@ -227,7 +232,7 @@ I used [JSHint](https://jshint.com/) to test the JavaScript code and the result 
 
 * **Bug**<br>Through testing, I found out that sometimes when user is moving on to next question, there are occasional delays. The user could assume that they may need to make another click to make it work. They may assume they either did not click properly or did not click at all. When repeated clicks are made, the repeated call to ```apiQuestion()``` function is queued up and multiple questions are iterated through. It takes the repeated click as the answer to all the queued up questions that appeared.
 
-* **Fix**<br>It has not been fixed yet.
+* **Fix**<br>It has not been fixed yet. A possible fix could be to add a loading animation to show next question is coming or give clear feedback that the user has clicked on answer. 
 
 * **Verdict**<br>It does not happen often and it shall be fixed later on. Apart from this uncommon occasion, it works as intended.
 
